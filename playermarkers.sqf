@@ -9,7 +9,7 @@ while {true} do
 		{
 		{
 		_jugador = _x getVariable ["owner",_x];
-		if ((not(_jugador in _jugadores)) and (player != _jugador)) then
+		if ((not(_jugador in _jugadores))) then
 			{
 			_jugadores pushBack _jugador;
 			_mrk = createMarkerLocal [format ["%1",_jugador],position _jugador];
