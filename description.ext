@@ -11,6 +11,7 @@ overviewPicture = "pic.jpg";
 
 allowFunctionsLog = 1;
 enableDebugConsole = 1;
+joinUnassigned = 0;
 
 respawn = "BASE";
 respawnDelay = 0;
