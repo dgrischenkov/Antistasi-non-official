@@ -374,10 +374,6 @@ if (_isJip) then
 			unlockedBackpacks pushBack "tf_rt1523g_sage";
 	  		publicVariable "unlockedBackpacks";
 	   		};*/
-		}
-	else
-		{
-		_nul = [true] execVM "Dialogs\firstLoad.sqf";
 		};
 	diag_log "Antistasi MP Client. JIP client finished";
 	}
@@ -408,8 +404,7 @@ else
 		    	}
 		    else
 		    	{
-		    	miembros = [];
-		    	 _nul = [] execVM "Dialogs\firstLoad.sqf";
+					miembros = [];
 		    	};
 		    };
 		};
