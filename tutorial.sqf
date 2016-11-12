@@ -13,6 +13,7 @@ if ( isNil "howtoplay" ) then { howtoplay = 0; };
 		ctrlSetText [512, localize "STR_CLOSE"];
 
 		_tutorial_titles = [
+			localize "STR_TUTO_TITLE0",
 			localize "STR_TUTO_TITLE1",
 			localize "STR_TUTO_TITLE2",
 			localize "STR_TUTO_TITLE3",
@@ -30,6 +31,7 @@ if ( isNil "howtoplay" ) then { howtoplay = 0; };
 		disableSerialization;
 
 		_tutorial_pages = [
+			"STR_TUTO_TEXT0",
 			"STR_TUTO_TEXT1",
 			"STR_TUTO_TEXT2",
 			"STR_TUTO_TEXT3",
@@ -38,7 +40,7 @@ if ( isNil "howtoplay" ) then { howtoplay = 0; };
 			"STR_TUTO_TEXT6"
 		];
 
-		_tutorial_height = [0.5, 0.7, 2.5, 1.0, 1.8, 0.8];
+		_tutorial_height = [1.9, 0.5, 0.7, 2.5, 1.0, 1.8, 0.8];
 
 		_old_page = -1;
 
