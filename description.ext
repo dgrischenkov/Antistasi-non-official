@@ -1,5 +1,6 @@
 #include "defines.hpp"
 #include "dialogs.hpp"
+#include "tutorial.hpp"
 
 author="Barbolani";
 OnLoadName = "Antistasi - modified";

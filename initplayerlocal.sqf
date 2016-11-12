@@ -2,6 +2,7 @@ waitUntil {!isNull player};
 waitUntil {player == player};
 player removeweaponGlobal "itemmap";
 player removeweaponGlobal "itemgps";
+player addAction ["<t color='#aaccaa'>" + localize "STR_TUTORIAL_ACTION" + "</t>","howtoplay = 1","",-740,false,true,"",""];
 if (isMultiplayer) then
 	{
 	[] execVM "briefing.sqf";
