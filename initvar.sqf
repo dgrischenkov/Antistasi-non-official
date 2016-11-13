@@ -265,7 +265,8 @@ if (!isServer) exitWith {};
 
 {server setVariable [_x,50,true]} forEach ["B_G_Soldier_F","B_G_Soldier_lite_F","b_g_soldier_unarmed_f"];
 {server setVariable [_x,100,true]} forEach ["B_G_Soldier_AR_F","B_G_medic_F","B_G_engineer_F","B_G_Soldier_exp_F","B_G_Soldier_GL_F","B_G_Soldier_TL_F","B_G_Soldier_A_F"];
-{server setVariable [_x,150,true]} forEach ["B_G_Soldier_M_F","B_G_Soldier_LAT_F","B_G_Soldier_SL_F","B_G_officer_F","B_G_Sharpshooter_F","Soldier_AA"];
+{server setVariable [_x,150,true]} forEach ["B_G_Soldier_M_F","B_G_Soldier_LAT_F","B_G_Soldier_SL_F","B_G_officer_F","B_G_Sharpshooter_F"];
+{server setVariable [_x,500,true]} forEach ["B_Soldier_AA_F"];
 {server setVariable [_x,100,true]} forEach ["I_crew_F","O_crew_F","C_man_1"];
 {server setVariable [_x,100,true]} forEach infList_regular;
 {server setVariable [_x,150,true]} forEach infList_auto;

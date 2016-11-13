@@ -245,7 +245,7 @@ class HQ_button_fpsplus: RscButton // L5
 	y = 0.710047 * safezoneH + safezoneY;
 	w = 0.175015 * safezoneW;
 	h = 0.0560125 * safezoneH;
-	action = "nul = [""Soldier_AA""] spawn reinfPlayer";
+	action = "nul = [""B_Soldier_AA_F""] spawn reinfPlayer";
 };
 
 ////////////////////////////////////////////////////////
@@ -1259,7 +1259,7 @@ class HQ_box: BOX
 	x = 0.244979 * safezoneW + safezoneX;
 	y = 0.223941 * safezoneH + safezoneY;
 	w = 0.445038 * safezoneW;
-	h = 0.492103 * safezoneH;
+	h = 0.590125 * safezoneH;
 };
 class HQ_frame: RscFrame
 {
@@ -1268,7 +1268,7 @@ class HQ_frame: RscFrame
 	x = 0.254979 * safezoneW + safezoneX;
 	y = 0.233941 * safezoneH + safezoneY;
 	w = 0.425038 * safezoneW;
-	h = 0.462103 * safezoneH;
+	h = 0.560125 * safezoneH;
 };
 class HQ_button_back: RscButton
 {
@@ -1360,6 +1360,17 @@ class HQ_button_AT: RscButton
 	w = 0.175015 * safezoneW;
 	h = 0.0560125 * safezoneH;
 	action = "nul = [""B_G_Soldier_LAT_F""] call garrisonAdd";
+};
+
+class HQ_button_AA: RscButton // L5
+{
+	idc = 112;
+	text = "Recruit AA"; //--- ToDo: Localize;
+	x = 0.37749 * safezoneW + safezoneX;
+	y = 0.710047 * safezoneH + safezoneY;
+	w = 0.175015 * safezoneW;
+	h = 0.0560125 * safezoneH;
+	action = "nul = [""B_Soldier_AA_F""] call garrisonAdd";
 };
 
 ////////////////////////////////////////////////////////

@@ -24,7 +24,7 @@ call {
 	if ((_tipounidad == "B_G_Soldier_GL_F") && (server getVariable "genGLlocked")) exitWith {_available = false;};
 	if ((_tipounidad == "B_G_Soldier_M_F") && (server getVariable "genSNPRlocked")) exitWith {_available = false;};
 	if ((_tipounidad == "B_G_Soldier_LAT_F") && (server getVariable "genATlocked")) exitWith {_available = false;};
-	if ((_tipounidad == "Soldier_AA") && (server getVariable "genAAlocked")) exitWith {_available = false;};
+	if ((_tipounidad == "B_Soldier_AA_F") && (server getVariable "genAAlocked")) exitWith {_available = false;};
 };
 
 if !(_available) exitWith {hint "Required weapon not unlocked yet."};
@@ -41,12 +41,7 @@ if (_coste > _resourcesFIA) exitWith {hint format ["You do not have enough money
 
 if ((count units group player) + (count units rezagados) > 9) exitWith {hint "Your squad is full or you have too many scattered units with no radio contact"};
 
-if !(_tipounidad == "Soldier_AA") then {
-	_unit = group player createUnit [_tipounidad, position player, [], 0, "NONE"];
-}
-else {
-	_unit = group player createUnit ["B_G_Soldier_lite_F", position player, [], 0, "NONE"];
-};
+_unit = group player createUnit [_tipounidad, position player, [], 0, "NONE"];
 
 if (!isMultiPlayer) then
 	{
@@ -61,7 +56,7 @@ else
 
 [_unit] spawn FIAinit;
 
-if (_tipounidad == "Soldier_AA") then {
+if (_tipounidad == "B_Soldier_AA_F") then {
 	_aal = genAALaunchers select 0;
 	[_unit,true,true,true,true] call randomRifle;
 	if (_aal in unlockedWeapons) then {

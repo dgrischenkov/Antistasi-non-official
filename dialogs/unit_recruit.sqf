@@ -25,5 +25,5 @@ if (str (_display) != "no display") then
 	_ChildControl = _display displayCtrl 111;
 	_ChildControl  ctrlSetTooltip format ["Cost: %1 €",server getVariable "B_G_Soldier_LAT_F"];
 	_ChildControl = _display displayCtrl 112;
-	_ChildControl  ctrlSetTooltip format ["Cost: %1 €",server getVariable "Soldier_AA"];
+	_ChildControl  ctrlSetTooltip format ["Cost: %1 €",server getVariable "B_Soldier_AA_F"];
 };
