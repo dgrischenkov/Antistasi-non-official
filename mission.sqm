@@ -109,20 +109,21 @@ class Mission
 		overviewText="Build FIA Army from scratch and defeat the AAF and CSAT forces in a whole map Dynamic Mission.";
 		resistanceWest=0;
 		resistanceEast=1;
-		startWeather=0.1;
+		startWeather=0.25;
 		startWind=0.099999994;
 		startWaves=0.099999994;
-		forecastWeather=0.1;
+		forecastWeather=0.25;
 		forecastWind=0.099999994;
 		forecastWaves=0.099999994;
 		forecastLightnings=0.099999994;
-		year=2035;
+		year=2016;
 		month=6;
-		day=6;
-		hour=6;
-		minute=0;
-		startFogDecay=0.013;
-		forecastFogDecay=0.013;
+		hour=9;
+		minute=-29;
+		startFogBase=-1000;
+		forecastFogBase=-1000;
+		startFogDecay=0.1;
+		forecastFogDecay=0.1;
 	};
 	class Entities
 	{
