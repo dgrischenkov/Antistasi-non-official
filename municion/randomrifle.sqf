@@ -57,7 +57,7 @@ if (_helmet) then
 			{
 			if (random 10 > _skillFIA) then
 				{
-				_unit forceAddUniform (civUniforms call BIS_fnc_selectRandom);
+				// _unit forceAddUniform (civUniforms call BIS_fnc_selectRandom);
 				_unit addItemToUniform "FirstAidKit";
 				if !(hayRHS) then {
 					_unit addMagazine ["HandGrenade", 1];
