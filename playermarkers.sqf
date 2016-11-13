@@ -14,7 +14,7 @@ while {true} do
 			_jugadores pushBack _jugador;
 			_mrk = createMarkerLocal [format ["%1",_jugador],position _jugador];
 			_mrk setMarkerTypeLocal "mil_triangle";
-			_mrk setMarkerColorLocal "ColorWhite";
+			_mrk setMarkerColorLocal "ColorYellow";
 			_mrk setMarkerTextLocal format ["%1",name _jugador];
 			if (server getVariable ["hardMode", false]) then {_mrk setMarkerAlphaLocal 0};
 			//_mrk setMarkerAlphaLocal 0; // <<-- hard mode
@@ -46,7 +46,7 @@ while {true} do
 					if (server getVariable ["hardMode", false]) then {_mrk setMarkerAlphaLocal 0};
 					//_mrk setMarkerAlphaLocal 0; // <<-- hard mode
 					_mrk setMarkerTextLocal format ["%1",name _jugador];
-					_mrk setMarkerColorLocal "ColorWhite";
+					_mrk setMarkerColorLocal "ColorYellow";
 					};
 				}
 			else
