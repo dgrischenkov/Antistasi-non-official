@@ -2,7 +2,7 @@ private ["_jugadores","_jugador","_mrk","_veh"];
 
 while {true} do
 	{
-	waitUntil {sleep 0.5; (visibleMap or visibleGPS) and ([player] call hasRadio)};
+	waitUntil {sleep 0.5; (visibleMap or visibleGPS)};
 	_jugadores = [];
 	_marcadores = [];
 	while {visibleMap or visibleGPS} do
