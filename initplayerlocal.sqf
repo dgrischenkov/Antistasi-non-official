@@ -279,6 +279,7 @@ caja addEventHandler ["ContainerOpened",
 	}
     ];
 
+
 if (_isJip) then
 	{
 	waitUntil {scriptdone _introshot};
@@ -360,20 +361,10 @@ if (_isJip) then
 		removeAllActions petros;
 		petros addAction ["Build HQ here", {[] spawn buildHQ},nil,0,false,true];
 		};
+
 	if ((player == stavros) and (isNil "placementDone") and (isMultiplayer)) then
 		{
 		_nul = [] execVM "Dialogs\initMenu.sqf";
-/*		if (backpack player == "tf_rt1523g_sage") then
-			{
-			// XLA fixed arsenal
-			if (hayXLA) then {
-				[caja,["tf_rt1523g_sage"],true] call XLA_fnc_addVirtualBackpackCargo;
-			} else {
-				[caja,["tf_rt1523g_sage"],true] call BIS_fnc_addVirtualBackpackCargo;
-			};
-			unlockedBackpacks pushBack "tf_rt1523g_sage";
-	  		publicVariable "unlockedBackpacks";
-	   		};*/
 		};
 	diag_log "Antistasi MP Client. JIP client finished";
 	}
@@ -389,17 +380,6 @@ else
 		    	HC_comandante synchronizeObjectsAdd [player];
 				player synchronizeObjectsAdd [HC_comandante];
 		    	_nul = [] execVM "Dialogs\initMenu.sqf";
-/*		    	if (backpack player == "tf_rt1523g_sage") then
-		    		{
-		    		// XLA fixed arsenal
-		    		if (hayXLA) then {
-						[caja,["tf_rt1523g_sage"],true] call XLA_fnc_addVirtualBackpackCargo;
-					} else {
-						[caja,["tf_rt1523g_sage"],true] call BIS_fnc_addVirtualBackpackCargo;
-					};
-		    		unlockedBackpacks pushBack "tf_rt1523g_sage";
-		    		publicVariable "unlockedBackpacks";
-		    		};*/
 		    	diag_log "Antistasi MP Client. Client finished";
 		    	}
 		    else
