@@ -362,7 +362,7 @@ if (_isJip) then
 		petros addAction ["Build HQ here", {[] spawn buildHQ},nil,0,false,true];
 		};
 
-	if ((player == stavros) and (isNil "placementDone") and (isMultiplayer)) then
+	if (isMultiplayer) then
 		{
 		_nul = [] execVM "Dialogs\initMenu.sqf";
 		};
