@@ -1,4 +1,4 @@
-
+﻿
 class HQ_menu
 {
 	idd=100;
@@ -12,7 +12,7 @@ class HQ_menu
 class HQ_box: BOX
 {
 	idc = 101;
-	text = ""; //--- ToDo: Localize;
+	text = "";
 	x = 0.244979 * safezoneW + safezoneX;
 	y = 0.223941 * safezoneH + safezoneY;
 	w = 0.445038 * safezoneW;
@@ -21,7 +21,7 @@ class HQ_box: BOX
 class HQ_frame: RscFrame
 {
 	idc = 102;
-	text = "FIA HQ Options - Commander Only"; //--- ToDo: Localize;
+	text = $STR_UI_HQ_OPTIONS;
 	x = 0.254979 * safezoneW + safezoneX;
 	y = 0.233941 * safezoneH + safezoneY;
 	w = 0.425038 * safezoneW;
@@ -30,7 +30,7 @@ class HQ_frame: RscFrame
 class HQ_button_back: RscButton
 {
 	idc = 103;
-	text = "Back"; //--- ToDo: Localize;
+	text = $STR_UI_BACK;
 	x = 0.61 * safezoneW + safezoneX;
 	y = 0.251941 * safezoneH + safezoneY;
 	w = 0.06 * safezoneW;//0.175015
@@ -40,7 +40,7 @@ class HQ_button_back: RscButton
 class HQ_button_load: RscButton // L1
 {
 	idc = 104;
-	text = "Grab 100 € from Pool"; //--- ToDo: Localize;
+	text = $STR_UI_GRAB_FROM_POOL;
 	x = 0.272481 * safezoneW + safezoneX;
 	y = 0.317959 * safezoneH + safezoneY;
 	w = 0.175015 * safezoneW;
@@ -50,7 +50,7 @@ class HQ_button_load: RscButton // L1
 class HQ_button_savegame: RscButton // L2
 {
 	idc = 105;
-	text = "Manage Garrisons"; //--- ToDo: Localize;
+	text = $STR_UI_MANAGE_GARRISONS;
 	x = 0.272481 * safezoneW + safezoneX;
 	y = 0.415981 * safezoneH + safezoneY;
 	w = 0.175015 * safezoneW;
@@ -60,7 +60,7 @@ class HQ_button_savegame: RscButton // L2
 class HQ_button_moveHQ: RscButton // L3
 {
 	idc = 106;
-	text = "Move HQ to another Zone"; //--- ToDo: Localize;
+	text = $STR_UI_MOVE_HQ;
 	x = 0.272481 * safezoneW + safezoneX;
 	y = 0.514003 * safezoneH + safezoneY;
 	w = 0.175015 * safezoneW;
@@ -70,7 +70,7 @@ class HQ_button_moveHQ: RscButton // L3
 class HQ_button_recruitUnit: RscButton // R1
 {
 	idc = 107;
-	text = "Ingame Member's List"; //--- ToDo: Localize;
+	text = $STR_UI_MEMBERS_LIST;
 	x = 0.482498 * safezoneW + safezoneX;
 	y = 0.317959 * safezoneH + safezoneY;
 	w = 0.175015 * safezoneW;
@@ -80,18 +80,18 @@ class HQ_button_recruitUnit: RscButton // R1
 class HQ_button_recruitSquad: RscButton // R3
 {
 	idc = 108;
-	text = "Rebuild Assets"; //--- ToDo: Localize;
+	text = $STR_UI_REBUILD_ASSETS;
 	x = 0.482498 * safezoneW + safezoneX;
 	y = 0.514003 * safezoneH + safezoneY;
 	w = 0.175015 * safezoneW;
 	h = 0.0560125 * safezoneH;
-	tooltip = "Cost: 5.000 €";
+	tooltip = "5.000 €";
 	action = "closeDialog 0;if (player == Stavros) then {nul=[] spawn rebuildAssets} else {hint ""Only Player Commander has access to this function""};";
 };
 class HQ_button_vehicle: RscButton // R2
 {
 	idc = 109;
-	text = "Train FIA - Skill Upgrade"; //--- ToDo: Localize;
+	text = $STR_UI_SKILL_UPGRADE;
 	x = 0.482498 * safezoneW + safezoneX;
 	y = 0.415981 * safezoneH + safezoneY;
 	w = 0.175015 * safezoneW;
@@ -102,7 +102,7 @@ class HQ_button_vehicle: RscButton // R2
 class HQ_button_skill: RscButton // L4
 {
 	idc = 110;
-	text = "Garage Access"; //--- ToDo: Localize;
+	text = $STR_UI_GARAGE_ACCESS;
 	x = 0.37749 * safezoneW + safezoneX;
 	y = 0.612025 * safezoneH + safezoneY;
 	w = 0.175015 * safezoneW;
@@ -130,7 +130,7 @@ class unit_recruit
 class HQ_box: BOX
 {
 	idc = 101;
-	text = ""; //--- ToDo: Localize;
+	text = "";
 	x = 0.244979 * safezoneW + safezoneX;
 	y = 0.223941 * safezoneH + safezoneY;
 	w = 0.445038 * safezoneW;
@@ -139,7 +139,7 @@ class HQ_box: BOX
 class HQ_frame: RscFrame
 {
 	idc = 102;
-	text = "Recruitment Options"; //--- ToDo: Localize;
+	text = $STR_UI_RECRUIT_OPTIONS;
 	x = 0.254979 * safezoneW + safezoneX;
 	y = 0.233941 * safezoneH + safezoneY;
 	w = 0.425038 * safezoneW;
@@ -148,7 +148,7 @@ class HQ_frame: RscFrame
 class HQ_button_back: RscButton
 {
 	idc = 103;
-	text = "Back"; //--- ToDo: Localize;
+	text = $STR_UI_BACK;
 	x = 0.61 * safezoneW + safezoneX;
 	y = 0.251941 * safezoneH + safezoneY;
 	w = 0.06 * safezoneW;//0.175015
@@ -158,7 +158,7 @@ class HQ_button_back: RscButton
 class HQ_button_rifleman: RscButton
 {
 	idc = 104;
-	text = "Recruit Militiaman"; //--- ToDo: Localize;
+	text = $STR_UI_REC_MILITARY;
 	x = 0.272481 * safezoneW + safezoneX;
 	y = 0.317959 * safezoneH + safezoneY;
 	w = 0.175015 * safezoneW;
@@ -168,7 +168,7 @@ class HQ_button_rifleman: RscButton
 class HQ_button_autorifleman: RscButton
 {
 	idc = 105;
-	text = "Recruit Autorifleman"; //--- ToDo: Localize;
+	text = $STR_UI_REC_AUTORIFLEMAN;
 	x = 0.272481 * safezoneW + safezoneX;
 	y = 0.415981 * safezoneH + safezoneY;
 	w = 0.175015 * safezoneW;
@@ -178,7 +178,7 @@ class HQ_button_autorifleman: RscButton
 class HQ_button_medic: RscButton
 {
 	idc = 126;
-	text = "Recruit Medic"; //--- ToDo: Localize;
+	text = $STR_UI_REC_MEDIC;
 	x = 0.272481 * safezoneW + safezoneX;
 	y = 0.514003 * safezoneH + safezoneY;
 	w = 0.175015 * safezoneW;
@@ -188,7 +188,7 @@ class HQ_button_medic: RscButton
 class HQ_button_engineer: RscButton
 {
 	idc = 107;
-	text = "Recruit Engineer"; //--- ToDo: Localize;
+	text = $STR_UI_REC_ENGINER;
 	x = 0.482498 * safezoneW + safezoneX;
 	y = 0.317959 * safezoneH + safezoneY;
 	w = 0.175015 * safezoneW;
@@ -198,7 +198,7 @@ class HQ_button_engineer: RscButton
 class HQ_button_explosive: RscButton
 {
 	idc = 108;
-	text = "Recruit Bomb Specialist"; //--- ToDo: Localize;
+	text = $STR_UI_REC_BOMBSP;
 	x = 0.482498 * safezoneW + safezoneX;
 	y = 0.514003 * safezoneH + safezoneY;
 	w = 0.175015 * safezoneW;
@@ -208,7 +208,7 @@ class HQ_button_explosive: RscButton
 class HQ_button_grenadier: RscButton
 {
 	idc = 109;
-	text = "Recruit Grenadier"; //--- ToDo: Localize;
+	text = $STR_UI_REC_GRENADIER;
 	x = 0.482498 * safezoneW + safezoneX;
 	y = 0.415981 * safezoneH + safezoneY;
 	w = 0.175015 * safezoneW;
@@ -218,7 +218,7 @@ class HQ_button_grenadier: RscButton
 class HQ_button_marksman: RscButton
 {
 	idc = 110;
-	text = "Recruit Marksman"; //--- ToDo: Localize;
+	text = $STR_UI_REC_MARKSMAN;
 	x = 0.272481 * safezoneW + safezoneX;
 	y = 0.612025 * safezoneH + safezoneY;
 	w = 0.175015 * safezoneW;
@@ -229,7 +229,7 @@ class HQ_button_marksman: RscButton
 class HQ_button_AT: RscButton
 {
 	idc = 111;
-	text = "Recruit AT"; //--- ToDo: Localize;
+	text = $STR_UI_REC_AT;
 	x = 0.482498 * safezoneW + safezoneX;
 	y = 0.612025 * safezoneH + safezoneY;
 	w = 0.175015 * safezoneW;
@@ -240,7 +240,7 @@ class HQ_button_AT: RscButton
 class HQ_button_fpsplus: RscButton // L5
 {
 	idc = 112;
-	text = "Recruit AA"; //--- ToDo: Localize;
+	text = $STR_UI_REC_AA;
 	x = 0.37749 * safezoneW + safezoneX;
 	y = 0.710047 * safezoneH + safezoneY;
 	w = 0.175015 * safezoneW;
@@ -266,7 +266,7 @@ class squad_recruit
 class HQ_box: BOX
 {
 	idc = 101;
-	text = ""; //--- ToDo: Localize;
+	text = "";
 	x = 0.244979 * safezoneW + safezoneX;
 	y = 0.223941 * safezoneH + safezoneY;
 	w = 0.445038 * safezoneW;
@@ -275,7 +275,7 @@ class HQ_box: BOX
 class HQ_frame: RscFrame
 {
 	idc = 102;
-	text = "Squad Recruitment Options"; //--- ToDo: Localize;
+	text = $STR_UI_SQUAD_RECRUITMENT;
 	x = 0.254979 * safezoneW + safezoneX;
 	y = 0.233941 * safezoneH + safezoneY;
 	w = 0.425038 * safezoneW;
@@ -284,7 +284,7 @@ class HQ_frame: RscFrame
 class HQ_button_back: RscButton
 {
 	idc = 103;
-	text = "Back"; //--- ToDo: Localize;
+	text = $STR_UI_BACK;
 	x = 0.61 * safezoneW + safezoneX;
 	y = 0.251941 * safezoneH + safezoneY;
 	w = 0.06 * safezoneW;//0.175015
@@ -294,7 +294,7 @@ class HQ_button_back: RscButton
 class HQ_button_infsquad: RscButton
 {
 	idc = 104;
-	text = "Recruit Inf. Squad"; //--- ToDo: Localize;
+	text = $STR_UI_REC_INF_SQUAD;
 	x = 0.272481 * safezoneW + safezoneX;
 	y = 0.317959 * safezoneH + safezoneY;
 	w = 0.175015 * safezoneW;
@@ -304,7 +304,7 @@ class HQ_button_infsquad: RscButton
 class HQ_button_infteam: RscButton
 {
 	idc = 105;
-	text = "Recruit Inf. Team"; //--- ToDo: Localize;
+	text = $STR_UI_REC_INF_TEAM;
 	x = 0.272481 * safezoneW + safezoneX;
 	y = 0.415981 * safezoneH + safezoneY;
 	w = 0.175015 * safezoneW;
@@ -314,7 +314,7 @@ class HQ_button_infteam: RscButton
 class HQ_button_ATteam: RscButton
 {
 	idc = 106;
-	text = "Recruit AT Team"; //--- ToDo: Localize;
+	text = $STR_UI_REC_AT_TEAM;
 	x = 0.272481 * safezoneW + safezoneX;
 	y = 0.514003 * safezoneH + safezoneY;
 	w = 0.175015 * safezoneW;
@@ -324,7 +324,7 @@ class HQ_button_ATteam: RscButton
 class HQ_button_sniperTeam: RscButton
 {
 	idc = 107;
-	text = "Recruit Sniper Team"; //--- ToDo: Localize;
+	text = $STR_UI_REC_SNIPER_TEAM;
 	x = 0.482498 * safezoneW + safezoneX;
 	y = 0.317959 * safezoneH + safezoneY;
 	w = 0.175015 * safezoneW;
@@ -334,7 +334,7 @@ class HQ_button_sniperTeam: RscButton
 class HQ_button_infsquadM: RscButton
 {
 	idc = 108;
-	text = "Recruit Sentry"; //--- ToDo: Localize;
+	text = $STR_UI_REC_SENTRY;
 	x = 0.482498 * safezoneW + safezoneX;
 	y = 0.514003 * safezoneH + safezoneY;
 	w = 0.175015 * safezoneW;
@@ -344,7 +344,7 @@ class HQ_button_infsquadM: RscButton
 class HQ_button_infteamM: RscButton
 {
 	idc = 109;
-	text = "Recruit AT Truck"; //--- ToDo: Localize;
+	text = $STR_UI_REC_AT_TRUCK;
 	x = 0.482498 * safezoneW + safezoneX;
 	y = 0.415981 * safezoneH + safezoneY;
 	w = 0.175015 * safezoneW;
@@ -354,7 +354,7 @@ class HQ_button_infteamM: RscButton
 class HQ_button_ATteamM: RscButton
 {
 	idc = 110;
-	text = "Recruit AA Truck"; //--- ToDo: Localize;
+	text = $STR_UI_REC_AA_TRUCK;
 	x = 0.272481 * safezoneW + safezoneX;
 	y = 0.612025 * safezoneH + safezoneY;
 	w = 0.175015 * safezoneW;
@@ -365,7 +365,7 @@ class HQ_button_ATteamM: RscButton
 class HQ_button_mortar: RscButton
 {
 	idc = 111;
-	text = "Recruit Mortar Team"; //--- ToDo: Localize;
+	text = $STR_UI_REC_MORTAR_TEAM;
 	x = 0.482498 * safezoneW + safezoneX;
 	y = 0.612025 * safezoneH + safezoneY;
 	w = 0.175015 * safezoneW;
@@ -376,7 +376,7 @@ class HQ_button_mortar: RscButton
 class HQ_button_engineers: RscButton
 {
 	idc = 112;
-	text = "Recruit Engineers"; //--- ToDo: Localize;
+	text = $STR_UI_REC_ENGINERS;
 	x = 0.37749 * safezoneW + safezoneX;
 	y = 0.710047 * safezoneH + safezoneY;
 	w = 0.175015 * safezoneW;
@@ -402,7 +402,7 @@ class buy_vehicle
 class HQ_box: BOX
 {
 	idc = 101;
-	text = ""; //--- ToDo: Localize;
+	text = "";
 	x = 0.244979 * safezoneW + safezoneX;
 	y = 0.223941 * safezoneH + safezoneY;
 	w = 0.445038 * safezoneW;
@@ -411,7 +411,7 @@ class HQ_box: BOX
 class HQ_frame: RscFrame
 {
 	idc = 102;
-	text = "Purchase Military Vehicle"; //--- ToDo: Localize;
+	text = $STR_UI_MILITARY_VEHICLE;
 	x = 0.254979 * safezoneW + safezoneX;
 	y = 0.233941 * safezoneH + safezoneY;
 	w = 0.425038 * safezoneW;
@@ -420,7 +420,7 @@ class HQ_frame: RscFrame
 class HQ_button_back: RscButton
 {
 	idc = 103;
-	text = "Back"; //--- ToDo: Localize;
+	text = $STR_UI_BACK;
 	x = 0.61 * safezoneW + safezoneX;
 	y = 0.251941 * safezoneH + safezoneY;
 	w = 0.06 * safezoneW;//0.175015
@@ -430,7 +430,7 @@ class HQ_button_back: RscButton
 class HQ_button_quad: RscButton // L1
 {
 	idc = 104;
-	text = "Buy Quadbike"; //--- ToDo: Localize;
+	text = $STR_UI_QUADBIKE;
 	x = 0.272481 * safezoneW + safezoneX;
 	y = 0.317959 * safezoneH + safezoneY;
 	w = 0.175015 * safezoneW;
@@ -440,7 +440,7 @@ class HQ_button_quad: RscButton // L1
 class HQ_button_offroad: RscButton // L2
 {
 	idc = 105;
-	text = "Buy Offroad/UAZ"; //--- ToDo: Localize;
+	text = $STR_UI_OFFROAD;
 	x = 0.272481 * safezoneW + safezoneX;
 	y = 0.415981 * safezoneH + safezoneY;
 	w = 0.175015 * safezoneW;
@@ -450,7 +450,7 @@ class HQ_button_offroad: RscButton // L2
 class HQ_button_truck: RscButton // L3
 {
 	idc = 106;
-	text = "Buy Truck"; //--- ToDo: Localize;
+	text = $STR_UI_TRUCK;
 	x = 0.272481 * safezoneW + safezoneX;
 	y = 0.514003 * safezoneH + safezoneY;
 	w = 0.175015 * safezoneW;
@@ -460,7 +460,7 @@ class HQ_button_truck: RscButton // L3
 class HQ_button_Aoffroad: RscButton // R1
 {
 	idc = 107;
-	text = "Buy Armed Offroad"; //--- ToDo: Localize;
+	text = $STR_UI_ARMED_OFFROAD;
 	x = 0.482498 * safezoneW + safezoneX;
 	y = 0.317959 * safezoneH + safezoneY;
 	w = 0.175015 * safezoneW;
@@ -470,7 +470,7 @@ class HQ_button_Aoffroad: RscButton // R1
 class HQ_button_MG: RscButton // R3
 {
 	idc = 108;
-	text = "Buy MG"; //--- ToDo: Localize;
+	text = $STR_UI_MG;
 	x = 0.482498 * safezoneW + safezoneX;
 	y = 0.514003 * safezoneH + safezoneY;
 	w = 0.175015 * safezoneW;
@@ -480,7 +480,7 @@ class HQ_button_MG: RscButton // R3
 class HQ_button_mortar: RscButton // R2
 {
 	idc = 109;
-	text = "Buy Mortar"; //--- ToDo: Localize;
+	text = $STR_UI_MORTAR;
 	x = 0.482498 * safezoneW + safezoneX;
 	y = 0.415981 * safezoneH + safezoneY;
 	w = 0.175015 * safezoneW;
@@ -490,7 +490,7 @@ class HQ_button_mortar: RscButton // R2
 class HQ_button_AT: RscButton // L4
 {
 	idc = 110;
-	text = "Buy Static AT"; //--- ToDo: Localize;
+	text = $STR_UI_STATIC_AT;
 	x = 0.272481 * safezoneW + safezoneX;
 	y = 0.612025 * safezoneH + safezoneY;
 	w = 0.175015 * safezoneW;
@@ -501,7 +501,7 @@ class HQ_button_AT: RscButton // L4
 class HQ_button_AA: RscButton // R4
 {
 	idc = 111;
-	text = "Buy Static AA"; //--- ToDo: Localize;
+	text = $STR_UI_STATIC_AA;
 	x = 0.482498 * safezoneW + safezoneX;
 	y = 0.612025 * safezoneH + safezoneY;
 	w = 0.175015 * safezoneW;
@@ -512,7 +512,7 @@ class HQ_button_AA: RscButton // R4
 class HQ_button_APC: RscButton // L5 -- M5
 {
 	idc = 112;
-	text = "Buy APC"; //--- ToDo: Localize;
+	text = $STR_UI_APC;
 	x = 0.37749 * safezoneW + safezoneX;
 	y = 0.710047 * safezoneH + safezoneY;
 	w = 0.175015 * safezoneW;
@@ -523,7 +523,7 @@ class HQ_button_APC: RscButton // L5 -- M5
 class HQ_button_CTRUCK: RscButton // R5
 {
 	idc = 113;
-	text = "Buy C2 Truck"; //--- ToDo: Localize;
+	text = "Buy C2 Truck";
 	x = 0.37749 * safezoneW + safezoneX;
 	y = 0.710047 * safezoneH + safezoneY;
 	w = 0.175015 * safezoneW;
@@ -550,7 +550,7 @@ class game_options
 class HQ_box: BOX
 {
 	idc = -1;
-	text = ""; //--- ToDo: Localize;
+	text = "";
 	x = 0.244979 * safezoneW + safezoneX;
 	y = 0.223941 * safezoneH + safezoneY;
 	w = 0.445038 * safezoneW;
@@ -559,7 +559,7 @@ class HQ_box: BOX
 class HQ_frame: RscFrame
 {
 	idc = -1;
-	text = "Game Options"; //--- ToDo: Localize;
+	text = $STR_UI_GAME_OPTIONS;
 	x = 0.254979 * safezoneW + safezoneX;
 	y = 0.233941 * safezoneH + safezoneY;
 	w = 0.425038 * safezoneW;
@@ -568,7 +568,7 @@ class HQ_frame: RscFrame
 class HQ_button_back: RscButton
 {
 	idc = -1;
-	text = "Back"; //--- ToDo: Localize;
+	text = $STR_UI_BACK;
 	x = 0.61 * safezoneW + safezoneX;
 	y = 0.251941 * safezoneH + safezoneY;
 	w = 0.06 * safezoneW;//0.175015
@@ -578,7 +578,7 @@ class HQ_button_back: RscButton
 class HQ_button_civplus: RscButton
 {
 	idc = -1;
-	text = "Civ Config"; //--- ToDo: Localize;
+	text = $STR_UI_CIV_CONFIG;
 	x = 0.272481 * safezoneW + safezoneX;
 	y = 0.317959 * safezoneH + safezoneY;
 	w = 0.175015 * safezoneW;
@@ -588,7 +588,7 @@ class HQ_button_civplus: RscButton
 class HQ_button_civless: RscButton
 {
 	idc = -1;
-	text = "Resign Comm.Career"; //--- ToDo: Localize;
+	text = $STR_UI_RESIGN_COMM_CAREER;
 	x = 0.272481 * safezoneW + safezoneX;
 	y = 0.415981 * safezoneH + safezoneY;
 	w = 0.175015 * safezoneW;
@@ -598,7 +598,7 @@ class HQ_button_civless: RscButton
 class HQ_button_music: RscButton
 {
 	idc = -1;
-	text = "Music ON/OFF"; //--- ToDo: Localize;
+	text = $STR_UI_MUSIC_ON_OFF;
 	x = 0.272481 * safezoneW + safezoneX;
 	y = 0.514003 * safezoneH + safezoneY;
 	w = 0.175015 * safezoneW;
@@ -608,7 +608,7 @@ class HQ_button_music: RscButton
 class HQ_button_garbageclean: RscButton
 {
 	idc = -1;
-	text = "Garbage Clean"; //--- ToDo: Localize;
+	text = $STR_UI_GARBAGE_CLEAN;
 	x = 0.482498 * safezoneW + safezoneX;
 	y = 0.317959 * safezoneH + safezoneY;
 	w = 0.175015 * safezoneW;
@@ -618,7 +618,7 @@ class HQ_button_garbageclean: RscButton
 class HQ_button_loadgame: RscButton
 {
 	idc = -1;
-	text = "Reinit UI \ Radio"; //--- ToDo: Localize;
+	text = $STR_UI_REINIT_UI_RADIO;
 	x = 0.482498 * safezoneW + safezoneX;
 	y = 0.514003 * safezoneH + safezoneY;
 	w = 0.175015 * safezoneW;
@@ -628,7 +628,7 @@ class HQ_button_loadgame: RscButton
 class HQ_button_savegame: RscButton
 {
 	idc = -1;
-	text = "Persistent Save"; //--- ToDo: Localize;
+	text = $STR_UI_PERSISTENT_SAVE;
 	x = 0.482498 * safezoneW + safezoneX;
 	y = 0.415981 * safezoneH + safezoneY;
 	w = 0.175015 * safezoneW;
@@ -638,7 +638,7 @@ class HQ_button_savegame: RscButton
 class HQ_button_fpsplus: RscButton
 {
 	idc = -1;
-	text = "FPS Limiter"; //--- ToDo: Localize;
+	text = $STR_UI_FPS_LIMITER;
 	x = 0.272481 * safezoneW + safezoneX;
 	y = 0.612025 * safezoneH + safezoneY;
 	w = 0.175015 * safezoneW;
@@ -649,7 +649,7 @@ class HQ_button_fpsplus: RscButton
 class HQ_button_AA: RscButton
 {
 	idc = -1;
-	text = "Spawn Dist. Config"; //--- ToDo: Localize;
+	text = $STR_UI_SPAWN_DIST_CONFIG;
 	x = 0.482498 * safezoneW + safezoneX;
 	y = 0.612025 * safezoneH + safezoneY;
 	w = 0.175015 * safezoneW;
@@ -660,7 +660,7 @@ class HQ_button_AA: RscButton
 class HQ_button_com_menu: RscButton
 {
 	idc = -1;
-	text = "Commander Menu"; //--- ToDo: Localize;
+	text = $STR_UI_COMMANDER_MENU;
 	x = 0.272481 * safezoneW + safezoneX;
 	y = 0.710047 * safezoneH + safezoneY;
 	w = 0.175015 * safezoneW;
@@ -671,7 +671,7 @@ class HQ_button_com_menu: RscButton
 class HQ_button_resync: RscButton
 {
 	idc = -1;
-	text = "Resync Arsenal"; //--- ToDo: Localize;
+	text = $STR_UI_RESYNC_ARSENAL;
 	x = 0.482498 * safezoneW + safezoneX;
 	y = 0.710047 * safezoneH + safezoneY;
 	w = 0.175015 * safezoneW;
@@ -698,7 +698,7 @@ class build_menu
 class HQ_box: BOX
 {
 	idc = -1;
-	text = ""; //--- ToDo: Localize;
+	text = "";
 	x = 0.244979 * safezoneW + safezoneX;
 	y = 0.223941 * safezoneH + safezoneY;
 	w = 0.445038 * safezoneW;
@@ -708,7 +708,7 @@ class HQ_box: BOX
 class HQ_frame: RscFrame
 {
 	idc = -1;
-	text = "Building Options"; //--- ToDo: Localize;
+	text = $STR_UI_BUILDING_OPTIONS;
 	x = 0.254979 * safezoneW + safezoneX;
 	y = 0.233941 * safezoneH + safezoneY;
 	w = 0.425038 * safezoneW;
@@ -718,7 +718,7 @@ class HQ_frame: RscFrame
 class HQ_button_back: RscButton
 {
 	idc = -1;
-	text = "Back"; //--- ToDo: Localize;
+	text = $STR_UI_BACK;
 	x = 0.61 * safezoneW + safezoneX;
 	y = 0.251941 * safezoneH + safezoneY;
 	w = 0.06 * safezoneW;//0.175015
@@ -728,7 +728,7 @@ class HQ_button_back: RscButton
 class HQ_button_mortar: RscButton // L2
 {
 	idc = -1;
-	text = "Build Minefield"; //--- ToDo: Localize;
+	text = $STR_UI_BUILD_MINEFIELD;
 	x = 0.272481 * safezoneW + safezoneX;
 	y = 0.415981 * safezoneH + safezoneY;
 	w = 0.175015 * safezoneW;
@@ -738,7 +738,7 @@ class HQ_button_mortar: RscButton // L2
 class HQ_button_cman: RscButton // R2
 {
 	idc = -1;
-	text = "Manage Camps"; //--- ToDo: Localize;
+	text = $STR_UI_MANAGE_CAMPS;
 	x = 0.482498 * safezoneW + safezoneX;
 	y = 0.415981 * safezoneH + safezoneY;
 	w = 0.175015 * safezoneW;
@@ -749,7 +749,7 @@ class HQ_button_cman: RscButton // R2
 class HQ_button_AT: RscButton // L1
 {
 	idc = -1;
-	text = "O.Post - Roadblock"; //--- ToDo: Localize;
+	text = $STR_UI_OPOST_READBLOCK;
 	x = 0.272481 * safezoneW + safezoneX;
 	y = 0.317959 * safezoneH + safezoneY;
 	w = 0.175015 * safezoneW;
@@ -759,7 +759,7 @@ class HQ_button_AT: RscButton // L1
 class HQ_button_AA: RscButton // R1
 {
 	idc = -1;
-	text = "O.Post-Roadblock Delete"; //--- ToDo: Localize;
+	text = $STR_UI_OPOST_READBLOCK_DELETE;
 	x = 0.482498 * safezoneW + safezoneX;
 	y = 0.317959 * safezoneH + safezoneY;
 	w = 0.175015 * safezoneW;
@@ -769,7 +769,7 @@ class HQ_button_AA: RscButton // R1
 class HQ_button_lantern: RscButton // L3
 {
 	idc = -1;
-	text = "HQ Fortifications"; //--- ToDo: Localize;
+	text = $STR_UI_HQ_FORTIFICATION;
 	x = 0.37749 * safezoneW + safezoneX;
 	y = 0.514003 * safezoneH + safezoneY;
 	w = 0.175015 * safezoneW;
@@ -792,7 +792,7 @@ class mission_menu
 class HQ_box: BOX
 {
 	idc = -1;
-	text = ""; //--- ToDo: Localize;
+	text = "";
 	x = 0.244979 * safezoneW + safezoneX;
 	y = 0.223941 * safezoneH + safezoneY;
 	w = 0.445038 * safezoneW;
@@ -801,7 +801,7 @@ class HQ_box: BOX
 class HQ_frame: RscFrame
 {
 	idc = -1;
-	text = "Available Missions"; //--- ToDo: Localize;
+	text = $STR_UI_AVAILABLE_MISSIONS;
 	x = 0.254979 * safezoneW + safezoneX;
 	y = 0.233941 * safezoneH + safezoneY;
 	w = 0.425038 * safezoneW;
@@ -810,7 +810,7 @@ class HQ_frame: RscFrame
 class HQ_button_back: RscButton
 {
 	idc = -1;
-	text = "Back"; //--- ToDo: Localize;
+	text = $STR_UI_BACK;
 	x = 0.61 * safezoneW + safezoneX;
 	y = 0.251941 * safezoneH + safezoneY;
 	w = 0.06 * safezoneW;//0.175015
@@ -820,7 +820,7 @@ class HQ_button_back: RscButton
 class HQ_button_AS: RscButton
 {
 	idc = -1;
-	text = "Military Contact"; // L1
+	text = $STR_UI_MILITARY_CONTACT; // L1
 	x = 0.272481 * safezoneW + safezoneX;
 	y = 0.317959 * safezoneH + safezoneY;
 	w = 0.175015 * safezoneW;
@@ -830,7 +830,7 @@ class HQ_button_AS: RscButton
 class HQ_button_CONV: RscButton
 {
 	idc = -1;
-	text = "Civilian Contact"; // L2
+	text = $STR_UI_CIVILIAN_CONTACT; // L2
 	x = 0.272481 * safezoneW + safezoneX;
 	y = 0.415981 * safezoneH + safezoneY;
 	w = 0.175015 * safezoneW;
@@ -840,7 +840,7 @@ class HQ_button_CONV: RscButton
 class HQ_button_DES: RscButton
 {
 	idc = -1;
-	text = "Explosives Dealer"; // L3
+	text = $STR_UI_EXPLOSIVES_DEALER; // L3
 	x = 0.272481 * safezoneW + safezoneX;
 	y = 0.514003 * safezoneH + safezoneY;
 	w = 0.175015 * safezoneW;
@@ -850,7 +850,7 @@ class HQ_button_DES: RscButton
 class HQ_button_LOG: RscButton
 {
 	idc = -1;
-	text = "Logistics Mission"; // R1
+	text = $STR_UI_LOGISTICS_MISSION; // R1
 	x = 0.482498 * safezoneW + safezoneX;
 	y = 0.317959 * safezoneH + safezoneY;
 	w = 0.175015 * safezoneW;
@@ -860,7 +860,7 @@ class HQ_button_LOG: RscButton
 class HQ_button_RES: RscButton
 {
 	idc = -1;
-	text = "Rescue Mission"; // R3
+	text = $STR_UI_RESCUE_MISSION; // R3
 	x = 0.482498 * safezoneW + safezoneX;
 	y = 0.514003 * safezoneH + safezoneY;
 	w = 0.175015 * safezoneW;
@@ -870,7 +870,7 @@ class HQ_button_RES: RscButton
 class HQ_button_vehicle: RscButton
 {
 	idc = -1;
-	text = "Destroy Mission"; // R2
+	text = $STR_UI_DESTROY_MISSION; // R2
 	x = 0.482498 * safezoneW + safezoneX;
 	y = 0.415981 * safezoneH + safezoneY;
 	w = 0.175015 * safezoneW;
@@ -905,7 +905,7 @@ class radio_comm
 class HQ_box: BOX
 {
 	idc = -1;
-	text = ""; //--- ToDo: Localize;
+	text = "";
 	x = 0.244979 * safezoneW + safezoneX;
 	y = 0.223941 * safezoneH + safezoneY;
 	w = 0.445038 * safezoneW;
@@ -914,7 +914,7 @@ class HQ_box: BOX
 class HQ_frame: RscFrame
 {
 	idc = -1;
-	text = "Battle Options"; //--- ToDo: Localize;
+	text = $STR_UI_BATTLE_OPTIONS;
 	x = 0.254979 * safezoneW + safezoneX;
 	y = 0.233941 * safezoneH + safezoneY;
 	w = 0.425038 * safezoneW;
@@ -923,7 +923,7 @@ class HQ_frame: RscFrame
 class HQ_button_back: RscButton
 {
 	idc = -1;
-	text = "Back"; //--- ToDo: Localize;
+	text = $STR_UI_BACK;
 	x = 0.61 * safezoneW + safezoneX;
 	y = 0.251941 * safezoneH + safezoneY;
 	w = 0.06 * safezoneW;
@@ -933,7 +933,7 @@ class HQ_button_back: RscButton
 class HQ_button_AS: RscButton
 {
 	idc = -1;
-	text = "Fast Travel"; //--- ToDo: Localize;
+	text = $STR_UI_FAST_TRAVEL;
 	x = 0.272481 * safezoneW + safezoneX;
 	y = 0.317959 * safezoneH + safezoneY;
 	w = 0.175015 * safezoneW;
@@ -943,7 +943,7 @@ class HQ_button_AS: RscButton
 class HQ_button_CONV: RscButton
 {
 	idc = -1;
-	text = "Undercover ON"; //--- ToDo: Localize;
+	text = $STR_UI_UNDERCOVER_ON;
 	x = 0.272481 * safezoneW + safezoneX;
 	y = 0.415981 * safezoneH + safezoneY;
 	w = 0.175015 * safezoneW;
@@ -953,7 +953,7 @@ class HQ_button_CONV: RscButton
 class HQ_button_DES: RscButton
 {
 	idc = -1;
-	text = "Vehicle Manager"; //--- ToDo: Localize;
+	text = $STR_UI_VEHICLE_MANAGER;
 	x = 0.272481 * safezoneW + safezoneX;
 	y = 0.514003 * safezoneH + safezoneY;
 	w = 0.175015 * safezoneW;
@@ -963,7 +963,7 @@ class HQ_button_DES: RscButton
 class HQ_button_LOG: RscButton
 {
 	idc = -1;
-	text = "NATO Options"; //--- ToDo: Localize;
+	text = $STR_UI_NATO_OPTIONS;
 	x = 0.482498 * safezoneW + safezoneX;
 	y = 0.317959 * safezoneH + safezoneY;
 	w = 0.175015 * safezoneW;
@@ -973,7 +973,7 @@ class HQ_button_LOG: RscButton
 class HQ_button_RES: RscButton
 {
 	idc = -1;
-	text = "Building Options"; //--- ToDo: Localize;
+	text = $STR_UI_BUILDING_OPTIONS;
 	x = 0.482498 * safezoneW + safezoneX;
 	y = 0.514003 * safezoneH + safezoneY;
 	w = 0.175015 * safezoneW;
@@ -983,7 +983,7 @@ class HQ_button_RES: RscButton
 class HQ_button_vehicle: RscButton
 {
 	idc = -1;
-	text = "Recruit Squad"; //--- ToDo: Localize;
+	text = $STR_UI_RECRUIT_SQUAD;
 	x = 0.482498 * safezoneW + safezoneX;
 	y = 0.415981 * safezoneH + safezoneY;
 	w = 0.175015 * safezoneW;
@@ -993,7 +993,7 @@ class HQ_button_vehicle: RscButton
 class HQ_button_fpsplus: RscButton
 {
 	idc = -1;
-	text = "AI Management"; //--- ToDo: Localize;
+	text = $STR_UI_AI_MANAGMENT;
 	x = 0.272481 * safezoneW + safezoneX;
 	y = 0.612025 * safezoneH + safezoneY;
 	w = 0.175015 * safezoneW;
@@ -1004,7 +1004,7 @@ class HQ_button_fpsplus: RscButton
 class HQ_button_AA: RscButton
 {
 	idc = -1;
-	text = "Player and Money"; //--- ToDo: Localize;
+	text = $STR_UI_PLAYER_AND_MONEY;
 	x = 0.482498 * safezoneW + safezoneX;
 	y = 0.612025 * safezoneH + safezoneY;
 	w = 0.175015 * safezoneW;
@@ -1030,7 +1030,7 @@ class NATO_Options
 class HQ_box: BOX
 {
 	idc = -1;
-	text = ""; //--- ToDo: Localize;
+	text = "";
 	x = 0.244979 * safezoneW + safezoneX;
 	y = 0.223941 * safezoneH + safezoneY;
 	w = 0.445038 * safezoneW;
@@ -1039,7 +1039,7 @@ class HQ_box: BOX
 class HQ_frame: RscFrame
 {
 	idc = -1;
-	text = "Ask NATO for"; //--- ToDo: Localize;
+	text = $STR_UI_ASK_NATO_FOR;
 	x = 0.254979 * safezoneW + safezoneX;
 	y = 0.233941 * safezoneH + safezoneY;
 	w = 0.425038 * safezoneW;
@@ -1048,7 +1048,7 @@ class HQ_frame: RscFrame
 class HQ_button_back: RscButton
 {
 	idc = -1;
-	text = "Back"; //--- ToDo: Localize;
+	text = $STR_UI_BACK;
 	x = 0.61 * safezoneW + safezoneX;
 	y = 0.251941 * safezoneH + safezoneY;
 	w = 0.06 * safezoneW;
@@ -1058,7 +1058,7 @@ class HQ_button_back: RscButton
 class HQ_button_AS: RscButton // L1
 {
 	idc = -1;
-	text = "Attack Mission"; //--- ToDo: Localize;
+	text = $STR_UI_ATTACK_MISSION;
 	x = 0.272481 * safezoneW + safezoneX;
 	y = 0.317959 * safezoneH + safezoneY;
 	w = 0.175015 * safezoneW;
@@ -1069,7 +1069,7 @@ class HQ_button_AS: RscButton // L1
 class HQ_button_CONV: RscButton // L2
 {
 	idc = -1;
-	text = "Armored Column"; //--- ToDo: Localize;
+	text = $STR_UI_ARMORED_COLUMN;
 	x = 0.272481 * safezoneW + safezoneX;
 	y = 0.415981 * safezoneH + safezoneY;
 	w = 0.175015 * safezoneW;
@@ -1080,7 +1080,7 @@ class HQ_button_CONV: RscButton // L2
 class HQ_button_Arty: RscButton // L3
 {
 	idc = -1;
-	text = "Artillery"; //--- ToDo: Localize;
+	text = $STR_UI_ARTILLERY;
 	x = 0.272481 * safezoneW + safezoneX;
 	y = 0.514003 * safezoneH + safezoneY;
 	w = 0.175015 * safezoneW;
@@ -1091,7 +1091,7 @@ class HQ_button_Arty: RscButton // L3
 class HQ_button_RB: RscButton // L4
 {
 	idc = -1;
-	text = "Roadblock"; //--- ToDo: Localize;
+	text = $STR_UI_ROADBLOCK;
 	x = 0.272481 * safezoneW + safezoneX;
 //	x = 0.37749 * safezoneW + safezoneX;
 	y = 0.612025 * safezoneH + safezoneY;
@@ -1105,7 +1105,7 @@ class HQ_button_RB: RscButton // L4
 class HQ_button_LOG: RscButton // R1
 {
 	idc = -1;
-	text = "Artillery"; //--- ToDo: Localize;
+	text = "Artillery";
 	x = 0.482498 * safezoneW + safezoneX;
 	y = 0.317959 * safezoneH + safezoneY;
 	w = 0.175015 * safezoneW;
@@ -1117,7 +1117,7 @@ class HQ_button_LOG: RscButton // R1
 class HQ_button_LOG: RscButton // R1
 {
 	idc = -1;
-	text = "NATO UAV"; //--- ToDo: Localize;
+	text = $STR_UI_NATO_UAV;
 	x = 0.482498 * safezoneW + safezoneX;
 	y = 0.317959 * safezoneH + safezoneY;
 	w = 0.175015 * safezoneW;
@@ -1128,7 +1128,7 @@ class HQ_button_LOG: RscButton // R1
 class HQ_button_vehicle: RscButton // R2
 {
 	idc = -1;
-	text = "Ammodrop"; //--- ToDo: Localize;
+	text = $STR_UI_AMMODROP;
 	x = 0.482498 * safezoneW + safezoneX;
 	y = 0.415981 * safezoneH + safezoneY;
 	w = 0.175015 * safezoneW;
@@ -1139,7 +1139,7 @@ class HQ_button_vehicle: RscButton // R2
 class HQ_button_RES: RscButton // R3
 {
 	idc = -1;
-	text = "CAS Support"; //--- ToDo: Localize;
+	text = $STR_UI_CAS_SUPPORT;
 	x = 0.482498 * safezoneW + safezoneX;
 	y = 0.514003 * safezoneH + safezoneY;
 	w = 0.175015 * safezoneW;
@@ -1151,7 +1151,7 @@ class HQ_button_RES: RscButton // R3
 class HQ_button_BR: RscButton // R4
 {
 	idc = -1;
-	text = "Bomb Run"; //--- ToDo: Localize;
+	text = $STR_UI_BOMB_RUN;
 	x = 0.482498 * safezoneW + safezoneX;
 	y = 0.612025 * safezoneH + safezoneY;
 	w = 0.175015 * safezoneW;
@@ -1163,7 +1163,7 @@ class HQ_button_BR: RscButton // R4
 class HQ_button_QRF: RscButton // M5
 {
 	idc = -1;
-	text = "NATO QRF"; //--- ToDo: Localize;
+	text = $STR_UI_NATO_QRF;
 	x = 0.37749 * safezoneW + safezoneX;
 	y = 0.710047 * safezoneH + safezoneY;
 	w = 0.175015 * safezoneW;
@@ -1191,7 +1191,7 @@ class garrison_menu
 class HQ_box: BOX
 {
 	idc = -1;
-	text = ""; //--- ToDo: Localize;
+	text = "";
 	x = 0.244979 * safezoneW + safezoneX;
 	y = 0.223941 * safezoneH + safezoneY;
 	w = 0.445038 * safezoneW;
@@ -1200,7 +1200,7 @@ class HQ_box: BOX
 class HQ_frame: RscFrame
 {
 	idc = -1;
-	text = "Garrison Menu"; //--- ToDo: Localize;
+	text = $STR_UI_GARRISON_MENU;
 	x = 0.254979 * safezoneW + safezoneX;
 	y = 0.233941 * safezoneH + safezoneY;
 	w = 0.425038 * safezoneW;
@@ -1209,7 +1209,7 @@ class HQ_frame: RscFrame
 class HQ_button_back: RscButton
 {
 	idc = -1;
-	text = "Back"; //--- ToDo: Localize;
+	text = $STR_UI_BACK;
 	x = 0.61 * safezoneW + safezoneX;
 	y = 0.251941 * safezoneH + safezoneY;
 	w = 0.06 * safezoneW;//0.175015
@@ -1219,7 +1219,7 @@ class HQ_button_back: RscButton
 class HQ_button_Gsquad: RscButton
 {
 	idc = -1;
-	text = "Recruit Garrison"; //--- ToDo: Localize;
+	text = $STR_UI_RECRUIT_GARRISON;
 	x = 0.272481 * safezoneW + safezoneX;
 	y = 0.317959 * safezoneH + safezoneY;
 	w = 0.175015 * safezoneW;
@@ -1229,7 +1229,7 @@ class HQ_button_Gsquad: RscButton
 class HQ_button_Gstatic: RscButton
 {
 	idc = -1;
-	text = "Remove Garrison"; //--- ToDo: Localize;
+	text = $STR_UI_REMOVE_GARRISON;
 	x = 0.482498 * safezoneW + safezoneX;
 	y = 0.317959 * safezoneH + safezoneY;
 	w = 0.175015 * safezoneW;
@@ -1255,7 +1255,7 @@ class garrison_recruit
 class HQ_box: BOX
 {
 	idc = 101;
-	text = ""; //--- ToDo: Localize;
+	text = "";
 	x = 0.244979 * safezoneW + safezoneX;
 	y = 0.223941 * safezoneH + safezoneY;
 	w = 0.445038 * safezoneW;
@@ -1264,7 +1264,7 @@ class HQ_box: BOX
 class HQ_frame: RscFrame
 {
 	idc = 102;
-	text = "Garrison Recruitment Options"; //--- ToDo: Localize;
+	text = $STR_UI_GARRISON_REC_OPT;
 	x = 0.254979 * safezoneW + safezoneX;
 	y = 0.233941 * safezoneH + safezoneY;
 	w = 0.425038 * safezoneW;
@@ -1273,7 +1273,7 @@ class HQ_frame: RscFrame
 class HQ_button_back: RscButton
 {
 	idc = 103;
-	text = "Back"; //--- ToDo: Localize;
+	text = $STR_UI_BACK;
 	x = 0.61 * safezoneW + safezoneX;
 	y = 0.251941 * safezoneH + safezoneY;
 	w = 0.06 * safezoneW;//0.175015
@@ -1283,7 +1283,7 @@ class HQ_button_back: RscButton
 class HQ_button_rifleman: RscButton
 {
 	idc = 104;
-	text = "Recruit Militiaman"; //--- ToDo: Localize;
+	text = $STR_UI_GAR_MILI;
 	x = 0.272481 * safezoneW + safezoneX;
 	y = 0.317959 * safezoneH + safezoneY;
 	w = 0.175015 * safezoneW;
@@ -1293,7 +1293,7 @@ class HQ_button_rifleman: RscButton
 class HQ_button_autorifleman: RscButton
 {
 	idc = 105;
-	text = "Recruit Autorifleman"; //--- ToDo: Localize;
+	text = $STR_UI_GAR_AUTORIFLE;
 	x = 0.272481 * safezoneW + safezoneX;
 	y = 0.415981 * safezoneH + safezoneY;
 	w = 0.175015 * safezoneW;
@@ -1303,7 +1303,7 @@ class HQ_button_autorifleman: RscButton
 class HQ_button_medic: RscButton
 {
 	idc = 126;
-	text = "Recruit Medic"; //--- ToDo: Localize;
+	text = $STR_UI_GAR_MEDIC;
 	x = 0.272481 * safezoneW + safezoneX;
 	y = 0.514003 * safezoneH + safezoneY;
 	w = 0.175015 * safezoneW;
@@ -1313,7 +1313,7 @@ class HQ_button_medic: RscButton
 class HQ_button_engineer: RscButton
 {
 	idc = 107;
-	text = "Recruit Squad Leader"; //--- ToDo: Localize;
+	text = $STR_UI_GAR_SQUAD_LEADER;
 	x = 0.482498 * safezoneW + safezoneX;
 	y = 0.317959 * safezoneH + safezoneY;
 	w = 0.175015 * safezoneW;
@@ -1323,7 +1323,7 @@ class HQ_button_engineer: RscButton
 class HQ_button_explosive: RscButton
 {
 	idc = 108;
-	text = "Recruit Mortar"; //--- ToDo: Localize;
+	text = $STR_UI_GAR_MOTAR;
 	x = 0.482498 * safezoneW + safezoneX;
 	y = 0.514003 * safezoneH + safezoneY;
 	w = 0.175015 * safezoneW;
@@ -1333,7 +1333,7 @@ class HQ_button_explosive: RscButton
 class HQ_button_grenadier: RscButton
 {
 	idc = 109;
-	text = "Recruit Grenadier"; //--- ToDo: Localize;
+	text = $STR_UI_GAR_GRENADIER;
 	x = 0.482498 * safezoneW + safezoneX;
 	y = 0.415981 * safezoneH + safezoneY;
 	w = 0.175015 * safezoneW;
@@ -1343,7 +1343,7 @@ class HQ_button_grenadier: RscButton
 class HQ_button_marksman: RscButton
 {
 	idc = 110;
-	text = "Recruit Marksman"; //--- ToDo: Localize;
+	text = $STR_UI_GAR_MARKSMAN;
 	x = 0.272481 * safezoneW + safezoneX;
 	y = 0.612025 * safezoneH + safezoneY;
 	w = 0.175015 * safezoneW;
@@ -1354,7 +1354,7 @@ class HQ_button_marksman: RscButton
 class HQ_button_AT: RscButton
 {
 	idc = 111;
-	text = "Recruit AT"; //--- ToDo: Localize;
+	text = $STR_UI_GAR_AT;
 	x = 0.482498 * safezoneW + safezoneX;
 	y = 0.612025 * safezoneH + safezoneY;
 	w = 0.175015 * safezoneW;
@@ -1365,7 +1365,7 @@ class HQ_button_AT: RscButton
 class HQ_button_AA: RscButton // L5
 {
 	idc = 112;
-	text = "Recruit AA"; //--- ToDo: Localize;
+	text = $STR_UI_GAR_AA;
 	x = 0.37749 * safezoneW + safezoneX;
 	y = 0.710047 * safezoneH + safezoneY;
 	w = 0.175015 * safezoneW;
@@ -1391,7 +1391,7 @@ class fps_limiter
 class HQ_box: BOX
 {
 	idc = -1;
-	text = ""; //--- ToDo: Localize;
+	text = "";
 	x = 0.244979 * safezoneW + safezoneX;
 	y = 0.223941 * safezoneH + safezoneY;
 	w = 0.445038 * safezoneW;
@@ -1400,7 +1400,7 @@ class HQ_box: BOX
 class HQ_frame: RscFrame
 {
 	idc = -1;
-	text = "FPS Limiter"; //--- ToDo: Localize;
+	text = $STR_UI_FPS_LIMITER;
 	x = 0.254979 * safezoneW + safezoneX;
 	y = 0.233941 * safezoneH + safezoneY;
 	w = 0.425038 * safezoneW;
@@ -1409,7 +1409,7 @@ class HQ_frame: RscFrame
 class HQ_button_back: RscButton
 {
 	idc = -1;
-	text = "Back"; //--- ToDo: Localize;
+	text = $STR_UI_BACK;
 	x = 0.61 * safezoneW + safezoneX;
 	y = 0.251941 * safezoneH + safezoneY;
 	w = 0.06 * safezoneW;//0.175015
@@ -1419,7 +1419,7 @@ class HQ_button_back: RscButton
 class HQ_button_Gsquad: RscButton
 {
 	idc = -1;
-	text = "+1 FPS Limit"; //--- ToDo: Localize;
+	text = $STR_UI_ONE_PLUS_FPS;
 	x = 0.272481 * safezoneW + safezoneX;
 	y = 0.317959 * safezoneH + safezoneY;
 	w = 0.175015 * safezoneW;
@@ -1429,7 +1429,7 @@ class HQ_button_Gsquad: RscButton
 class HQ_button_Gstatic: RscButton
 {
 	idc = -1;
-	text = "-1 FPS Limit"; //--- ToDo: Localize;
+	text = $STR_UI_ONE_MINUS_FPS;
 	x = 0.482498 * safezoneW + safezoneX;
 	y = 0.317959 * safezoneH + safezoneY;
 	w = 0.175015 * safezoneW;
@@ -1454,7 +1454,7 @@ class spawn_config
 class HQ_box: BOX
 {
 	idc = -1;
-	text = ""; //--- ToDo: Localize;
+	text = "";
 	x = 0.244979 * safezoneW + safezoneX;
 	y = 0.223941 * safezoneH + safezoneY;
 	w = 0.445038 * safezoneW;
@@ -1463,7 +1463,7 @@ class HQ_box: BOX
 class HQ_frame: RscFrame
 {
 	idc = -1;
-	text = "Spawn Distance Config"; //--- ToDo: Localize;
+	text = $STR_UI_SPAWN_DISTANCE_CONFIG;
 	x = 0.254979 * safezoneW + safezoneX;
 	y = 0.233941 * safezoneH + safezoneY;
 	w = 0.425038 * safezoneW;
@@ -1472,7 +1472,7 @@ class HQ_frame: RscFrame
 class HQ_button_back: RscButton
 {
 	idc = -1;
-	text = "Back"; //--- ToDo: Localize;
+	text = $STR_UI_BACK;
 	x = 0.61 * safezoneW + safezoneX;
 	y = 0.251941 * safezoneH + safezoneY;
 	w = 0.06 * safezoneW;//0.175015
@@ -1482,7 +1482,7 @@ class HQ_button_back: RscButton
 class HQ_button_Gsquad: RscButton
 {
 	idc = -1;
-	text = "+100 Spawn Dist."; //--- ToDo: Localize;
+	text = $STR_UI_PLUS_SPAWN_DIST;
 	x = 0.272481 * safezoneW + safezoneX;
 	y = 0.317959 * safezoneH + safezoneY;
 	w = 0.175015 * safezoneW;
@@ -1492,7 +1492,7 @@ class HQ_button_Gsquad: RscButton
 class HQ_button_Gstatic: RscButton
 {
 	idc = -1;
-	text = "-100 Spawn Dist."; //--- ToDo: Localize;
+	text = $STR_UI_MINUS_SPAWN_DIST;
 	x = 0.482498 * safezoneW + safezoneX;
 	y = 0.317959 * safezoneH + safezoneY;
 	w = 0.175015 * safezoneW;
@@ -1517,7 +1517,7 @@ class civ_config
 class HQ_box: BOX
 {
 	idc = -1;
-	text = ""; //--- ToDo: Localize;
+	text = "";
 	x = 0.244979 * safezoneW + safezoneX;
 	y = 0.223941 * safezoneH + safezoneY;
 	w = 0.445038 * safezoneW;
@@ -1526,7 +1526,7 @@ class HQ_box: BOX
 class HQ_frame: RscFrame
 {
 	idc = -1;
-	text = "Civ Presence Config"; //--- ToDo: Localize;
+	text = $STR_UI_CIV_PRESENCE_CONFIG;
 	x = 0.254979 * safezoneW + safezoneX;
 	y = 0.233941 * safezoneH + safezoneY;
 	w = 0.425038 * safezoneW;
@@ -1535,7 +1535,7 @@ class HQ_frame: RscFrame
 class HQ_button_back: RscButton
 {
 	idc = -1;
-	text = "Back"; //--- ToDo: Localize;
+	text = $STR_UI_BACK;
 	x = 0.61 * safezoneW + safezoneX;
 	y = 0.251941 * safezoneH + safezoneY;
 	w = 0.06 * safezoneW;//0.175015
@@ -1545,7 +1545,7 @@ class HQ_button_back: RscButton
 class HQ_button_Gsquad: RscButton
 {
 	idc = -1;
-	text = "+1% Civ Spawn."; //--- ToDo: Localize;
+	text = $STR_UI_PLUS_CIV_SPAWN;
 	x = 0.272481 * safezoneW + safezoneX;
 	y = 0.317959 * safezoneH + safezoneY;
 	w = 0.175015 * safezoneW;
@@ -1555,7 +1555,7 @@ class HQ_button_Gsquad: RscButton
 class HQ_button_Gstatic: RscButton
 {
 	idc = -1;
-	text = "-1% Civ Spawn."; //--- ToDo: Localize;
+	text = $STR_UI_MINUS_CIV_SPAWN;
 	x = 0.482498 * safezoneW + safezoneX;
 	y = 0.317959 * safezoneH + safezoneY;
 	w = 0.175015 * safezoneW;
@@ -1581,7 +1581,7 @@ class squad_manager
 class HQ_box: BOX
 {
 	idc = -1;
-	text = ""; //--- ToDo: Localize;
+	text = "";
 	x = 0.244979 * safezoneW + safezoneX;
 	y = 0.223941 * safezoneH + safezoneY;
 	w = 0.445038 * safezoneW;
@@ -1590,7 +1590,7 @@ class HQ_box: BOX
 class HQ_frame: RscFrame
 {
 	idc = -1;
-	text = "HC Squad Options"; //--- ToDo: Localize;
+	text = $STR_UI_HC_SQUAD_OPT;
 	x = 0.254979 * safezoneW + safezoneX;
 	y = 0.233941 * safezoneH + safezoneY;
 	w = 0.425038 * safezoneW;
@@ -1599,7 +1599,7 @@ class HQ_frame: RscFrame
 class HQ_button_back: RscButton
 {
 	idc = -1;
-	text = "Back"; //--- ToDo: Localize;
+	text = $STR_UI_BACK;
 	x = 0.61 * safezoneW + safezoneX;
 	y = 0.251941 * safezoneH + safezoneY;
 	w = 0.06 * safezoneW;//0.175015
@@ -1609,7 +1609,7 @@ class HQ_button_back: RscButton
 class HQ_button_mortar: RscButton
 {
 	idc = -1;
-	text = "Squad Add Vehicle"; //--- ToDo: Localize;
+	text = $STR_UI_SQUAD_ADD_VEHICLE;
 	x = 0.272481 * safezoneW + safezoneX;
 	y = 0.317959 * safezoneH + safezoneY;
 	w = 0.175015 * safezoneW;
@@ -1619,7 +1619,7 @@ class HQ_button_mortar: RscButton
 class HQ_button_MG: RscButton
 {
 	idc = -1;
-	text = "Squad Vehicle Stats"; //--- ToDo: Localize;
+	text = $STR_UI_SQUAD_VEH_STATS;
 	x = 0.272481 * safezoneW + safezoneX;
 	y = 0.415981 * safezoneH + safezoneY;
 	w = 0.175015 * safezoneW;
@@ -1629,7 +1629,7 @@ class HQ_button_MG: RscButton
 class HQ_button_AT: RscButton
 {
 	idc = -1;
-	text = "Mount / Dismount"; //--- ToDo: Localize;
+	text = $STR_UI_MOUNT_DISMOUNT;
 	x = 0.482498 * safezoneW + safezoneX;
 	y = 0.317959 * safezoneH + safezoneY;
 	w = 0.175015 * safezoneW;
@@ -1639,7 +1639,7 @@ class HQ_button_AT: RscButton
 class HQ_button_AA: RscButton
 {
 	idc = -1;
-	text = "Static Autotarget"; //--- ToDo: Localize;
+	text = $STR_UI_STATIC_AUTOTARGET;
 	x = 0.482498 * safezoneW + safezoneX;
 	y = 0.415981 * safezoneH + safezoneY;
 	w = 0.175015 * safezoneW;
@@ -1664,7 +1664,7 @@ class veh_query
 class HQ_box: BOX
 {
 	idc = 101;
-	text = ""; //--- ToDo: Localize;
+	text = "";
 	x = 0.244979 * safezoneW + safezoneX;
 	y = 0.223941 * safezoneH + safezoneY;
 	w = 0.445038 * safezoneW;
@@ -1673,7 +1673,7 @@ class HQ_box: BOX
 class HQ_frame: RscFrame
 {
 	idc = 102;
-	text = "Add Vehicle to Squad?"; //--- ToDo: Localize;
+	text = $STR_UI_ADD_VEH_TO_SQUAD;
 	x = 0.254979 * safezoneW + safezoneX;
 	y = 0.233941 * safezoneH + safezoneY;
 	w = 0.425038 * safezoneW;
@@ -1682,7 +1682,7 @@ class HQ_frame: RscFrame
 class HQ_button_back: RscButton
 {
 	idc = 103;
-	text = "Back"; //--- ToDo: Localize;
+	text = $STR_UI_BACK;
 	x = 0.61 * safezoneW + safezoneX;
 	y = 0.251941 * safezoneH + safezoneY;
 	w = 0.06 * safezoneW;//0.175015
@@ -1692,7 +1692,7 @@ class HQ_button_back: RscButton
 class HQ_button_Gsquad: RscButton
 {
 	idc = 104;
-	text = "YES"; //--- ToDo: Localize;
+	text = $STR_UI_YES;
 	x = 0.272481 * safezoneW + safezoneX;
 	y = 0.317959 * safezoneH + safezoneY;
 	w = 0.175015 * safezoneW;
@@ -1702,7 +1702,7 @@ class HQ_button_Gsquad: RscButton
 class HQ_button_Gstatic: RscButton
 {
 	idc = 105;
-	text = "NO"; //--- ToDo: Localize;
+	text = $STR_UI_NO;
 	x = 0.482498 * safezoneW + safezoneX;
 	y = 0.317959 * safezoneH + safezoneY;
 	w = 0.175015 * safezoneW;
@@ -1727,7 +1727,7 @@ class player_money
 class HQ_box: BOX
 {
 	idc = -1;
-	text = ""; //--- ToDo: Localize;
+	text = "";
 	x = 0.244979 * safezoneW + safezoneX;
 	y = 0.223941 * safezoneH + safezoneY;
 	w = 0.445038 * safezoneW;
@@ -1736,7 +1736,7 @@ class HQ_box: BOX
 class HQ_frame: RscFrame
 {
 	idc = -1;
-	text = "Player and Money Interaction"; //--- ToDo: Localize;
+	text = $STR_UI_PLAYER_AND_MONEY;
 	x = 0.254979 * safezoneW + safezoneX;
 	y = 0.233941 * safezoneH + safezoneY;
 	w = 0.425038 * safezoneW;
@@ -1745,7 +1745,7 @@ class HQ_frame: RscFrame
 class HQ_button_back: RscButton
 {
 	idc = -1;
-	text = "Back"; //--- ToDo: Localize;
+	text = $STR_UI_BACK;
 	x = 0.61 * safezoneW + safezoneX;
 	y = 0.251941 * safezoneH + safezoneY;
 	w = 0.06 * safezoneW;//0.175015
@@ -1755,7 +1755,7 @@ class HQ_button_back: RscButton
 class HQ_button_mortar: RscButton
 {
 	idc = -1;
-	text = "Add Server Member"; //--- ToDo: Localize;
+	text = $STR_UI_ADD_SERVER_MEMBER;
 	x = 0.272481 * safezoneW + safezoneX;
 	y = 0.317959 * safezoneH + safezoneY;
 	w = 0.175015 * safezoneW;
@@ -1765,7 +1765,7 @@ class HQ_button_mortar: RscButton
 class HQ_button_MG: RscButton
 {
 	idc = -1;
-	text = "Remove Server Member"; //--- ToDo: Localize;
+	text = $STR_UI_REMOVE_SERVER_MEMBER;
 	x = 0.272481 * safezoneW + safezoneX;
 	y = 0.415981 * safezoneH + safezoneY;
 	w = 0.175015 * safezoneW;
@@ -1775,7 +1775,7 @@ class HQ_button_MG: RscButton
 class HQ_button_AT: RscButton
 {
 	idc = -1;
-	text = "Donate 100 € to player"; //--- ToDo: Localize;
+	text = $STR_UI_DONATE_TO_PLAYER;
 	x = 0.482498 * safezoneW + safezoneX;
 	y = 0.317959 * safezoneH + safezoneY;
 	w = 0.175015 * safezoneW;
@@ -1785,7 +1785,7 @@ class HQ_button_AT: RscButton
 class HQ_button_AA: RscButton
 {
 	idc = -1;
-	text = "Donate 100 € to FIA"; //--- ToDo: Localize;
+	text = $STR_UI_DONATE_TO_FIA;
 	x = 0.482498 * safezoneW + safezoneX;
 	y = 0.415981 * safezoneH + safezoneY;
 	w = 0.175015 * safezoneW;
@@ -1811,7 +1811,7 @@ class vehicle_manager
 class HQ_box: BOX
 {
 	idc = -1;
-	text = ""; //--- ToDo: Localize;
+	text = "";
 	x = 0.244979 * safezoneW + safezoneX;
 	y = 0.223941 * safezoneH + safezoneY;
 	w = 0.445038 * safezoneW;
@@ -1820,7 +1820,7 @@ class HQ_box: BOX
 class HQ_frame: RscFrame
 {
 	idc = -1;
-	text = "Vehicle Manager"; //--- ToDo: Localize;
+	text = $STR_UI_VEH_MANAGER;
 	x = 0.254979 * safezoneW + safezoneX;
 	y = 0.233941 * safezoneH + safezoneY;
 	w = 0.425038 * safezoneW;
@@ -1829,7 +1829,7 @@ class HQ_frame: RscFrame
 class HQ_button_back: RscButton
 {
 	idc = -1;
-	text = "Back"; //--- ToDo: Localize;
+	text = $STR_UI_BACK;
 	x = 0.61 * safezoneW + safezoneX;
 	y = 0.251941 * safezoneH + safezoneY;
 	w = 0.06 * safezoneW;//0.175015
@@ -1839,7 +1839,7 @@ class HQ_button_back: RscButton
 class HQ_button_Gsquad: RscButton
 {
 	idc = -1;
-	text = "Garage\Sell Vehicle"; //--- ToDo: Localize;
+	text = $STR_UI_GARAGE_SELL_VEH;
 	x = 0.272481 * safezoneW + safezoneX;
 	y = 0.317959 * safezoneH + safezoneY;
 	w = 0.175015 * safezoneW;
@@ -1849,7 +1849,7 @@ class HQ_button_Gsquad: RscButton
 class HQ_button_Gstatic: RscButton
 {
 	idc = -1;
-	text = "Vehicles and Squads"; //--- ToDo: Localize;
+	text = $STR_UI_VEH_SQUADS;
 	x = 0.482498 * safezoneW + safezoneX;
 	y = 0.317959 * safezoneH + safezoneY;
 	w = 0.175015 * safezoneW;
@@ -1860,7 +1860,7 @@ class HQ_button_Gstatic: RscButton
 class HQ_button_Gunlock: RscButton
 {
 	idc = -1;
-	text = "Unlock Vehicle"; //--- ToDo: Localize;
+	text = $STR_UI_UNLOCK_VEHICLE;
 	x = 0.37749 * safezoneW + safezoneX;
 	y = 0.415981 * safezoneH + safezoneY;
 	w = 0.175015 * safezoneW;
@@ -1872,7 +1872,7 @@ class HQ_button_Gunlock: RscButton
 class HQ_button_Gremove: RscButton
 {
 	idc = -1;
-	text = "Remove Garrison Squads"; //--- ToDo: Localize;
+	text = "Remove Garrison Squads";
 	x = 0.37749 * safezoneW + safezoneX;
 	y = 0.415981 * safezoneH + safezoneY;
 	w = 0.175015 * safezoneW;
@@ -1898,7 +1898,7 @@ class garage_sell
 class HQ_box: BOX
 {
 	idc = -1;
-	text = ""; //--- ToDo: Localize;
+	text = "";
 	x = 0.244979 * safezoneW + safezoneX;
 	y = 0.223941 * safezoneH + safezoneY;
 	w = 0.445038 * safezoneW;
@@ -1907,7 +1907,7 @@ class HQ_box: BOX
 class HQ_frame: RscFrame
 {
 	idc = -1;
-	text = "Sell or Garage Vehicle"; //--- ToDo: Localize;
+	text = $STR_UI_SELL_OR_GARAGE_VEHICLE;
 	x = 0.254979 * safezoneW + safezoneX;
 	y = 0.233941 * safezoneH + safezoneY;
 	w = 0.425038 * safezoneW;
@@ -1916,7 +1916,7 @@ class HQ_frame: RscFrame
 class HQ_button_back: RscButton
 {
 	idc = -1;
-	text = "Back"; //--- ToDo: Localize;
+	text = $STR_UI_BACK;
 	x = 0.61 * safezoneW + safezoneX;
 	y = 0.251941 * safezoneH + safezoneY;
 	w = 0.06 * safezoneW;//0.175015
@@ -1926,7 +1926,7 @@ class HQ_button_back: RscButton
 class HQ_button_Gsquad: RscButton
 {
 	idc = -1;
-	text = "Garage Vehicle"; //--- ToDo: Localize;
+	text = $STR_UI_GARAGE_VEHICLE;
 	x = 0.272481 * safezoneW + safezoneX;
 	y = 0.317959 * safezoneH + safezoneY;
 	w = 0.175015 * safezoneW;
@@ -1936,7 +1936,7 @@ class HQ_button_Gsquad: RscButton
 class HQ_button_Gstatic: RscButton
 {
 	idc = -1;
-	text = "Sell Vehicle"; //--- ToDo: Localize;
+	text = $STR_UI_SELL_VEHICLE;
 	x = 0.482498 * safezoneW + safezoneX;
 	y = 0.317959 * safezoneH + safezoneY;
 	w = 0.175015 * safezoneW;
@@ -1948,7 +1948,7 @@ class HQ_button_Gstatic: RscButton
 class HQ_button_Gremove: RscButton
 {
 	idc = -1;
-	text = "Remove Garrison Squads"; //--- ToDo: Localize;
+	text = "Remove Garrison Squads";
 	x = 0.37749 * safezoneW + safezoneX;
 	y = 0.415981 * safezoneH + safezoneY;
 	w = 0.175015 * safezoneW;
@@ -1974,7 +1974,7 @@ class garage_check
 class HQ_box: BOX
 {
 	idc = -1;
-	text = ""; //--- ToDo: Localize;
+	text = "";
 	x = 0.244979 * safezoneW + safezoneX;
 	y = 0.223941 * safezoneH + safezoneY;
 	w = 0.445038 * safezoneW;
@@ -1983,7 +1983,7 @@ class HQ_box: BOX
 class HQ_frame: RscFrame
 {
 	idc = -1;
-	text = "Personal or FIA Garage?"; //--- ToDo: Localize;
+	text = $STR_UI_PERSONAL_OR_FIA_GARAGE;
 	x = 0.254979 * safezoneW + safezoneX;
 	y = 0.233941 * safezoneH + safezoneY;
 	w = 0.425038 * safezoneW;
@@ -1992,7 +1992,7 @@ class HQ_frame: RscFrame
 class HQ_button_back: RscButton
 {
 	idc = -1;
-	text = "Back"; //--- ToDo: Localize;
+	text = $STR_UI_BACK;
 	x = 0.61 * safezoneW + safezoneX;
 	y = 0.251941 * safezoneH + safezoneY;
 	w = 0.06 * safezoneW;//0.175015
@@ -2002,7 +2002,7 @@ class HQ_button_back: RscButton
 class HQ_button_Gsquad: RscButton
 {
 	idc = -1;
-	text = "Personal Garage"; //--- ToDo: Localize;
+	text = $STR_UI_PERSONAL_GARAGE;
 	x = 0.272481 * safezoneW + safezoneX;
 	y = 0.317959 * safezoneH + safezoneY;
 	w = 0.175015 * safezoneW;
@@ -2012,7 +2012,7 @@ class HQ_button_Gsquad: RscButton
 class HQ_button_Gstatic: RscButton
 {
 	idc = -1;
-	text = "FIA Garage"; //--- ToDo: Localize;
+	text = $STR_UI_FIA_GARAGE;
 	x = 0.482498 * safezoneW + safezoneX;
 	y = 0.317959 * safezoneH + safezoneY;
 	w = 0.175015 * safezoneW;
@@ -2025,7 +2025,7 @@ class HQ_button_Gstatic: RscButton
 class HQ_button_Gremove: RscButton
 {
 	idc = -1;
-	text = "Remove Garrison Squads"; //--- ToDo: Localize;
+	text = "Remove Garrison Squads";
 	x = 0.37749 * safezoneW + safezoneX;
 	y = 0.415981 * safezoneH + safezoneY;
 	w = 0.175015 * safezoneW;
@@ -2051,7 +2051,7 @@ class vehicle_option
 class HQ_box: BOX
 {
 	idc = -1;
-	text = ""; //--- ToDo: Localize;
+	text = "";
 	x = 0.244979 * safezoneW + safezoneX;
 	y = 0.223941 * safezoneH + safezoneY;
 	w = 0.445038 * safezoneW;
@@ -2060,7 +2060,7 @@ class HQ_box: BOX
 class HQ_frame: RscFrame
 {
 	idc = -1;
-	text = "Buy Vehicle"; //--- ToDo: Localize;
+	text = $STR_UI_BUY_VEHICLE;
 	x = 0.254979 * safezoneW + safezoneX;
 	y = 0.233941 * safezoneH + safezoneY;
 	w = 0.425038 * safezoneW;
@@ -2069,7 +2069,7 @@ class HQ_frame: RscFrame
 class HQ_button_back: RscButton
 {
 	idc = -1;
-	text = "Back"; //--- ToDo: Localize;
+	text = $STR_UI_BACK;
 	x = 0.61 * safezoneW + safezoneX;
 	y = 0.251941 * safezoneH + safezoneY;
 	w = 0.06 * safezoneW;//0.175015
@@ -2079,7 +2079,7 @@ class HQ_button_back: RscButton
 class HQ_button_Gsquad: RscButton
 {
 	idc = -1;
-	text = "Civilian Vehicle"; //--- ToDo: Localize;
+	text = $STR_UI_CIV_VEH;
 	x = 0.272481 * safezoneW + safezoneX;
 	y = 0.317959 * safezoneH + safezoneY;
 	w = 0.175015 * safezoneW;
@@ -2089,7 +2089,7 @@ class HQ_button_Gsquad: RscButton
 class HQ_button_Gstatic: RscButton
 {
 	idc = -1;
-	text = "Military Vehicle"; //--- ToDo: Localize;
+	text = $STR_UI_MIL_VEH;
 	x = 0.482498 * safezoneW + safezoneX;
 	y = 0.317959 * safezoneH + safezoneY;
 	w = 0.175015 * safezoneW;
@@ -2100,7 +2100,7 @@ class HQ_button_Gstatic: RscButton
 class HQ_button_Gremove: RscButton
 {
 	idc = -1;
-	text = "Remove Garrison Squads"; //--- ToDo: Localize;
+	text = "Remove Garrison Squads";
 	x = 0.37749 * safezoneW + safezoneX;
 	y = 0.415981 * safezoneH + safezoneY;
 	w = 0.175015 * safezoneW;
@@ -2126,7 +2126,7 @@ class civ_vehicle
 class HQ_box: BOX
 {
 	idc = -1;
-	text = ""; //--- ToDo: Localize;
+	text = "";
 	x = 0.244979 * safezoneW + safezoneX;
 	y = 0.223941 * safezoneH + safezoneY;
 	w = 0.445038 * safezoneW;
@@ -2135,7 +2135,7 @@ class HQ_box: BOX
 class HQ_frame: RscFrame
 {
 	idc = -1;
-	text = "Buy Civilian Vehicle"; //--- ToDo: Localize;
+	text = $STR_UI_BUY_CIV_VEH;
 	x = 0.254979 * safezoneW + safezoneX;
 	y = 0.233941 * safezoneH + safezoneY;
 	w = 0.425038 * safezoneW;
@@ -2144,7 +2144,7 @@ class HQ_frame: RscFrame
 class HQ_button_back: RscButton
 {
 	idc = -1;
-	text = "Back"; //--- ToDo: Localize;
+	text = $STR_UI_BACK;
 	x = 0.61 * safezoneW + safezoneX;
 	y = 0.251941 * safezoneH + safezoneY;
 	w = 0.06 * safezoneW;//0.175015
@@ -2154,7 +2154,7 @@ class HQ_button_back: RscButton
 class HQ_button_Gsquad: RscButton
 {
 	idc = 104;
-	text = "Offroad"; //--- ToDo: Localize;
+	text = $STR_UI_BUY_OFFROAD;
 	x = 0.272481 * safezoneW + safezoneX;
 	y = 0.317959 * safezoneH + safezoneY;
 	w = 0.175015 * safezoneW;
@@ -2164,7 +2164,7 @@ class HQ_button_Gsquad: RscButton
 class HQ_button_Gstatic: RscButton
 {
 	idc = 105;
-	text = "Truck"; //--- ToDo: Localize;
+	text = $STR_UI_BUY_TRUCK;
 	x = 0.482498 * safezoneW + safezoneX;
 	y = 0.317959 * safezoneH + safezoneY;
 	w = 0.175015 * safezoneW;
@@ -2174,7 +2174,7 @@ class HQ_button_Gstatic: RscButton
 class HQ_button_Gremove: RscButton
 {
 	idc = 106;
-	text = "Helicopter"; //--- ToDo: Localize;
+	text = $STR_UI_BUY_HELICOPTER;
 	x = 0.37749 * safezoneW + safezoneX;
 	y = 0.415981 * safezoneH + safezoneY;
 	w = 0.175015 * safezoneW;
@@ -2199,7 +2199,7 @@ class carpet_bombing
 class HQ_box: BOX
 {
 	idc = -1;
-	text = ""; //--- ToDo: Localize;
+	text = "";
 	x = 0.244979 * safezoneW + safezoneX;
 	y = 0.223941 * safezoneH + safezoneY;
 	w = 0.445038 * safezoneW;
@@ -2208,7 +2208,7 @@ class HQ_box: BOX
 class HQ_frame: RscFrame
 {
 	idc = -1;
-	text = "Carpet Bombing Strike"; //--- ToDo: Localize;
+	text = $STR_UI_CARPER_BOMBONG_STRIKE;
 	x = 0.254979 * safezoneW + safezoneX;
 	y = 0.233941 * safezoneH + safezoneY;
 	w = 0.425038 * safezoneW;
@@ -2217,7 +2217,7 @@ class HQ_frame: RscFrame
 class HQ_button_back: RscButton
 {
 	idc = -1;
-	text = "Back"; //--- ToDo: Localize;
+	text = $STR_UI_BACK;
 	x = 0.61 * safezoneW + safezoneX;
 	y = 0.251941 * safezoneH + safezoneY;
 	w = 0.06 * safezoneW;//0.175015
@@ -2227,7 +2227,7 @@ class HQ_button_back: RscButton
 class HQ_button_Gsquad: RscButton
 {
 	idc = -1;
-	text = "HE Bombs"; //--- ToDo: Localize;
+	text = $STR_UI_HE_BOMBS;
 	x = 0.272481 * safezoneW + safezoneX;
 	y = 0.317959 * safezoneH + safezoneY;
 	w = 0.175015 * safezoneW;
@@ -2238,7 +2238,7 @@ class HQ_button_Gsquad: RscButton
 class HQ_button_Gstatic: RscButton
 {
 	idc = -1;
-	text = "Carpet Bombing"; //--- ToDo: Localize;
+	text = $STR_UI_CARPET_BOMBING;
 	x = 0.482498 * safezoneW + safezoneX;
 	y = 0.317959 * safezoneH + safezoneY;
 	w = 0.175015 * safezoneW;
@@ -2250,7 +2250,7 @@ class HQ_button_Gstatic: RscButton
 class HQ_button_Gremove: RscButton
 {
 	idc = -1;
-	text = "NAPALM Bomb"; //--- ToDo: Localize;
+	text = $STR_UI_NAPALM_BOMB;
 	x = 0.37749 * safezoneW + safezoneX;
 	y = 0.415981 * safezoneH + safezoneY;
 	w = 0.175015 * safezoneW;
@@ -2278,7 +2278,7 @@ class tu_madre
 class HQ_box: BOX
 {
 	idc = -1;
-	text = ""; //--- ToDo: Localize;
+	text = "";
 	x = 0.244979 * safezoneW + safezoneX;
 	y = 0.223941 * safezoneH + safezoneY;
 	w = 0.445038 * safezoneW;
@@ -2287,7 +2287,7 @@ class HQ_box: BOX
 class HQ_frame: RscFrame
 {
 	idc = -1;
-	text = "Carpet Bombing Strike"; //--- ToDo: Localize;
+	text = $STR_UI_CARPER_BOMBONG_STRIKE;
 	x = 0.254979 * safezoneW + safezoneX;
 	y = 0.233941 * safezoneH + safezoneY;
 	w = 0.425038 * safezoneW;
@@ -2296,7 +2296,7 @@ class HQ_frame: RscFrame
 class HQ_button_back: RscListBox
 {
 	idc = -1;
-	//text = "Back"; //--- ToDo: Localize;
+	//text = $STR_UI_BACK;
 	x = 0.61 * safezoneW + safezoneX;
 	y = 0.251941 * safezoneH + safezoneY;
 	w = 0.06 * safezoneW;//0.175015
@@ -2317,7 +2317,7 @@ class HQ_button_back: RscListBox
 class HQ_button_Gsquad: RscButton
 {
 	idc = -1;
-	text = "HE Bombs"; //--- ToDo: Localize;
+	text = $STR_UI_HE_BOMBS;
 	x = 0.272481 * safezoneW + safezoneX;
 	y = 0.317959 * safezoneH + safezoneY;
 	w = 0.175015 * safezoneW;
@@ -2328,7 +2328,7 @@ class HQ_button_Gsquad: RscButton
 class HQ_button_Gstatic: RscButton
 {
 	idc = -1;
-	text = "Carpet Bombing"; //--- ToDo: Localize;
+	text = $STR_UI_CARPET_BOMBING;
 	x = 0.482498 * safezoneW + safezoneX;
 	y = 0.317959 * safezoneH + safezoneY;
 	w = 0.175015 * safezoneW;
@@ -2340,7 +2340,7 @@ class HQ_button_Gstatic: RscButton
 class HQ_button_Gremove: RscButton
 {
 	idc = -1;
-	text = "NAPALM Bomb"; //--- ToDo: Localize;
+	text = $STR_UI_NAPALM_BOMB;
 	x = 0.37749 * safezoneW + safezoneX;
 	y = 0.415981 * safezoneH + safezoneY;
 	w = 0.175015 * safezoneW;
@@ -2367,7 +2367,7 @@ class AI_management
 class HQ_box: BOX
 {
 	idc = -1;
-	text = ""; //--- ToDo: Localize;
+	text = "";
 	x = 0.244979 * safezoneW + safezoneX;
 	y = 0.223941 * safezoneH + safezoneY;
 	w = 0.445038 * safezoneW;
@@ -2376,7 +2376,7 @@ class HQ_box: BOX
 class HQ_frame: RscFrame
 {
 	idc = -1;
-	text = "AI Management"; //--- ToDo: Localize;
+	text = $STR_UI_AI_MANAGMENT;
 	x = 0.254979 * safezoneW + safezoneX;
 	y = 0.233941 * safezoneH + safezoneY;
 	w = 0.425038 * safezoneW;
@@ -2385,7 +2385,7 @@ class HQ_frame: RscFrame
 class HQ_button_back: RscButton
 {
 	idc = -1;
-	text = "Back"; //--- ToDo: Localize;
+	text = $STR_UI_BACK;
 	x = 0.61 * safezoneW + safezoneX;
 	y = 0.251941 * safezoneH + safezoneY;
 	w = 0.06 * safezoneW;//0.175015
@@ -2395,7 +2395,7 @@ class HQ_button_back: RscButton
 class HQ_button_Gsquad: RscButton
 {
 	idc = -1;
-	text = "Temp. AI Control"; //--- ToDo: Localize;
+	text = $STR_UI_TEMP_AI_CONTROL;
 	x = 0.272481 * safezoneW + safezoneX;
 	y = 0.317959 * safezoneH + safezoneY;
 	w = 0.175015 * safezoneW;
@@ -2405,7 +2405,7 @@ class HQ_button_Gsquad: RscButton
 class HQ_button_Gstatic: RscButton
 {
 	idc = -1;
-	text = "Auto Rearm"; //--- ToDo: Localize;
+	text = $STR_UI_AUTO_REARM;
 	x = 0.482498 * safezoneW + safezoneX;
 	y = 0.317959 * safezoneH + safezoneY;
 	w = 0.175015 * safezoneW;
@@ -2416,7 +2416,7 @@ class HQ_button_Gstatic: RscButton
 class HQ_button_Gremove: RscButton
 {
 	idc = -1;
-	text = "Auto Heal"; //--- ToDo: Localize;
+	text = $STR_UI_AUTO_HEAL;
 	//x = 0.37749 * safezoneW + safezoneX;
 	x = 0.272481 * safezoneW + safezoneX;
 	y = 0.415981 * safezoneH + safezoneY;
@@ -2427,7 +2427,7 @@ class HQ_button_Gremove: RscButton
 class dismiss_units: RscButton
 {
 	idc = -1;
-	text = "Dismiss Units/Squads"; //--- ToDo: Localize;
+	text = $STR_UI_DISMISS_UNITS_SQUADS;
 	//x = 0.37749 * safezoneW + safezoneX;
 	x = 0.482498 * safezoneW + safezoneX;
 	y = 0.415981 * safezoneH + safezoneY;
@@ -2453,7 +2453,7 @@ class rounds_number
 class HQ_box: BOX
 {
 	idc = -1;
-	text = ""; //--- ToDo: Localize;
+	text = "";
 	x = 0.244979 * safezoneW + safezoneX;
 	y = 0.223941 * safezoneH + safezoneY;
 	w = 0.445038 * safezoneW;
@@ -2462,7 +2462,7 @@ class HQ_box: BOX
 class HQ_frame: RscFrame
 {
 	idc = -1;
-	text = "Select No. Rounds to be fired"; //--- ToDo: Localize;
+	text = $STR_UI_SELECT_NO_ROUND_TO_BE_FIRED;
 	x = 0.254979 * safezoneW + safezoneX;
 	y = 0.233941 * safezoneH + safezoneY;
 	w = 0.425038 * safezoneW;
@@ -2471,7 +2471,7 @@ class HQ_frame: RscFrame
 class HQ_button_back: RscButton
 {
 	idc = -1;
-	text = "Back"; //--- ToDo: Localize;
+	text = $STR_UI_BACK;
 	x = 0.61 * safezoneW + safezoneX;
 	y = 0.251941 * safezoneH + safezoneY;
 	w = 0.06 * safezoneW;//0.175015
@@ -2481,7 +2481,7 @@ class HQ_button_back: RscButton
 class HQ_button_AS: RscButton
 {
 	idc = -1;
-	text = "1"; //--- ToDo: Localize;
+	text = "1";
 	x = 0.272481 * safezoneW + safezoneX;
 	y = 0.317959 * safezoneH + safezoneY;
 	w = 0.175015 * safezoneW;
@@ -2491,7 +2491,7 @@ class HQ_button_AS: RscButton
 class HQ_button_CONV: RscButton
 {
 	idc = -1;
-	text = "2"; //--- ToDo: Localize;
+	text = "2";
 	x = 0.272481 * safezoneW + safezoneX;
 	y = 0.415981 * safezoneH + safezoneY;
 	w = 0.175015 * safezoneW;
@@ -2501,7 +2501,7 @@ class HQ_button_CONV: RscButton
 class HQ_button_DES: RscButton
 {
 	idc = -1;
-	text = "3"; //--- ToDo: Localize;
+	text = "3";
 	x = 0.272481 * safezoneW + safezoneX;
 	y = 0.514003 * safezoneH + safezoneY;
 	w = 0.175015 * safezoneW;
@@ -2511,7 +2511,7 @@ class HQ_button_DES: RscButton
 class HQ_button_LOG: RscButton
 {
 	idc = -1;
-	text = "5"; //--- ToDo: Localize;
+	text = "5";
 	x = 0.482498 * safezoneW + safezoneX;
 	y = 0.317959 * safezoneH + safezoneY;
 	w = 0.175015 * safezoneW;
@@ -2521,7 +2521,7 @@ class HQ_button_LOG: RscButton
 class HQ_button_RES: RscButton
 {
 	idc = -1;
-	text = "7"; //--- ToDo: Localize;
+	text = "7";
 	x = 0.482498 * safezoneW + safezoneX;
 	y = 0.514003 * safezoneH + safezoneY;
 	w = 0.175015 * safezoneW;
@@ -2531,7 +2531,7 @@ class HQ_button_RES: RscButton
 class HQ_button_vehicle: RscButton
 {
 	idc = -1;
-	text = "6"; //--- ToDo: Localize;
+	text = "6";
 	x = 0.482498 * safezoneW + safezoneX;
 	y = 0.415981 * safezoneH + safezoneY;
 	w = 0.175015 * safezoneW;
@@ -2541,7 +2541,7 @@ class HQ_button_vehicle: RscButton
 class HQ_button_fpsplus: RscButton
 {
 	idc = -1;
-	text = "4"; //--- ToDo: Localize;
+	text = "4";
 	x = 0.272481 * safezoneW + safezoneX;
 	y = 0.612025 * safezoneH + safezoneY;
 	w = 0.175015 * safezoneW;
@@ -2552,7 +2552,7 @@ class HQ_button_fpsplus: RscButton
 class HQ_button_AA: RscButton
 {
 	idc = -1;
-	text = "8"; //--- ToDo: Localize;
+	text = "8";
 	x = 0.482498 * safezoneW + safezoneX;
 	y = 0.612025 * safezoneH + safezoneY;
 	w = 0.175015 * safezoneW;
@@ -2577,7 +2577,7 @@ class strike_type
 class HQ_box: BOX
 {
 	idc = -1;
-	text = ""; //--- ToDo: Localize;
+	text = "";
 	x = 0.244979 * safezoneW + safezoneX;
 	y = 0.223941 * safezoneH + safezoneY;
 	w = 0.445038 * safezoneW;
@@ -2586,7 +2586,7 @@ class HQ_box: BOX
 class HQ_frame: RscFrame
 {
 	idc = -1;
-	text = "Select type of strike"; //--- ToDo: Localize;
+	text = $STR_UI_SELECT_TYPE_OF_STRIKE;
 	x = 0.254979 * safezoneW + safezoneX;
 	y = 0.233941 * safezoneH + safezoneY;
 	w = 0.425038 * safezoneW;
@@ -2595,7 +2595,7 @@ class HQ_frame: RscFrame
 class HQ_button_back: RscButton
 {
 	idc = -1;
-	text = "Back"; //--- ToDo: Localize;
+	text = $STR_UI_BACK;
 	x = 0.61 * safezoneW + safezoneX;
 	y = 0.251941 * safezoneH + safezoneY;
 	w = 0.06 * safezoneW;//0.175015
@@ -2605,7 +2605,7 @@ class HQ_button_back: RscButton
 class HQ_button_Gsquad: RscButton
 {
 	idc = -1;
-	text = "Single Point Strike"; //--- ToDo: Localize;
+	text = $STR_UI_SINGLE_POINT_STRIKE;
 	x = 0.272481 * safezoneW + safezoneX;
 	y = 0.317959 * safezoneH + safezoneY;
 	w = 0.175015 * safezoneW;
@@ -2615,7 +2615,7 @@ class HQ_button_Gsquad: RscButton
 class HQ_button_Gstatic: RscButton
 {
 	idc = -1;
-	text = "Barrage Strike"; //--- ToDo: Localize;
+	text = $STR_UI_BARRAGE_STRIKE;
 	x = 0.482498 * safezoneW + safezoneX;
 	y = 0.317959 * safezoneH + safezoneY;
 	w = 0.175015 * safezoneW;
@@ -2626,7 +2626,7 @@ class HQ_button_Gstatic: RscButton
 class HQ_button_Gremove: RscButton
 {
 	idc = -1;
-	text = "Remove Garrison Squads"; //--- ToDo: Localize;
+	text = "Remove Garrison Squads";
 	x = 0.37749 * safezoneW + safezoneX;
 	y = 0.415981 * safezoneH + safezoneY;
 	w = 0.175015 * safezoneW;
@@ -2652,7 +2652,7 @@ class mbt_type
 class HQ_box: BOX
 {
 	idc = -1;
-	text = ""; //--- ToDo: Localize;
+	text = "";
 	x = 0.244979 * safezoneW + safezoneX;
 	y = 0.223941 * safezoneH + safezoneY;
 	w = 0.445038 * safezoneW;
@@ -2661,7 +2661,7 @@ class HQ_box: BOX
 class HQ_frame: RscFrame
 {
 	idc = -1;
-	text = "Select type ammo for the strike"; //--- ToDo: Localize;
+	text = $STR_UI_SELECT_TYPE_AMMO_FOR_THE_STRIKE;
 	x = 0.254979 * safezoneW + safezoneX;
 	y = 0.233941 * safezoneH + safezoneY;
 	w = 0.425038 * safezoneW;
@@ -2670,7 +2670,7 @@ class HQ_frame: RscFrame
 class HQ_button_back: RscButton
 {
 	idc = -1;
-	text = "Back"; //--- ToDo: Localize;
+	text = $STR_UI_BACK;
 	x = 0.61 * safezoneW + safezoneX;
 	y = 0.251941 * safezoneH + safezoneY;
 	w = 0.06 * safezoneW;//0.175015
@@ -2680,7 +2680,7 @@ class HQ_button_back: RscButton
 class HQ_button_Gsquad: RscButton
 {
 	idc = -1;
-	text = "HE"; //--- ToDo: Localize;
+	text = $STR_UI_STRIKE_HE;
 	x = 0.272481 * safezoneW + safezoneX;
 	y = 0.317959 * safezoneH + safezoneY;
 	w = 0.175015 * safezoneW;
@@ -2690,7 +2690,7 @@ class HQ_button_Gsquad: RscButton
 class HQ_button_Gstatic: RscButton
 {
 	idc = -1;
-	text = "Laser Guided"; //--- ToDo: Localize;
+	text = $STR_UI_LASER_GUIDED;
 	x = 0.482498 * safezoneW + safezoneX;
 	y = 0.317959 * safezoneH + safezoneY;
 	w = 0.175015 * safezoneW;
@@ -2701,7 +2701,7 @@ class HQ_button_Gstatic: RscButton
 class HQ_button_Gremove: RscButton
 {
 	idc = -1;
-	text = "Smoke"; //--- ToDo: Localize;
+	text = $STR_UI_STRIKE_SMOKE;
 	x = 0.37749 * safezoneW + safezoneX;
 	y = 0.415981 * safezoneH + safezoneY;
 	w = 0.175015 * safezoneW;
@@ -2727,7 +2727,7 @@ class mortar_type
 class HQ_box: BOX
 {
 	idc = -1;
-	text = ""; //--- ToDo: Localize;
+	text = "";
 	x = 0.244979 * safezoneW + safezoneX;
 	y = 0.223941 * safezoneH + safezoneY;
 	w = 0.445038 * safezoneW;
@@ -2736,7 +2736,7 @@ class HQ_box: BOX
 class HQ_frame: RscFrame
 {
 	idc = -1;
-	text = "Select Mortar Ammo"; //--- ToDo: Localize;
+	text = $STR_UI_SELECT_MOTAR_AMMO;
 	x = 0.254979 * safezoneW + safezoneX;
 	y = 0.233941 * safezoneH + safezoneY;
 	w = 0.425038 * safezoneW;
@@ -2745,7 +2745,7 @@ class HQ_frame: RscFrame
 class HQ_button_back: RscButton
 {
 	idc = -1;
-	text = "Back"; //--- ToDo: Localize;
+	text = $STR_UI_BACK;
 	x = 0.61 * safezoneW + safezoneX;
 	y = 0.251941 * safezoneH + safezoneY;
 	w = 0.06 * safezoneW;//0.175015
@@ -2755,7 +2755,7 @@ class HQ_button_back: RscButton
 class HQ_button_Gsquad: RscButton
 {
 	idc = -1;
-	text = "HE"; //--- ToDo: Localize;
+	text = $STR_UI_STRIKE_HE;
 	x = 0.272481 * safezoneW + safezoneX;
 	y = 0.317959 * safezoneH + safezoneY;
 	w = 0.175015 * safezoneW;
@@ -2765,7 +2765,7 @@ class HQ_button_Gsquad: RscButton
 class HQ_button_Gstatic: RscButton
 {
 	idc = -1;
-	text = "Smoke"; //--- ToDo: Localize;
+	text = $STR_UI_STRIKE_SMOKE;
 	x = 0.482498 * safezoneW + safezoneX;
 	y = 0.317959 * safezoneH + safezoneY;
 	w = 0.175015 * safezoneW;
@@ -2776,7 +2776,7 @@ class HQ_button_Gstatic: RscButton
 class HQ_button_Gremove: RscButton
 {
 	idc = -1;
-	text = "Remove Garrison Squads"; //--- ToDo: Localize;
+	text = "Remove Garrison Squads";
 	x = 0.37749 * safezoneW + safezoneX;
 	y = 0.415981 * safezoneH + safezoneY;
 	w = 0.175015 * safezoneW;
@@ -2803,7 +2803,7 @@ class minebuild_menu
 class HQ_box: BOX
 {
 	idc = -1;
-	text = ""; //--- ToDo: Localize;
+	text = "";
 	x = 0.244979 * safezoneW + safezoneX;
 	y = 0.223941 * safezoneH + safezoneY;
 	w = 0.445038 * safezoneW;
@@ -2812,7 +2812,7 @@ class HQ_box: BOX
 class HQ_frame: RscFrame
 {
 	idc = -1;
-	text = "Build Minefield"; //--- ToDo: Localize;
+	text = $STR_UI_BUILD_MINEFIELD;
 	x = 0.254979 * safezoneW + safezoneX;
 	y = 0.233941 * safezoneH + safezoneY;
 	w = 0.425038 * safezoneW;
@@ -2821,7 +2821,7 @@ class HQ_frame: RscFrame
 class HQ_button_back: RscButton
 {
 	idc = -1;
-	text = "Back"; //--- ToDo: Localize;
+	text = $STR_UI_BACK;
 	x = 0.61 * safezoneW + safezoneX;
 	y = 0.251941 * safezoneH + safezoneY;
 	w = 0.06 * safezoneW;//0.175015
@@ -2831,7 +2831,7 @@ class HQ_button_back: RscButton
 class HQ_button_Gsquad: RscButton
 {
 	idc = -1;
-	text = "APERS Mines"; //--- ToDo: Localize;
+	text = $STR_UI_APERS_MINES;
 	x = 0.272481 * safezoneW + safezoneX;
 	y = 0.317959 * safezoneH + safezoneY;
 	w = 0.175015 * safezoneW;
@@ -2841,7 +2841,7 @@ class HQ_button_Gsquad: RscButton
 class HQ_button_Gstatic: RscButton
 {
 	idc = -1;
-	text = "AT Mines"; //--- ToDo: Localize;
+	text = $STR_UI_AT_MINES;
 	x = 0.482498 * safezoneW + safezoneX;
 	y = 0.317959 * safezoneH + safezoneY;
 	w = 0.175015 * safezoneW;
@@ -2873,7 +2873,7 @@ class fasttravel_dialog // 340
 		class HQ_frame: RscFrame
 		{
 			idc = -1;
-			text = "Fast Travel";
+			text = $STR_UI_FAST_TRAVEL;
 			x = 0.254979 * safezoneW + safezoneX;
 			y = 0.233941 * safezoneH + safezoneY;
 			w = 0.425038 * safezoneW;
@@ -2882,7 +2882,7 @@ class fasttravel_dialog // 340
 		class HQ_button_back: RscButton
 		{
 			idc = -1;
-			text = "Back"; //--- ToDo: Localize;
+			text = $STR_UI_BACK;
 			x = 0.61 * safezoneW + safezoneX;
 			y = 0.251941 * safezoneH + safezoneY;
 			w = 0.06 * safezoneW;
@@ -2893,23 +2893,23 @@ class fasttravel_dialog // 340
 		class btn_ft_old: RscButton
 		{
 			idc = -1;
-			text = "Fast Travel (old)";
+			text = $STR_UI_FAST_TRAVEL_OLD;
 			x = 0.272481 * safezoneW + safezoneX;
 			y = 0.317959 * safezoneH + safezoneY;
 			w = 0.175015 * safezoneW;
 			h = 0.0560125 * safezoneH;
-			tooltip = "Targets: all FIA-controlled zones";
+			tooltip = $STR_UI_TRAVEL_TO_ALL_ZONE;
 			action = "closeDialog 0;nul = [] execVM ""fastTravelRadio.sqf"";";
 		};
 		class btn_ft_new: RscButton
 		{
 			idc = -1;
-			text = "Fast Travel (new)";
+			text = $STR_UI_FAST_TRAVEL_NEW;
 			x = 0.482498 * safezoneW + safezoneX;
 			y = 0.317959 * safezoneH + safezoneY;
 			w = 0.175015 * safezoneW;
 			h = 0.0560125 * safezoneH;
-			tooltip = "Only FIA camps and HQ";
+			tooltip = $STR_UI_TRAVEL_ONLY_TO_CAMP;
 			action = "closeDialog 0;nul = [] execVM ""altFastTravel.sqf"";";
 		};
 	};
@@ -2934,7 +2934,7 @@ class camp_dialog // 350
 		class HQ_frame: RscFrame
 		{
 			idc = -1;
-			text = "Camp Management";
+			text = $STR_UI_CAMP_MANAGMENT;
 			x = 0.254979 * safezoneW + safezoneX;
 			y = 0.233941 * safezoneH + safezoneY;
 			w = 0.425038 * safezoneW;
@@ -2943,7 +2943,7 @@ class camp_dialog // 350
 		class HQ_button_back: RscButton
 		{
 			idc = -1;
-			text = "Back";
+			text = $STR_UI_BACK;
 			x = 0.61 * safezoneW + safezoneX;
 			y = 0.251941 * safezoneH + safezoneY;
 			w = 0.06 * safezoneW;
@@ -2953,7 +2953,7 @@ class camp_dialog // 350
 		class btn_camp_build: RscButton
 		{
 			idc = -1;
-			text = "Establish Camp";
+			text = $STR_UI_ESTABLISH_CAMP;
 			x = 0.272481 * safezoneW + safezoneX;
 			y = 0.317959 * safezoneH + safezoneY;
 			w = 0.175015 * safezoneW;
@@ -2964,7 +2964,7 @@ class camp_dialog // 350
 		class btn_camp_delete: RscButton
 		{
 			idc = -1;
-			text = "Delete Camp";
+			text = $STR_UI_DELETE_CAMP;
 			x = 0.482498 * safezoneW + safezoneX;
 			y = 0.317959 * safezoneH + safezoneY;
 			w = 0.175015 * safezoneW;
@@ -2974,7 +2974,7 @@ class camp_dialog // 350
 		class HQ_button_Gremove: RscButton
 		{
 			idc = -1;
-			text = "Rename Camp";
+			text = $STR_UI_RENAME_CAMP;
 			x = 0.37749 * safezoneW + safezoneX;
 			y = 0.415981 * safezoneH + safezoneY;
 			w = 0.175015 * safezoneW;
@@ -3003,7 +3003,7 @@ class com_menu // 360
 		class HQ_frame: RscFrame
 		{
 			idc = -1;
-			text = "Commander Menu";
+			text = $STR_UI_COMM_MENU;
 			x = 0.254979 * safezoneW + safezoneX;
 			y = 0.233941 * safezoneH + safezoneY;
 			w = 0.425038 * safezoneW;
@@ -3012,7 +3012,7 @@ class com_menu // 360
 		class HQ_button_back: RscButton
 		{
 			idc = -1;
-			text = "Back";
+			text = $STR_UI_BACK;
 			x = 0.61 * safezoneW + safezoneX;
 			y = 0.251941 * safezoneH + safezoneY;
 			w = 0.06 * safezoneW;
@@ -3022,18 +3022,18 @@ class com_menu // 360
 		class btn_toggle_ft: RscButton
 		{
 			idc = -1;
-			text = "FT On/Off";
+			text = $STR_UI_FT_ON_OFF;
 			x = 0.272481 * safezoneW + safezoneX;
 			y = 0.317959 * safezoneH + safezoneY;
 			w = 0.175015 * safezoneW;
 			h = 0.0560125 * safezoneH;
-			tooltip = "Toggle the old Fast Travel system on/off";
+			tooltip = $STR_UI_TOOGLE_OLD;
 			action = "if (server getVariable ""enableFTold"") then {server setVariable [""enableFTold"",false,true]; [[petros,""hint"",""Fast Travel limited to camps and HQ""],""commsMP""] call BIS_fnc_MP;} else {server setVariable [""enableFTold"",true,true]; [[petros,""hint"",""Extended Fast Travel system enabled""],""commsMP""] call BIS_fnc_MP;};";
 		};
 		class btn_toggle_arsenal: RscButton
 		{
 			idc = -1;
-			text = "Arsenal Access On/Off";
+			text = $STR_UI_ARSENAL_ACCESS;
 			//x = 0.37749 * safezoneW + safezoneX;
 			x = 0.482498 * safezoneW + safezoneX;
 			y = 0.317959 * safezoneH + safezoneY;
@@ -3045,7 +3045,7 @@ class com_menu // 360
 		class btn_easy_mode: RscButton
 		{
 			idc = -1;
-			text = "Toggle Increased Income";
+			text = $STR_UI_TOOGLE_INCRASE;
 			x = 0.37749 * safezoneW + safezoneX;
 			y = 0.415981 * safezoneH + safezoneY;
 			w = 0.175015 * safezoneW;
@@ -3074,7 +3074,7 @@ class com_menu_on // 370
 		class HQ_frame: RscFrame
 		{
 			idc = -1;
-			text = "Commander Menu";
+			text = $STR_UI_COMM_MENU;
 			x = 0.254979 * safezoneW + safezoneX;
 			y = 0.233941 * safezoneH + safezoneY;
 			w = 0.425038 * safezoneW;
@@ -3083,7 +3083,7 @@ class com_menu_on // 370
 		class HQ_button_back: RscButton
 		{
 			idc = -1;
-			text = "Back";
+			text = $STR_UI_BACK;
 			x = 0.61 * safezoneW + safezoneX;
 			y = 0.251941 * safezoneH + safezoneY;
 			w = 0.06 * safezoneW;
@@ -3093,18 +3093,18 @@ class com_menu_on // 370
 		class btn_toggle_ft_x: RscButton
 		{
 			idc = -1;
-			text = "FT On/Off";
+			text = $STR_UI_FT_ON_OFF;
 			x = 0.272481 * safezoneW + safezoneX;
 			y = 0.317959 * safezoneH + safezoneY;
 			w = 0.175015 * safezoneW;
 			h = 0.0560125 * safezoneH;
-			tooltip = "Toggle the old Fast Travel system on/off";
+			tooltip = $STR_UI_TOOGLE_OLD;
 			action = "if (server getVariable ""enableFTold"") then {server setVariable [""enableFTold"",false,true]; ctrlSetText [371,""Enable Fast Travel""]; hint ""Fast Travel restricted to camps and HQ"";} else {server setVariable [""enableFTold"",true,true]; ctrlSetText [371,""Disable Fast Travel""]; hint ""Old Fast Travel system enabled"";};";
 		};
 		class btn_toggle_arsenal_x: RscButton
 		{
 			idc = -1;
-			text = "Arsenal Access On/Off";
+			text = $STR_UI_ARSENAL_ACCESS;
 			x = 0.482498 * safezoneW + safezoneX;
 			y = 0.317959 * safezoneH + safezoneY;
 			w = 0.175015 * safezoneW;
@@ -3145,7 +3145,7 @@ class bm_mission_menu // 380
 		class HQ_frame: RscFrame
 		{
 			idc = -1;
-			text = "Available Missions";
+			text = $STR_UI_AVAILABLE_MISSIONS;
 			x = 0.254979 * safezoneW + safezoneX;
 			y = 0.233941 * safezoneH + safezoneY;
 			w = 0.425038 * safezoneW;
@@ -3154,7 +3154,7 @@ class bm_mission_menu // 380
 		class HQ_button_back: RscButton
 		{
 			idc = -1;
-			text = "Back";
+			text = $STR_UI_BACK;
 			x = 0.61 * safezoneW + safezoneX;
 			y = 0.251941 * safezoneH + safezoneY;
 			w = 0.06 * safezoneW;
@@ -3194,7 +3194,7 @@ class misCiv_menu // 400
 class HQ_box: BOX
 {
 	idc = -1;
-	text = ""; //--- ToDo: Localize;
+	text = "";
 	x = 0.244979 * safezoneW + safezoneX;
 	y = 0.223941 * safezoneH + safezoneY;
 	w = 0.445038 * safezoneW;
@@ -3203,7 +3203,7 @@ class HQ_box: BOX
 class HQ_frame: RscFrame
 {
 	idc = -1;
-	text = "Available Missions"; //--- ToDo: Localize;
+	text = $STR_UI_AVAILABLE_MISSIONS;
 	x = 0.254979 * safezoneW + safezoneX;
 	y = 0.233941 * safezoneH + safezoneY;
 	w = 0.425038 * safezoneW;
@@ -3212,7 +3212,7 @@ class HQ_frame: RscFrame
 class HQ_button_back: RscButton
 {
 	idc = -1;
-	text = "Back"; //--- ToDo: Localize;
+	text = $STR_UI_BACK;
 	x = 0.61 * safezoneW + safezoneX;
 	y = 0.251941 * safezoneH + safezoneY;
 	w = 0.06 * safezoneW;//0.175015
@@ -3222,7 +3222,7 @@ class HQ_button_back: RscButton
 class HQ_button_AS: RscButton
 {
 	idc = -1;
-	text = "Assassination Mission"; //--- ToDo: Localize;
+	text = $STR_UI_MISSION_ASSASIN;
 	x = 0.272481 * safezoneW + safezoneX;
 	y = 0.317959 * safezoneH + safezoneY;
 	w = 0.175015 * safezoneW;
@@ -3232,7 +3232,7 @@ class HQ_button_AS: RscButton
 class HQ_button_CONV: RscButton
 {
 	idc = -1;
-	text = "Convoy Ambush"; //--- ToDo: Localize;
+	text = $STR_UI_MISSION_CONVOY;
 	x = 0.37749 * safezoneW + safezoneX;
 	y = 0.415981 * safezoneH + safezoneY;
 	w = 0.175015 * safezoneW;
@@ -3242,7 +3242,7 @@ class HQ_button_CONV: RscButton
 class HQ_button_LOG: RscButton
 {
 	idc = -1;
-	text = "Conquest Missions"; //--- ToDo: Localize;
+	text = $STR_UI_MISSION_CONQUEST;
 	x = 0.482498 * safezoneW + safezoneX;
 	y = 0.317959 * safezoneH + safezoneY;
 	w = 0.175015 * safezoneW;
@@ -3262,7 +3262,7 @@ class misMil_menu // 410
 class HQ_box: BOX
 {
 	idc = -1;
-	text = ""; //--- ToDo: Localize;
+	text = "";
 	x = 0.244979 * safezoneW + safezoneX;
 	y = 0.223941 * safezoneH + safezoneY;
 	w = 0.445038 * safezoneW;
@@ -3271,7 +3271,7 @@ class HQ_box: BOX
 class HQ_frame: RscFrame
 {
 	idc = -1;
-	text = "Available Missions"; //--- ToDo: Localize;
+	text = $STR_UI_AVAILABLE_MISSIONS;
 	x = 0.254979 * safezoneW + safezoneX;
 	y = 0.233941 * safezoneH + safezoneY;
 	w = 0.425038 * safezoneW;
@@ -3280,7 +3280,7 @@ class HQ_frame: RscFrame
 class HQ_button_back: RscButton
 {
 	idc = -1;
-	text = "Back"; //--- ToDo: Localize;
+	text = $STR_UI_BACK;
 	x = 0.61 * safezoneW + safezoneX;
 	y = 0.251941 * safezoneH + safezoneY;
 	w = 0.06 * safezoneW;//0.175015
@@ -3290,7 +3290,7 @@ class HQ_button_back: RscButton
 class HQ_button_AS: RscButton
 {
 	idc = -1;
-	text = "Assassination Mission"; //--- ToDo: Localize;
+	text = $STR_UI_MISSION_ASSASIN;
 	x = 0.272481 * safezoneW + safezoneX;
 	y = 0.317959 * safezoneH + safezoneY;
 	w = 0.175015 * safezoneW;
@@ -3300,7 +3300,7 @@ class HQ_button_AS: RscButton
 class HQ_button_CONV: RscButton
 {
 	idc = -1;
-	text = "Convoy Ambush"; //--- ToDo: Localize;
+	text = $STR_UI_MISSION_CONVOY;
 	x = 0.272481 * safezoneW + safezoneX;
 	y = 0.415981 * safezoneH + safezoneY;
 	w = 0.175015 * safezoneW;
@@ -3310,7 +3310,7 @@ class HQ_button_CONV: RscButton
 class HQ_button_LOG: RscButton
 {
 	idc = -1;
-	text = "Conquest Missions"; //--- ToDo: Localize;
+	text = $STR_UI_MISSION_CONQUEST;
 	x = 0.482498 * safezoneW + safezoneX;
 	y = 0.317959 * safezoneH + safezoneY;
 	w = 0.175015 * safezoneW;
@@ -3320,7 +3320,7 @@ class HQ_button_LOG: RscButton
 class HQ_button_vehicle: RscButton
 {
 	idc = -1;
-	text = "Destroy Missions"; //--- ToDo: Localize;
+	text = $STR_UI_MISSION_DESTROY;
 	x = 0.482498 * safezoneW + safezoneX;
 	y = 0.415981 * safezoneH + safezoneY;
 	w = 0.175015 * safezoneW;
@@ -3390,7 +3390,7 @@ class exp_menu // 430
 class HQ_box: BOX
 {
 	idc = -1;
-	text = ""; //--- ToDo: Localize;
+	text = "";
 	x = 0.244979 * safezoneW + safezoneX;
 	y = 0.223941 * safezoneH + safezoneY;
 	w = 0.445038 * safezoneW;
@@ -3399,7 +3399,7 @@ class HQ_box: BOX
 class HQ_frame: RscFrame
 {
 	idc = -1;
-	text = "Buy Explosives"; //--- ToDo: Localize;
+	text = $STR_UI_BUYEXPLOSIVES;
 	x = 0.254979 * safezoneW + safezoneX;
 	y = 0.233941 * safezoneH + safezoneY;
 	w = 0.425038 * safezoneW;
@@ -3408,7 +3408,7 @@ class HQ_frame: RscFrame
 class HQ_button_back: RscButton
 {
 	idc = -1;
-	text = "Back"; //--- ToDo: Localize;
+	text = $STR_UI_BACK;
 	x = 0.61 * safezoneW + safezoneX;
 	y = 0.251941 * safezoneH + safezoneY;
 	w = 0.06 * safezoneW;
@@ -3418,7 +3418,7 @@ class HQ_button_back: RscButton
 class HQ_button_Gsquad: RscButton
 {
 	idc = -1;
-	text = "Some Charges"; //--- ToDo: Localize;
+	text = $STR_UI_SOME_CHARGES;
 	x = 0.272481 * safezoneW + safezoneX;
 	y = 0.317959 * safezoneH + safezoneY;
 	w = 0.175015 * safezoneW;
@@ -3431,7 +3431,7 @@ class HQ_button_Gsquad: RscButton
 class HQ_button_Gstatic: RscButton
 {
 	idc = -1;
-	text = "Some Mines"; //--- ToDo: Localize;
+	text = $STR_UI_SOME_MINES;
 	x = 0.482498 * safezoneW + safezoneX;
 	y = 0.317959 * safezoneH + safezoneY;
 	w = 0.175015 * safezoneW;
@@ -3443,7 +3443,7 @@ class HQ_button_Gstatic: RscButton
 class HQ_button_Gremove: RscButton
 {
 	idc = -1;
-	text = "Many Charges"; //--- ToDo: Localize;
+	text = $STR_UI_MANY_CHARGES;
 	x = 0.272481 * safezoneW + safezoneX;
 	y = 0.415981 * safezoneH + safezoneY;
 	w = 0.175015 * safezoneW;
@@ -3455,7 +3455,7 @@ class HQ_button_Gremove: RscButton
 class dismiss_units: RscButton
 {
 	idc = -1;
-	text = "Many Mines"; //--- ToDo: Localize;
+	text = $STR_UI_MANY_MINES;
 	x = 0.482498 * safezoneW + safezoneX;
 	y = 0.415981 * safezoneH + safezoneY;
 	w = 0.175015 * safezoneW;
@@ -3486,7 +3486,7 @@ class HQ_fort_dialog // 440
 		class HQ_frame: RscFrame
 		{
 			idc = -1;
-			text = "HQ Fortifications";
+			text = $STR_UI_HQ_FORTIFICATION;
 			x = 0.254979 * safezoneW + safezoneX;
 			y = 0.233941 * safezoneH + safezoneY;
 			w = 0.425038 * safezoneW;
@@ -3495,7 +3495,7 @@ class HQ_fort_dialog // 440
 		class HQ_button_back: RscButton
 		{
 			idc = -1;
-			text = "Back";
+			text = $STR_UI_BACK;
 			x = 0.61 * safezoneW + safezoneX;
 			y = 0.251941 * safezoneH + safezoneY;
 			w = 0.06 * safezoneW;
@@ -3505,7 +3505,7 @@ class HQ_fort_dialog // 440
 		class btn_hq_camo: RscButton
 		{
 			idc = -1;
-			text = "Camo Net";
+			text = $STR_UI_CAMO_NET;
 			x = 0.272481 * safezoneW + safezoneX;
 			y = 0.317959 * safezoneH + safezoneY;
 			w = 0.175015 * safezoneW;
@@ -3517,7 +3517,7 @@ class HQ_fort_dialog // 440
 		class btn_hq_lantern: RscButton
 		{
 			idc = -1;
-			text = "Lantern";
+			text = $STR_UI_LANTERN;
 			x = 0.482498 * safezoneW + safezoneX;
 			y = 0.317959 * safezoneH + safezoneY;
 			w = 0.175015 * safezoneW;
@@ -3528,7 +3528,7 @@ class HQ_fort_dialog // 440
 		class btn_hq_delete: RscButton
 		{
 			idc = -1;
-			text = "Delete All";
+			text = $STR_UI_DELETE_ALL;
 			x = 0.37749 * safezoneW + safezoneX;
 			y = 0.415981 * safezoneH + safezoneY;
 			w = 0.175015 * safezoneW;

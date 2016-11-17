@@ -1,7 +1,7 @@
-private ["_tipo","_posicionTel","_cercano","_garrison","_coste","_hr","_size"];
+﻿private ["_tipo","_posicionTel","_cercano","_garrison","_coste","_hr","_size"];
 _tipo = _this select 0;
 
-if (_tipo == "add") then {hint "Select a zone to add garrisoned troops"} else {hint "Select a zone to remove it's Garrison"};
+if (_tipo == "add") then {hint localize "STR_SELECT_ZONE_FOR_GARRISON"} else {hint localize "STR_SELECT_ZONE_FOR_REMOVE_GARRISON"};
 
 openMap true;
 posicionTel = [];
@@ -19,24 +19,24 @@ posicionGarr = [];
 _cercano = [marcadores,_posicionTel] call BIS_fnc_nearestPosition;
 _posicion = getMarkerPos _cercano;
 
-if (getMarkerPos _cercano distance _posicionTel > 40) exitWith {hint "You must click near a marked zone"; _nul=CreateDialog "garrison_menu";};
+if (getMarkerPos _cercano distance _posicionTel > 40) exitWith {hint localize "STR_CLICK_NEAR_ZONE"; _nul=CreateDialog "garrison_menu";};
 
-if (_cercano in mrkAAF) exitWith {hint "That zone does not belong to FIA"; _nul=CreateDialog "garrison_menu";};
+if (_cercano in mrkAAF) exitWith {hint localize "STR_NOT_BELONG_TO_FIA"; _nul=CreateDialog "garrison_menu";};
 
-if ((_cercano in puestosFIA) or (_cercano in ciudades)) exitWith {hint "You cannot manage garrisons on this kind of zone"; _nul=CreateDialog "garrison_menu"};
+if ((_cercano in puestosFIA) or (_cercano in ciudades)) exitWith {hint localize "STR_CANT_MANAGE_GARRISON"; _nul=CreateDialog "garrison_menu"};
 
 _garrison = garrison getVariable [_cercano,[]];
 
 if (_tipo == "rem") then
 	{
-	if (count _garrison == 0) exitWith {hint "The place has no garrisoned troops to remove"; _nul=CreateDialog "garrison_menu";};
+	if (count _garrison == 0) exitWith {hint localize "STR_NO_TROOPS_FOR_REMOVE"; _nul=CreateDialog "garrison_menu";};
 	_coste = 0;
 	_hr = 0;
 	if (spawner getVariable _cercano) then
 		{
 		if ({(alive _x) and (!captive _x) and ((side _x == side_green) or (side _x == side_red)) and (_x distance _posicion < 500)} count allUnits > 0) then
 			{
-			hint "You cannot remove garrisons while there are enemies nearby";
+			hint localize "STR_CANT_REMOVE_GARRISONS_ENEMIES_NEAR";
 			_nul=CreateDialog "garrison_menu"
 			}
 		else
@@ -79,7 +79,7 @@ else
 		};
 	posicionGarr = _posicionTel;
 	publicVariable "posicionGarr";
-	hint format ["Info%1",[_cercano] call garrisonInfo];
+	hint format [localize "STR_GARRISON_INFO",[_cercano] call garrisonInfo];
 	closeDialog 0;
 	_nul=CreateDialog "garrison_recruit";
 	sleep 1;
@@ -90,20 +90,20 @@ else
 	if (str (_display) != "no display") then
 		{
 		_ChildControl = _display displayCtrl 104;
-		_ChildControl  ctrlSetTooltip format ["Cost: %1 €",server getVariable "B_G_Soldier_F"];
+		_ChildControl  ctrlSetTooltip format [localize "STR_COST",server getVariable "B_G_Soldier_F"];
 		_ChildControl = _display displayCtrl 105;
-		_ChildControl  ctrlSetTooltip format ["Cost: %1 €",server getVariable "B_G_Soldier_AR_F"];
+		_ChildControl  ctrlSetTooltip format [localize "STR_COST",server getVariable "B_G_Soldier_AR_F"];
 		_ChildControl = _display displayCtrl 126;
-		_ChildControl  ctrlSetTooltip format ["Cost: %1 €",server getVariable "B_G_medic_F"];
+		_ChildControl  ctrlSetTooltip format [localize "STR_COST",server getVariable "B_G_medic_F"];
 		_ChildControl = _display displayCtrl 107;
-		_ChildControl  ctrlSetTooltip format ["Cost: %1 €",server getVariable "B_G_Soldier_SL_F"];
+		_ChildControl  ctrlSetTooltip format [localize "STR_COST",server getVariable "B_G_Soldier_SL_F"];
 		_ChildControl = _display displayCtrl 108;
-		_ChildControl  ctrlSetTooltip format ["Cost: %1 €",(server getVariable "b_g_soldier_unarmed_f") + (["B_G_Mortar_01_F"] call vehiclePrice)];
+		_ChildControl  ctrlSetTooltip format [localize "STR_COST",(server getVariable "b_g_soldier_unarmed_f") + (["B_G_Mortar_01_F"] call vehiclePrice)];
 		_ChildControl = _display displayCtrl 109;
-		_ChildControl  ctrlSetTooltip format ["Cost: %1 €",server getVariable "B_G_Soldier_GL_F"];
+		_ChildControl  ctrlSetTooltip format [localize "STR_COST",server getVariable "B_G_Soldier_GL_F"];
 		_ChildControl = _display displayCtrl 110;
-		_ChildControl  ctrlSetTooltip format ["Cost: %1 €",server getVariable "B_G_Soldier_M_F"];
+		_ChildControl  ctrlSetTooltip format [localize "STR_COST",server getVariable "B_G_Soldier_M_F"];
 		_ChildControl = _display displayCtrl 111;
-		_ChildControl  ctrlSetTooltip format ["Cost: %1 €",server getVariable "B_G_Soldier_LAT_F"];
+		_ChildControl  ctrlSetTooltip format [localize "STR_COST",server getVariable "B_G_Soldier_LAT_F"];
 		};
 	};

@@ -32,6 +32,6 @@ if (_t == "net") then {
 
 _ci = _item createVehicle [0,0,0];
 _ci setpos _pos;
-_ci addAction ["Move this asset", "moveHQObject.sqf",nil,0,false,true,"","(_this == stavros)"];
+_ci addAction [localize "STR_MOVE_THIS_ASSET", "moveHQObject.sqf",nil,0,false,true,"","(_this == stavros)"];
 
 // for later: large: CamoNet_BLUFOR_big_F -- small: CamoNet_BLUFOR_F

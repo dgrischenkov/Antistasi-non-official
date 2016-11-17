@@ -1,4 +1,4 @@
-
+﻿
 private ["_cuenta","_tonto","_tiempo","_punish"];
 if (isDedicated) exitWith {};
 
@@ -20,20 +20,20 @@ player removeWeaponGlobal (primaryWeapon player);
 player removeWeaponGlobal (secondaryWeapon player);
 player setPosASL [0,0,0];
 
-hint "Being an asshole is not a desired skill of the general Antistasi player";
+hint localize "STR_PRISON_0";
 sleep 5;
-hint "This is a COOP game and you are welcome to do so";
+hint localize "STR_PRISON_1";
 sleep 5;
-hint "If you are bored, I think there is a new episode on SpongeBob Square Pants today";
+hint localize "STR_PRISON_2";
 sleep 5;
 _cuenta = _punish;
 while {_cuenta > 0} do
 	{
-	hint format ["Now watch the sights for the following %1 seconds.\n\nPlease be thankful this is a game. In reality you could be sentenced to death by a firing squad, this little punish is not that bad.", _cuenta];
+	hint format [localize "STR_PRISON_3", _cuenta];
 	sleep 1;
 	_cuenta = _cuenta -1;
 	};
-hint "Enough then";
+hint localize "STR_PRISON_4";
 disableUserInput false;
 player setpos getMarkerPos "respawn_west";
 player setVariable ["punish",_punish,true];

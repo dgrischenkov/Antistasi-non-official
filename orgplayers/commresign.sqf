@@ -1,4 +1,4 @@
-_jugador = player getVariable ["owner",player];
+﻿_jugador = player getVariable ["owner",player];
 
 if (_jugador getVariable ["elegible",true]) then
 	{
@@ -11,11 +11,11 @@ if (_jugador getVariable ["elegible",true]) then
 		}
 	else
 		{
-		hint "You decided not to be elegible for Commander.";
+		hint localize "STR_DECIDED_COMM";
 		};
 	}
 else
 	{
-	hint "You are now elegible to be Commander of the FIA forces.";
+	hint localize "STR_ELEGIBLE_COMM";
 	_jugador setVariable ["elegible",true,true];
 	};

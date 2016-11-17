@@ -1,4 +1,4 @@
-if (!isServer) exitWith {};
+﻿if (!isServer) exitWith {};
 
 private ["_tipo","_coste","_grupo","_unit","_tam","_roads","_road","_pos","_camion","_texto","_mrk","_hr","_unidades","_formato"];
 
@@ -30,13 +30,13 @@ if (_tipo == "delete") exitWith
 
 _escarretera = isOnRoad _posicionTel;
 
-_texto = "FIA Observation Post";
+_texto = localize "STR_OBSERVATION_PORT";
 _tipogrupo = "IRG_SniperTeam_M";
 _tipoVeh = "B_G_Quadbike_01_F";
 
 if (_escarretera) then
 	{
-	_texto = "FIA Roadblock";
+	_texto = localize "STR_READBLOCK";
 	_tipogrupo = "IRG_InfTeam_AT";
 	_tipoVeh = "B_G_Offroad_01_F";
 	};

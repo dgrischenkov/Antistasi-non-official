@@ -1,11 +1,11 @@
-if (player != player getVariable ["owner",player]) exitWith {hint "You cannot buy vehicles while you are controlling AI"};
+﻿if (player != player getVariable ["owner",player]) exitWith {hint localize "STR_CANT_BY_VEHICLE_WHILE_AI"};
 
 _chequeo = false;
 {
 	if (((side _x == side_red) or (side _x == side_green)) and (_x distance player < 500) and (not(captive _x))) then {_chequeo = true};
 } forEach allUnits;
 
-if (_chequeo) exitWith {Hint "You cannot buy vehicles with enemies nearby"};
+if (_chequeo) exitWith {hint localize "STR_CANT_BY_VEHICLE_WHILE_ENEMY"};
 
 private ["_tipoVeh","_coste","_resourcesFIA","_marcador","_pos","_veh"];
 
@@ -27,9 +27,9 @@ if (!isMultiPlayer) then {_resourcesFIA = server getVariable "resourcesFIA"} els
 		};
 	};
 
-if (_resourcesFIA < _coste) exitWith {hint format ["You do not have enough money for this vehicle: %1 € required",_coste]};
+if (_resourcesFIA < _coste) exitWith {hint format [localize "STR_NOT_ENOUTH_FOR_VEHICLE",_coste]};
 _pos = position player findEmptyPosition [10,50,_tipoVeh];
-if (count _pos == 0) exitWith {hint "Not enough space to place this type of vehicle"};
+if (count _pos == 0) exitWith {hint localize "STR_NOT_ENOUTH_SPACE_FOR_VEHICLE"};
 _veh = _tipoVeh createVehicle _pos;
 if (!isMultiplayer) then
 	{
@@ -56,7 +56,7 @@ else
 		};
 	};
 [_veh] spawn VEHinit;
-if (_tipoVeh in _milstatics) then {staticsToSave pushBackUnique _veh; publicVariable "staticsToSave";_veh addAction ["Move this asset", "Scripts\moveStatic.sqf",nil,0,false,true,"","(_this == stavros)"];};
+if (_tipoVeh in _milstatics) then {staticsToSave pushBackUnique _veh; publicVariable "staticsToSave";_veh addAction [localize "STR_MOVE_THIS_ASSET", "Scripts\moveStatic.sqf",nil,0,false,true,"","(_this == stavros)"];};
 hint "Vehicle Purchased";
 player reveal _veh;
 petros directSay "SentGenBaseUnlockVehicle";

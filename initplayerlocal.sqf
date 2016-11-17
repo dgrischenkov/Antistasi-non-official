@@ -1,4 +1,4 @@
-waitUntil {!isNull player};
+﻿waitUntil {!isNull player};
 waitUntil {player == player};
 player removeweaponGlobal "itemmap";
 player removeweaponGlobal "itemgps";
@@ -460,8 +460,8 @@ if (hayXLA) then {
 	caja setvariable ["bis_fnc_arsenal_action",_action];
 };
 
-caja addAction ["Transfer Vehicle cargo to Ammobox", "[] call vaciar"];
-caja addAction ["Move this asset", "moveHQObject.sqf",nil,0,false,true,"","(_this == stavros)"];
+caja addAction [localize "STR_UI_VEH_CARGO_TO_AMMOBOX", "[] call vaciar"];
+caja addAction [localize "STR_MOVE_THIS_ASSET", "moveHQObject.sqf",nil,0,false,true,"","(_this == stavros)"];
 
 _nul = [player] execVM "OrgPlayers\unitTraits.sqf";
 _nul = [player] execVM "OrgPlayers\cleanGear.sqf";

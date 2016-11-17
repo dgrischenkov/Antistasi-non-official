@@ -1,14 +1,14 @@
-
-if (player != Stavros) exitWith {hint "Only Commander Stavros has access to this function"};
-if (!allowPlayerRecruit) exitWith {hint "Server is very loaded. \nWait one minute or change FPS settings in order to fulfill this request"};
-if (markerAlpha "respawn_west" == 0) exitWith {hint "You cant recruit a new squad while you are moving your HQ"};
-if (!([player] call hasRadio)) exitWith {hint "You need a radio in your inventory to be able to give orders to other squads"};
+﻿
+if (player != Stavros) exitWith {hint localize "STR_ONLY_COMM_CAN_USE_IT"};
+if (!allowPlayerRecruit) exitWith {hint localize "STR_HIGT_LOAD_ON_SERVER"};
+if (markerAlpha "respawn_west" == 0) exitWith {hint localize "STR_CANT_RECRUIT"};
+if (!([player] call hasRadio)) exitWith {hint localize "STR_NEED_RADIO_FOR_ORDERS"};
 _chequeo = false;
 {
 	if (((side _x == side_red) or (side _x == side_green)) and (_x distance petros < 500) and (not(captive _x))) then {_chequeo = true};
 } forEach allUnits;
 
-if (_chequeo) exitWith {Hint "You cannot Recruit Squads with enemies near your HQ"};
+if (_chequeo) exitWith {hint localize "STR_CANT_RECRUIT_NEAR_ENEMIES"};
 
 private ["_tipogrupo","_esinf","_tipoVeh","_coste","_costeHR","_exit","_formato","_pos","_hr","_resourcesFIA","_grupo","_roads","_road","_grupo","_camion","_vehicle","_mortero","_morty"];
 
@@ -49,9 +49,9 @@ else
 	};
 };
 
-if (_hr < _costeHR) then {_exit = true;hint format ["You do not have enough HR for this request (%1 required)",_costeHR]};
+if (_hr < _costeHR) then {_exit = true;hint format [localize "STR_NOT_ENOUGH_HR",_costeHR]};
 
-if (_resourcesFIA < _coste) then {_exit = true;hint format ["You do not have enough money for this request (%1 € required)",_coste]};
+if (_resourcesFIA < _coste) then {_exit = true;hint format [localize "STR_NOT_ENOUTH_MONEY",_coste]};
 
 if (_exit) exitWith {};
 

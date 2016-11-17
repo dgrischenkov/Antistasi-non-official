@@ -1,6 +1,1115 @@
 <?xml version="1.0" encoding="utf-8"?>
 <Project name="Antistasi">
 		<Package name="Antistasi">
+
+				<Key ID="STR_PRISON_0">
+						<Original>Being an asshole is not a desired skill of the general Antistasi player</Original>
+						<Russian>Быть мудаком не тот скилл, который нужен для игры в Антистаси</Russian>
+				</Key>
+				<Key ID="STR_PRISON_1">
+						<Original>This is a COOP game and you are welcome to do so</Original>
+						<Russian>Это кооперативная игра, и будь так любезен, играй в команде</Russian>
+				</Key>
+				<Key ID="STR_PRISON_2">
+						<Original>If you are bored, I think there is a new episode on SpongeBob Square Pants today</Original>
+						<Russian>Если тебе так скучно, лучше посмотри по телеку какой нибудь сериал для домохозяек</Russian>
+				</Key>
+				<Key ID="STR_PRISON_3">
+						<Original>Now watch the sights for the following %1 seconds.\n\nPlease be thankful this is a game. In reality you could be sentenced to death by a firing squad, this little punish is not that bad.</Original>
+						<Russian>Теперь жди тут %1 секунд.\n\nПожалуйста пойми, это игра. В реальности тебя ждал бы военный трибунал, это наказание ничто по сравнению с расстрелом.</Russian>
+				</Key>
+				<Key ID="STR_PRISON_4">
+						<Original>Enough then</Original>
+						<Russian>Хватит! Больше так не делай!</Russian>
+				</Key>
+				<Key ID="STR_OBSERVATION_PORT">
+						<Original>FIA Observation Post</Original>
+						<Russian>Пост наблюдения</Russian>
+				</Key>
+				<Key ID="STR_READBLOCK">
+						<Original>FIA Roadblock</Original>
+						<Russian>Блокпост</Russian>
+				</Key>
+				<Key ID="STR_UI_HQ_OPTIONS">
+						<Original>FIA HQ Options - Commander Only</Original>
+						<Russian>Меню командира - только для командиров</Russian>
+				</Key>
+				<Key ID="STR_UI_BACK">
+						<Original>Back</Original>
+						<Russian>Назад</Russian>
+				</Key>
+				<Key ID="STR_UI_GRAB_FROM_POOL">
+						<Original>Grab 100 € from Pool</Original>
+						<Russian>Забрать 100 € из общака</Russian>
+				</Key>
+				<Key ID="STR_UI_MANAGE_GARRISONS">
+						<Original>Manage Garrisons</Original>
+						<Russian>Управление гарнизонами</Russian>
+				</Key>
+				<Key ID="STR_UI_MOVE_HQ">
+						<Original>Move HQ to another Zone</Original>
+						<Russian>Переместить HQ в другое место</Russian>
+				</Key>
+				<Key ID="STR_UI_MEMBERS_LIST">
+						<Original>Ingame Member's List</Original>
+						<Russian>Список игроков сервера</Russian>
+				</Key>
+				<Key ID="STR_UI_REBUILD_ASSETS">
+						<Original>Rebuild Assets</Original>
+						<Russian>Восстановить объект</Russian>
+				</Key>
+				<Key ID="STR_UI_SKILL_UPGRADE">
+						<Original>Train FIA - Skill Upgrade</Original>
+						<Russian>Апгрейд ботов</Russian>
+				</Key>
+				<Key ID="STR_UI_GARAGE_ACCESS">
+						<Original>Garage Access</Original>
+						<Russian>Доступ в гараж</Russian>
+				</Key>
+				<Key ID="STR_UI_RECRUIT_OPTIONS">
+						<Original>Recruitment Options</Original>
+						<Russian>Набор добровольцев</Russian>
+				</Key>
+				<Key ID="STR_UI_REC_MILITARY">
+						<Original>Recruit Militiaman</Original>
+						<Russian>Ополченец</Russian>
+				</Key>
+				<Key ID="STR_UI_REC_AUTORIFLEMAN">
+						<Original>Recruit Autorifleman</Original>
+						<Russian>Пулемётчик</Russian>
+				</Key>
+				<Key ID="STR_UI_REC_MEDIC">
+						<Original>Recruit Medic</Original>
+						<Russian>Медик</Russian>
+				</Key>
+				<Key ID="STR_UI_REC_ENGINER">
+						<Original>Recruit Engineer</Original>
+						<Russian>Инженер</Russian>
+				</Key>
+				<Key ID="STR_UI_REC_BOMBSP">
+						<Original>Recruit Bomb Specialist</Original>
+						<Russian>Сапёр</Russian>
+				</Key>
+				<Key ID="STR_UI_REC_GRENADIER">
+						<Original>Recruit Grenadier</Original>
+						<Russian>Стрелок ГП</Russian>
+				</Key>
+				<Key ID="STR_UI_REC_MARKSMAN">
+						<Original>Recruit Marksman</Original>
+						<Russian>Снайпер</Russian>
+				</Key>
+				<Key ID="STR_UI_REC_AT">
+						<Original>Recruit AT</Original>
+						<Russian>Стрелок ПТ</Russian>
+				</Key>
+				<Key ID="STR_UI_REC_AA">
+						<Original>Recruit AA</Original>
+						<Russian>Стрелок ПЗРК</Russian>
+				</Key>
+				<Key ID="STR_UI_SQUAD_RECRUITMENT">
+						<Original>Squad Recruitment Options</Original>
+						<Russian>Набор отрядов</Russian>
+				</Key>
+				<Key ID="STR_UI_REC_INF_SQUAD">
+						<Original>Recruit Inf. Squad</Original>
+						<Russian>Отделение пехоты</Russian>
+				</Key>
+				<Key ID="STR_UI_REC_INF_TEAM">
+						<Original>Recruit Inf. Team</Original>
+						<Russian>Пехотный расчёт</Russian>
+				</Key>
+				<Key ID="STR_UI_REC_AT_TEAM">
+						<Original>Recruit AT Team</Original>
+						<Russian>Расчёт ПТ</Russian>
+				</Key>
+				<Key ID="STR_UI_REC_SNIPER_TEAM">
+						<Original>Recruit Sniper Team</Original>
+						<Russian>Снайперский расчёт</Russian>
+				</Key>
+				<Key ID="STR_UI_REC_SENTRY">
+						<Original>Recruit Sentry</Original>
+						<Russian>Караульный расчёт</Russian>
+				</Key>
+				<Key ID="STR_UI_REC_AT_TRUCK">
+						<Original>Recruit AT Truck</Original>
+						<Russian>ПТ грузовик</Russian>
+				</Key>
+				<Key ID="STR_UI_REC_AA_TRUCK">
+						<Original>Recruit AA Truck</Original>
+						<Russian>ПВО грузовик</Russian>
+				</Key>
+				<Key ID="STR_UI_REC_MORTAR_TEAM">
+						<Original>Recruit Mortar Team</Original>
+						<Russian>Миномётный расчёт</Russian>
+				</Key>
+				<Key ID="STR_UI_REC_ENGINERS">
+						<Original>Recruit Enginers</Original>
+						<Russian>Инженерный расчет</Russian>
+				</Key>
+				<Key ID="STR_UI_MILITARY_VEHICLE">
+						<Original>Purchase Military Vehicle</Original>
+						<Russian>Покупка техники FIA</Russian>
+				</Key>
+				<Key ID="STR_UI_QUADBIKE">
+						<Original>Buy Quadbike</Original>
+						<Russian>Квадроцикл</Russian>
+				</Key>
+				<Key ID="STR_UI_OFFROAD">
+						<Original>Buy Offroad/UAZ</Original>
+						<Russian>Внедорожник</Russian>
+				</Key>
+				<Key ID="STR_UI_TRUCK">
+						<Original>Buy Truck</Original>
+						<Russian>Грузовик</Russian>
+				</Key>
+				<Key ID="STR_UI_ARMED_OFFROAD">
+						<Original>Buy Armed Offroad</Original>
+						<Russian>Вооружённый внедорожник</Russian>
+				</Key>
+				<Key ID="STR_UI_MG">
+						<Original>Buy MG</Original>
+						<Russian>Станковый пулемёт</Russian>
+				</Key>
+				<Key ID="STR_UI_MORTAR">
+						<Original>Buy Mortar</Original>
+						<Russian>Миномёт</Russian>
+				</Key>
+				<Key ID="STR_UI_STATIC_AT">
+						<Original>Buy Static AT</Original>
+						<Russian>Станок с ПТУР</Russian>
+				</Key>
+				<Key ID="STR_UI_STATIC_AA">
+						<Original>Buy Static AA</Original>
+						<Russian>Станок с ПЗРК</Russian>
+				</Key>
+				<Key ID="STR_UI_APC">
+						<Original>Buy APC</Original>
+						<Russian>БТР</Russian>
+				</Key>
+				<Key ID="STR_UI_GAME_OPTIONS">
+						<Original>Game Options</Original>
+						<Russian>Управление игрой</Russian>
+				</Key>
+				<Key ID="STR_UI_CIV_CONFIG">
+						<Original>Civ Config</Original>
+						<Russian>Гражданские</Russian>
+				</Key>
+				<Key ID="STR_UI_RESIGN_COMM_CAREER">
+						<Original>Resign Comm.Career</Original>
+						<Russian>Уступить командование</Russian>
+				</Key>
+				<Key ID="STR_UI_MUSIC_ON_OFF">
+						<Original>Music ON/OFF</Original>
+						<Russian>Музыка ON/OFF</Russian>
+				</Key>
+				<Key ID="STR_UI_GARBAGE_CLEAN">
+						<Original>Garbage Clean</Original>
+						<Russian>Очистка мусора</Russian>
+				</Key>
+				<Key ID="STR_UI_REINIT_UI_RADIO">
+						<Original>Reinit UI \ Radio</Original>
+						<Russian>Восстановить UI \ Radio</Russian>
+				</Key>
+				<Key ID="STR_UI_PERSISTENT_SAVE">
+						<Original>Persistent Save</Original>
+						<Russian>Сохранить прогресс</Russian>
+				</Key>
+				<Key ID="STR_UI_FPS_LIMITER">
+						<Original>FPS Limiter</Original>
+						<Russian>Ограничитель FPS</Russian>
+				</Key>
+				<Key ID="STR_UI_SPAWN_DIST_CONFIG">
+						<Original>Spawn Dist. Config</Original>
+						<Russian>Дистанция симуляции</Russian>
+				</Key>
+				<Key ID="STR_UI_COMMANDER_MENU">
+						<Original>Commander Menu</Original>
+						<Russian>Меню командира</Russian>
+				</Key>
+				<Key ID="STR_UI_RESYNC_ARSENAL">
+						<Original>Resync Arsenal</Original>
+						<Russian>Синхронизация Арсенала</Russian>
+				</Key>
+				<Key ID="STR_UI_BUILDING_OPTIONS">
+						<Original>Building Options</Original>
+						<Russian>Строительные опции</Russian>
+				</Key>
+				<Key ID="STR_UI_BUILD_MINEFIELD">
+						<Original>Build Minefield</Original>
+						<Russian>Создать минное поле</Russian>
+				</Key>
+				<Key ID="STR_UI_MANAGE_CAMPS">
+						<Original>Manage Camps</Original>
+						<Russian>Управлять лагерями</Russian>
+				</Key>
+				<Key ID="STR_UI_OPOST_READBLOCK">
+						<Original>O.Post - Roadblock</Original>
+						<Russian>Создать стационарный пост</Russian>
+				</Key>
+				<Key ID="STR_UI_OPOST_READBLOCK_DELETE">
+						<Original>O.Post-Roadblock Delete</Original>
+						<Russian>Удалить стационарный пост</Russian>
+				</Key>
+				<Key ID="STR_UI_HQ_FORTIFICATION">
+						<Original>HQ Fortifications</Original>
+						<Russian>HQ апгрейд</Russian>
+				</Key>
+				<Key ID="STR_UI_AVAILABLE_MISSIONS">
+						<Original>Available Missions</Original>
+						<Russian>Доступные миссии</Russian>
+				</Key>
+				<Key ID="STR_UI_MILITARY_CONTACT">
+						<Original>Military Contact</Original>
+						<Russian>Военный контакт</Russian>
+				</Key>
+				<Key ID="STR_UI_CIVILIAN_CONTACT">
+						<Original>Civilian Contact</Original>
+						<Russian>Гражданский контакт</Russian>
+				</Key>
+				<Key ID="STR_UI_EXPLOSIVES_DEALER">
+						<Original>Explosives Dealer</Original>
+						<Russian>Торговец взрывчаткой</Russian>
+				</Key>
+				<Key ID="STR_UI_LOGISTICS_MISSION">
+						<Original>Logistics Mission</Original>
+						<Russian>Снабжение</Russian>
+				</Key>
+				<Key ID="STR_UI_RESCUE_MISSION">
+						<Original>Rescue Mission</Original>
+						<Russian>Спасение</Russian>
+				</Key>
+				<Key ID="STR_UI_DESTROY_MISSION">
+						<Original>Destroy Mission</Original>
+						<Russian>Уничтожить</Russian>
+				</Key>
+				<Key ID="STR_UI_BATTLE_OPTIONS">
+						<Original>Battle Options</Original>
+						<Russian>Тактическое меню</Russian>
+				</Key>
+				<Key ID="STR_UI_FAST_TRAVEL">
+						<Original>Fast Travel</Original>
+						<Russian>Быстрое перемещение</Russian>
+				</Key>
+				<Key ID="STR_UI_UNDERCOVER_ON">
+						<Original>Undercover ON</Original>
+						<Russian>Под прикрытием</Russian>
+				</Key>
+				<Key ID="STR_UI_VEHICLE_MANAGER">
+						<Original>Vehicle Manager</Original>
+						<Russian>Управление транспортом</Russian>
+				</Key>
+				<Key ID="STR_UI_NATO_OPTIONS">
+						<Original>NATO Options</Original>
+						<Russian>Поддержка NATO</Russian>
+				</Key>
+				<Key ID="STR_UI_BUILDING_OPTIONS">
+						<Original>Building Options</Original>
+						<Russian>Построить</Russian>
+				</Key>
+				<Key ID="STR_UI_RECRUIT_SQUAD">
+						<Original>Recruit Squad</Original>
+						<Russian>Набор отрядов</Russian>
+				</Key>
+				<Key ID="STR_UI_AI_MANAGMENT">
+						<Original>AI Management</Original>
+						<Russian>Управление AI</Russian>
+				</Key>
+				<Key ID="STR_UI_PLAYER_AND_MONEY">
+						<Original>Player and Money</Original>
+						<Russian>Игрок и деньги</Russian>
+				</Key>
+				<Key ID="STR_UI_ASK_NATO_FOR">
+						<Original>Ask NATO for</Original>
+						<Russian>Запрос поддержки NATO</Russian>
+				</Key>
+				<Key ID="STR_UI_ATTACK_MISSION">
+						<Original>Attack Mission</Original>
+						<Russian>Атаковать</Russian>
+				</Key>
+				<Key ID="STR_UI_ARMORED_COLUMN">
+						<Original>Armored Column</Original>
+						<Russian>Бронеколонна</Russian>
+				</Key>
+				<Key ID="STR_UI_ARTILLERY">
+						<Original>Artillery</Original>
+						<Russian>Бомбардировка</Russian>
+				</Key>
+				<Key ID="STR_UI_ROADBLOCK">
+						<Original>Roadblock</Original>
+						<Russian>Блокпост</Russian>
+				</Key>
+				<Key ID="STR_UI_NATO_UAV">
+						<Original>NATO UAV</Original>
+						<Russian>Ударный БПЛА</Russian>
+				</Key>
+				<Key ID="STR_UI_AMMODROP">
+						<Original>Ammodrop</Original>
+						<Russian>Сброс боеприпасов</Russian>
+				</Key>
+				<Key ID="STR_UI_CAS_SUPPORT">
+						<Original>CAS Support</Original>
+						<Russian>Поддержка с воздуха</Russian>
+				</Key>
+				<Key ID="STR_UI_BOMB_RUN">
+						<Original>Bomb Run</Original>
+						<Russian>Бомбардировка</Russian>
+				</Key>
+				<Key ID="STR_UI_NATO_QRF">
+						<Original>NATO QRF</Original>
+						<Russian>БПЛА</Russian>
+				</Key>
+				<Key ID="STR_UI_GARRISON_MENU">
+						<Original>Garrison Menu</Original>
+						<Russian>Управление гарнизонами</Russian>
+				</Key>
+				<Key ID="STR_UI_RECRUIT_GARRISON">
+						<Original>Recruit Garrison</Original>
+						<Russian>Зачислить в гарнизон</Russian>
+				</Key>
+				<Key ID="STR_UI_REMOVE_GARRISON">
+						<Original>Remove Garrison</Original>
+						<Russian>Удалить весь гарнизон</Russian>
+				</Key>
+				<Key ID="STR_UI_GARRISON_REC_OPT">
+						<Original>Garrison Recruitment Options</Original>
+						<Russian>Зачисление в гарнизон</Russian>
+				</Key>
+				<Key ID="STR_UI_GAR_MILI">
+						<Original>Recruit Militiaman</Original>
+						<Russian>Ополченец</Russian>
+				</Key>
+				<Key ID="STR_UI_GAR_AUTORIFLE">
+						<Original>Recruit Autorifleman</Original>
+						<Russian>Пулемётчик</Russian>
+				</Key>
+				<Key ID="STR_UI_GAR_MEDIC">
+						<Original>Recruit Medic</Original>
+						<Russian>Медик</Russian>
+				</Key>
+				<Key ID="STR_UI_GAR_SQUAD_LEADER">
+						<Original>Recruit Squad Leader</Original>
+						<Russian>Командир</Russian>
+				</Key>
+				<Key ID="STR_UI_GAR_MOTAR">
+						<Original>Recruit Mortar</Original>
+						<Russian>Миномётчик</Russian>
+				</Key>
+				<Key ID="STR_UI_GAR_GRENADIER">
+						<Original>Recruit Grenadier</Original>
+						<Russian>Гранатомётчик</Russian>
+				</Key>
+				<Key ID="STR_UI_GAR_MARKSMAN">
+						<Original>Recruit Marksman</Original>
+						<Russian>Снайпер</Russian>
+				</Key>
+				<Key ID="STR_UI_GAR_AT">
+						<Original>Recruit AT</Original>
+						<Russian>Стрелок ПТ</Russian>
+				</Key>
+				<Key ID="STR_UI_GAR_AA">
+						<Original>Recruit AA</Original>
+						<Russian>Стрелок ПЗРК</Russian>
+				</Key>
+				<Key ID="STR_UI_ONE_PLUS_FPS">
+						<Original>+1 FPS Limit</Original>
+						<Russian>+1 FPS лимит</Russian>
+				</Key>
+				<Key ID="STR_UI_ONE_MINUS_FPS">
+						<Original>-1 FPS Limit</Original>
+						<Russian>-1 FPS лимит</Russian>
+				</Key>
+				<Key ID="STR_UI_SPAWN_DISTANCE_CONFIG">
+						<Original>Spawn Distance Config</Original>
+						<Russian>Настройка дистанции симуляции</Russian>
+				</Key>
+				<Key ID="STR_UI_PLUS_SPAWN_DIST">
+						<Original>+100 Spawn Dist.</Original>
+						<Russian>+100 метров.</Russian>
+				</Key>
+				<Key ID="STR_UI_MINUS_SPAWN_DIST">
+						<Original>-100 Spawn Dist.</Original>
+						<Russian>-100 метров.</Russian>
+				</Key>
+				<Key ID="STR_UI_CIV_PRESENCE_CONFIG">
+						<Original>Civ Presence Config</Original>
+						<Russian>Настройка гражданских</Russian>
+				</Key>
+				<Key ID="STR_UI_PLUS_CIV_SPAWN">
+						<Original>+1% Civ Spawn.</Original>
+						<Russian>+1% гражданских.</Russian>
+				</Key>
+				<Key ID="STR_UI_MINUS_CIV_SPAWN">
+						<Original>-1% Civ Spawn.</Original>
+						<Russian>-1% гражданских.</Russian>
+				</Key>
+				<Key ID="STR_UI_HC_SQUAD_OPT">
+						<Original>HC Squad Options</Original>
+						<Russian>Управление отрядами (HC)</Russian>
+				</Key>
+				<Key ID="STR_UI_SQUAD_ADD_VEHICLE">
+						<Original>Squad Add Vehicle</Original>
+						<Russian>Добавить в отряд технику</Russian>
+				</Key>
+				<Key ID="STR_UI_SQUAD_VEH_STATS">
+						<Original>Squad Vehicle Stats</Original>
+						<Russian>Статус техники отряда</Russian>
+				</Key>
+				<Key ID="STR_UI_MOUNT_DISMOUNT">
+						<Original>Mount / Dismount</Original>
+						<Russian>Занять / Покинуть</Russian>
+				</Key>
+				<Key ID="STR_UI_STATIC_AUTOTARGET">
+						<Original>Static Autotarget</Original>
+						<Russian>Автонацеливание статики</Russian>
+				</Key>
+				<Key ID="STR_UI_ADD_VEH_TO_SQUAD">
+						<Original>Add Vehicle to Squad?</Original>
+						<Russian>Добавить транспорт в отряд?</Russian>
+				</Key>
+				<Key ID="STR_UI_YES">
+						<Original>YES</Original>
+						<Russian>ДА</Russian>
+				</Key>
+				<Key ID="STR_UI_NO">
+						<Original>NO</Original>
+						<Russian>НЕТ</Russian>
+				</Key>
+				<Key ID="STR_UI_PLAYER_AND_MONEY">
+						<Original>Player and Money Interaction</Original>
+						<Russian>Игрок и деньги</Russian>
+				</Key>
+				<Key ID="STR_UI_ADD_SERVER_MEMBER">
+						<Original>Add Server Member</Original>
+						<Russian>Добавить игрока на сервер</Russian>
+				</Key>
+				<Key ID="STR_UI_REMOVE_SERVER_MEMBER">
+						<Original>Remove Server Member</Original>
+						<Russian>Удалить игрока с сервера</Russian>
+				</Key>
+				<Key ID="STR_UI_DONATE_TO_PLAYER">
+						<Original>Donate 100 € to player</Original>
+						<Russian>Перевести 100 € игроку</Russian>
+				</Key>
+				<Key ID="STR_UI_DONATE_TO_FIA">
+						<Original>Donate 100 € to FIA</Original>
+						<Russian>Перевести 100 € в FIA</Russian>
+				</Key>
+				<Key ID="STR_UI_VEH_MANAGER">
+						<Original>Vehicle Manager</Original>
+						<Russian>Автопарк</Russian>
+				</Key>
+				<Key ID="STR_UI_GARAGE_SELL_VEH">
+						<Original>Garage\Sell Vehicle</Original>
+						<Russian>Гараж\Продажа</Russian>
+				</Key>
+				<Key ID="STR_UI_VEH_SQUADS">
+						<Original>Vehicles and Squads</Original>
+						<Russian>Техника и отряды</Russian>
+				</Key>
+				<Key ID="STR_UI_UNLOCK_VEHICLE">
+						<Original>Unlock Vehicle</Original>
+						<Russian>Разблокировать</Russian>
+				</Key>
+				<Key ID="STR_UI_SELL_OR_GARAGE_VEHICLE">
+						<Original>Sell or Garage Vehicle</Original>
+						<Russian>Гараж\Продажа</Russian>
+				</Key>
+				<Key ID="STR_UI_GARAGE_VEHICLE">
+						<Original>Garage Vehicle</Original>
+						<Russian>Поставить в гараж</Russian>
+				</Key>
+				<Key ID="STR_UI_SELL_VEHICLE">
+						<Original>Sell Vehicle</Original>
+						<Russian>Продать технику</Russian>
+				</Key>
+				<Key ID="STR_UI_PERSONAL_OR_FIA_GARAGE">
+						<Original>Personal or FIA Garage?</Original>
+						<Russian>Личный гараж или FIA гараж?</Russian>
+				</Key>
+				<Key ID="STR_UI_PERSONAL_GARAGE">
+						<Original>Personal Garage</Original>
+						<Russian>Личный гараж</Russian>
+				</Key>
+				<Key ID="STR_UI_FIA_GARAGE">
+						<Original>FIA Garage</Original>
+						<Russian>FIA гараж</Russian>
+				</Key>
+				<Key ID="STR_UI_BUY_VEHICLE">
+						<Original>Buy Vehicle</Original>
+						<Russian>Покупка техники</Russian>
+				</Key>
+				<Key ID="STR_UI_CIV_VEH">
+						<Original>Civilian Vehicle</Original>
+						<Russian>Гражданская техника</Russian>
+				</Key>
+				<Key ID="STR_UI_MIL_VEH">
+						<Original>Military Vehicle</Original>
+						<Russian>Техника FIA</Russian>
+				</Key>
+				<Key ID="STR_UI_BUY_CIV_VEH">
+						<Original>Buy Civilian Vehicle</Original>
+						<Russian>Покупка гражданской техники</Russian>
+				</Key>
+				<Key ID="STR_UI_BUY_OFFROAD">
+						<Original>Offroad</Original>
+						<Russian>Внедорожник</Russian>
+				</Key>
+				<Key ID="STR_UI_BUY_TRUCK">
+						<Original>Truck</Original>
+						<Russian>Грузовик</Russian>
+				</Key>
+				<Key ID="STR_UI_BUY_HELICOPTER">
+						<Original>Helicopter</Original>
+						<Russian>Вертолёт</Russian>
+				</Key>
+				<Key ID="STR_UI_CARPER_BOMBONG_STRIKE">
+						<Original>Carpet Bombing Strike</Original>
+						<Russian>Ковровая бомбардировка</Russian>
+				</Key>
+				<Key ID="STR_UI_HE_BOMBS">
+						<Original>HE Bombs</Original>
+						<Russian>Фугасные бомбы</Russian>
+				</Key>
+				<Key ID="STR_UI_CARPET_BOMBING">
+						<Original>Carpet Bombing</Original>
+						<Russian>Ковровая бомбардировка</Russian>
+				</Key>
+				<Key ID="STR_UI_NAPALM_BOMB">
+						<Original>NAPALM Bomb</Original>
+						<Russian>Напалм</Russian>
+				</Key>
+				<Key ID="STR_UI_AI_MANAGMENT">
+						<Original>AI Management</Original>
+						<Russian>Управление AI</Russian>
+				</Key>
+				<Key ID="STR_UI_TEMP_AI_CONTROL">
+						<Original>Temp. AI Control</Original>
+						<Russian>Временно управлять AI</Russian>
+				</Key>
+				<Key ID="STR_UI_AUTO_REARM">
+						<Original>Auto Rearm</Original>
+						<Russian>Автопоиск боепрепасов</Russian>
+				</Key>
+				<Key ID="STR_UI_AUTO_HEAL">
+						<Original>Auto Heal</Original>
+						<Russian>Автолечение</Russian>
+				</Key>
+				<Key ID="STR_UI_DISMISS_UNITS_SQUADS">
+						<Original>Dismiss Units/Squads</Original>
+						<Russian>Роспуск отрядов/увольнение</Russian>
+				</Key>
+				<Key ID="STR_UI_SELECT_NO_ROUND_TO_BE_FIRED">
+						<Original>Select No. Rounds to be fired</Original>
+						<Russian>Выберете количество залпов</Russian>
+				</Key>
+				<Key ID="STR_UI_SELECT_TYPE_OF_STRIKE">
+						<Original>Select type of strike</Original>
+						<Russian>Выберите вид удара</Russian>
+				</Key>
+				<Key ID="STR_UI_SINGLE_POINT_STRIKE">
+						<Original>Single Point Strike</Original>
+						<Russian>Точечный залп</Russian>
+				</Key>
+				<Key ID="STR_UI_BARRAGE_STRIKE">
+						<Original>Barrage Strike</Original>
+						<Russian>Заградительный залп</Russian>
+				</Key>
+				<Key ID="STR_UI_SELECT_TYPE_AMMO_FOR_THE_STRIKE">
+						<Original>Select type ammo for the strike</Original>
+						<Russian>Выберите вид боеприпасов для удара</Russian>
+				</Key>
+				<Key ID="STR_UI_STRIKE_HE">
+						<Original>HE</Original>
+						<Russian>ОФ</Russian>
+				</Key>
+				<Key ID="STR_UI_LASER_GUIDED">
+						<Original>Laser Guided</Original>
+						<Russian>Лазерное наведение</Russian>
+				</Key>
+				<Key ID="STR_UI_STRIKE_SMOKE">
+						<Original>Smoke</Original>
+						<Russian>Дым</Russian>
+				</Key>
+				<Key ID="STR_UI_SELECT_MOTAR_AMMO">
+						<Original>Select Mortar Ammo</Original>
+						<Russian>Выберите боеприпас для миномёта</Russian>
+				</Key>
+				<Key ID="STR_UI_APERS_MINES">
+						<Original>APERS Mines</Original>
+						<Russian>ПП мины</Russian>
+				</Key>
+				<Key ID="STR_UI_AT_MINES">
+						<Original>AT Mines</Original>
+						<Russian>ПТ мины</Russian>
+				</Key>
+				<Key ID="STR_UI_FAST_TRAVEL_OLD">
+						<Original>Fast Travel (old)</Original>
+						<Russian>Быстрое перемещение (старое)</Russian>
+				</Key>
+				<Key ID="STR_UI_TRAVEL_TO_ALL_ZONE">
+						<Original>Targets: all FIA-controlled zones</Original>
+						<Russian>Куда: все контроллируемые FIA зоны</Russian>
+				</Key>
+				<Key ID="STR_UI_FAST_TRAVEL_NEW">
+						<Original>Fast Travel (new)</Original>
+						<Russian>Быстрое перемещение (новое)</Russian>
+				</Key>
+				<Key ID="STR_UI_TRAVEL_ONLY_TO_CAMP">
+						<Original>Only FIA camps and HQ</Original>
+						<Russian>Только лагеря FIA и Штаб</Russian>
+				</Key>
+				<Key ID="STR_UI_CAMP_MANAGMENT">
+						<Original>Camp Management</Original>
+						<Russian>Управление лагерем</Russian>
+				</Key>
+				<Key ID="STR_UI_ESTABLISH_CAMP">
+						<Original>Establish Camp</Original>
+						<Russian>Разбить лагерь</Russian>
+				</Key>
+				<Key ID="STR_UI_DELETE_CAMP">
+						<Original>Delete Camp</Original>
+						<Russian>Удалить лагерь</Russian>
+				</Key>
+				<Key ID="STR_UI_RENAME_CAMP">
+						<Original>Rename Camp</Original>
+						<Russian>Переименовать лагерь</Russian>
+				</Key>
+				<Key ID="STR_UI_COMM_MENU">
+						<Original>Commander Menu</Original>
+						<Russian>Меню командира</Russian>
+				</Key>
+				<Key ID="STR_UI_FT_ON_OFF">
+						<Original>FT On/Off</Original>
+						<Russian>Телепорт Вкл/Выкл</Russian>
+				</Key>
+				<Key ID="STR_UI_TOOGLE_OLD">
+						<Original>Toggle the old Fast Travel system on/off</Original>
+						<Russian>Вкл/выкл быстрое перемещение</Russian>
+				</Key>
+				<Key ID="STR_UI_ARSENAL_ACCESS">
+						<Original>Arsenal Access On/Off</Original>
+						<Russian>Доступ к арсеналу Вкл/Выкл</Russian>
+				</Key>
+				<Key ID="STR_UI_TOOGLE_INCRASE">
+						<Original>Toggle Increased Income</Original>
+						<Russian>Переключить количество дохода</Russian>
+				</Key>
+				<Key ID="STR_UI_AVAILABLE_MISSIONS">
+						<Original>Available Missions</Original>
+						<Russian>Доступные миссии</Russian>
+				</Key>
+				<Key ID="STR_UI_MISSION_ASSASIN">
+						<Original>Assassination Mission</Original>
+						<Russian>Охотник за головами</Russian>
+				</Key>
+				<Key ID="STR_UI_MISSION_CONVOY">
+						<Original>Convoy Ambush</Original>
+						<Russian></Russian>
+				</Key>
+				<Key ID="STR_UI_MISSION_CONQUEST">
+						<Original>Conquest Missions</Original>
+						<Russian>Захват</Russian>
+				</Key>
+				<Key ID="STR_UI_MISSION_DESTROY">
+						<Original>Destroy Missions</Original>
+						<Russian>Уничтожить</Russian>
+				</Key>
+				<Key ID="STR_UI_BUYEXPLOSIVES">
+						<Original>Buy Explosives</Original>
+						<Russian>Покупка взрывчатки</Russian>
+				</Key>
+				<Key ID="STR_UI_SOME_CHARGES">
+						<Original>Some Charges</Original>
+						<Russian>Заряды</Russian>
+				</Key>
+				<Key ID="STR_UI_SOME_MINES">
+						<Original>Some Mines</Original>
+						<Russian>Мины</Russian>
+				</Key>
+				<Key ID="STR_UI_MANY_CHARGES">
+						<Original>Many Charges</Original>
+						<Russian>Много зарядов</Russian>
+				</Key>
+				<Key ID="STR_UI_MANY_MINES">
+						<Original>Many Mines</Original>
+						<Russian>Много мин</Russian>
+				</Key>
+				<Key ID="STR_UI_CAMO_NET">
+						<Original>Camo Net</Original>
+						<Russian>Сетка</Russian>
+				</Key>
+				<Key ID="STR_UI_LANTERN">
+						<Original>Lantern</Original>
+						<Russian>Освещение</Russian>
+				</Key>
+				<Key ID="STR_UI_DELETE_ALL">
+						<Original>Delete All</Original>
+						<Russian>Удалить всё</Russian>
+				</Key>
+				<Key ID="STR_UI_CLICK_NEAR_CONTROL">
+						<Original>You must click near marker under your control</Original>
+						<Russian>Кликните рядом с маркером под нашим контролем</Russian>
+				</Key>
+				<Key ID="STR_UI_UNIT_RECRUITMENT">
+						<Original>Unit Recruitment</Original>
+						<Russian>Набор добровольцев</Russian>
+				</Key>
+				<Key ID="STR_UI_MISSION_REQUEST">
+						<Original>Mission Request</Original>
+						<Russian>Получить задание</Russian>
+				</Key>
+				<Key ID="STR_UI_AMMOBOX_TO_TRUCK">
+						<Original>Transfer Ammobox to Truck</Original>
+						<Russian>Загрузить содержимое ящика в грузовик</Russian>
+				</Key>
+				<Key ID="STR_UI_ORDER_TO_FOLLOW">
+						<Original>Order Refugee to follow me</Original>
+						<Russian>Следовать за мной</Russian>
+				</Key>
+				<Key ID="STR_UI_LIBERATE_POW">
+						<Original>Liberate POW</Original>
+						<Russian>Освободить пленного</Russian>
+				</Key>
+				<Key ID="STR_UI_INTERROGATE">
+						<Original>Interrogate</Original>
+						<Russian>Допросить</Russian>
+				</Key>
+				<Key ID="STR_UI_OFFIER_TO_JOIN">
+						<Original>Offer join FIA</Original>
+						<Russian>Предложить вступить в FIA</Russian>
+				</Key>
+				<Key ID="STR_UI_BUILD_HQ_HERE">
+						<Original>Build HQ here</Original>
+						<Russian>Разместить Штаб тут</Russian>
+				</Key>
+				<Key ID="STR_UI_BUY_BOAT">
+						<Original>Buy Boat</Original>
+						<Russian>Купить лодку</Russian>
+				</Key>
+				<Key ID="STR_UI_STEAL_STATIC">
+						<Original>Steal Static</Original>
+						<Russian>Разобрать статику</Russian>
+				</Key>
+				<Key ID="STR_UI_PERSONAL_GARAGE">
+						<Original>Personal Garage</Original>
+						<Russian>Личный гараж</Russian>
+				</Key>
+				<Key ID="STR_UI_FIA_GARAGE">
+						<Original>FIA Garage</Original>
+						<Russian>Гараж FIA</Russian>
+				</Key>
+				<Key ID="STR_UI_SELL_GEAR">
+						<Original>Sell Gear</Original>
+						<Russian>Продать снаряжение</Russian>
+				</Key>
+				<Key ID="STR_UI_GRAB_SOME_CHOW">
+						<Original>Grab Some Chow</Original>
+						<Russian>Подлечиться</Russian>
+				</Key>
+				<Key ID="STR_UI_REFUEL_VEH">
+						<Original>Refuel Vehicles</Original>
+						<Russian>Заправить технику</Russian>
+				</Key>
+				<Key ID="STR_UI_WHAT_DO">
+						<Original>Is there anything I can do for you?</Original>
+						<Russian>Есть что-то, что я могу для тебя сделать?</Russian>
+				</Key>
+				<Key ID="STR_UI_TALK">
+						<Original>Talk</Original>
+						<Russian>Поговорить</Russian>
+				</Key>
+				<Key ID="STR_UI_BUY">
+						<Original>Buy</Original>
+						<Russian>Купить</Russian>
+				</Key>
+				<Key ID="STR_UI_JAM_CSAT">
+						<Original>Jam CSAT</Original>
+						<Russian>Глушить CSAT</Russian>
+				</Key>
+				<Key ID="STR_UI_GARRISON_INFO">
+						<Original>\n\nGarrison men: %1\n\nSquad Leaders: %2\nMortars: %3\nRiflemen: %4\nAutoriflemen: %5\nMedics: %6\nGrenadiers: %7\nMarksmen: %8\nAT Men: %9\nAA Men: %10\nStatic Weap: %11</Original>
+						<Russian>\n\nГарнизон: %1\n\nКомандиров: %2\nМиномётчиков: %3\nОполченцев: %4\nПулемётчиков: %5\nМедиков: %6\nГранатомётчиков: %7\nСнайперов: %8\nСтрелков АТ: %9\nСтрелков АА: %10\nСтатики: %11</Russian>
+				</Key>
+				<Key ID="STR_UI_VEH_CARGO_TO_AMMOBOX">
+						<Original>Transfer Vehicle cargo to Ammobox</Original>
+						<Russian>Разгрузить машину</Russian>
+				</Key>
+				<Key ID="STR_UI_ONLY_FOR_COMMANDER">
+						<Original>Only Player Commander is allowed to move HQ assets</Original>
+						<Russian>Только командир отряда может перемещать предметы Штаба!</Russian>
+				</Key>
+				<Key ID="STR_UI_CANT_MOVE_IN_VEH">
+						<Original>You cannot move HQ assets while in a vehicle</Original>
+						<Russian>Вы не можете переносить предметы Штаба, когда вы в транспорте.</Russian>
+				</Key>
+				<Key ID="STR_UI_CANT_MOVE_30M">
+						<Original>You cannot move HQ assets far from 30mts distance to Petros position</Original>
+						<Russian>Вы не можете уносить предметы Штаба дальше 30 метров от Петроса.</Russian>
+				</Key>
+				<Key ID="STR_UI_CANT_REBUILD_NO_MONEY">
+						<Original>You do not have enough money to rebuild any Asset. You need 5.000 €</Original>
+						<Russian>У вас недостаточно денег, чтобы восстановить что-либо. 5.000 € требуется</Russian>
+				</Key>
+				<Key ID="STR_UI_CLICK_FOR_REBUILD">
+						<Original>Click on the zone you want to rebuild.</Original>
+						<Russian>Кликните рядом с маркером, который вы хотите восстановить.</Russian>
+				</Key>
+				<Key ID="STR_UI_MUST_CLICK_NEAR_MARKER">
+						<Original>You must click near a map marker</Original>
+						<Russian>Вы должны кликнуть рядом с маркером</Russian>
+				</Key>
+				<Key ID="STR_UI_CANT_REBUILD_THAT">
+						<Original>You cannot rebuild that</Original>
+						<Russian>Вы не можете его восстановить</Russian>
+				</Key>
+				<Key ID="STR_UI_REBUILDED">
+						<Original>%1 Rebuilt</Original>
+						<Russian>%1 восстановлен</Russian>
+				</Key>
+				<Key ID="STR_UI_DECIDED_REST">
+						<Original>You decided to rest some time</Original>
+						<Russian>Вы решили немного отдохнуть</Russian>
+				</Key>
+				<Key ID="STR_UI_TIME_TO_GO">
+						<Original>Time to go</Original>
+						<Russian>Время действовать!</Russian>
+				</Key>
+				<Key ID="STR_UI_TOP_PANEL_COMM">
+						<Original>Commander: %3 | Rank: %2 | HR: %1 | Your Money: %4 € | NATO Support: %5 | CSAT Support: %6 | Undercover Mode:</Original>
+						<Russian>Командир: %3 | Звание: %2 | HR: %1 | Ваши деньги: %4 € | Поддержка NATO: %5 | Поддержка CSAT: %6 | Под прикрытием:</Russian>
+				</Key>
+				<Key ID="STR_UI_TOP_PANEL_USER">
+						<Original>Rank: %5 | HR: %1 | Your Money: %6 € | FIA Money: %2 € | NATO Support: %3 | CSAT Support: %4 | Undercover Mode:</Original>
+						<Russian>Звание: %5 | HR: %1 | Ваши деньги: %6 € | Деньги FIA: %2 € | Поддержка NATO: %3 | Поддержка CSAT: %4 | Под прикрытием:</Russian>
+				</Key>
+				<Key ID="STR_UI_ON">
+						<Original>%1 ON</Original>
+						<Russian>%1 ДА</Russian>
+				</Key>
+				<Key ID="STR_UI_OFF">
+						<Original>%1 OFF</Original>
+						<Russian>%1 НЕТ</Russian>
+				</Key>
+				<Key ID="STR_UI_SHOW_STATISTICS">
+						<Original>HR: %1 | FIA Money: %2 € | NATO Support: %3 | CSAT Support: %4 | Undercover Mode:</Original>
+						<Russian>HR: %1 | Деньги FIA: %2 € | Поддержка NATO: %3 | Поддержка CSAT: %4 | Под прикрытием:</Russian>
+				</Key>
+				<Key ID="STR_NEED_CLICK_NEAR_CAMP">
+						<Original>You must click near a camp or HQ</Original>
+						<Russian>Кликните рядом с лагерем или нашим Штабом</Russian>
+				</Key>
+				<Key ID="STR_ARRIVED_TO_DESTINATION">
+						<Original>You arrived to destination</Original>
+						<Russian>Вы достигли места назначения</Russian>
+				</Key>
+				<Key ID="STR_TRAVELING_WAIT">
+						<Original>Fast traveling, please wait</Original>
+						<Russian>Перемещаемся, ожидайте</Russian>
+				</Key>
+				<Key ID="STR_CLICK_FOR_TRAVEL">
+						<Original>Click on the zone you want to travel to</Original>
+						<Russian>Кликните на место, куда вы хотите переместиться</Russian>
+				</Key>
+				<Key ID="STR_POWER_FACTORY">
+						<Original>Factory: %1</Original>
+						<Russian>Фабрика %1</Russian>
+				</Key>
+				<Key ID="STR_POWER_PLANT">
+						<Original>Power Plant: %1</Original>
+						<Russian>ТЭЦ %1</Russian>
+				</Key>
+				<Key ID="STR_FIA_PORT">
+						<Original>Sea Port: %1</Original>
+						<Russian>Порт</Russian>
+				</Key>
+				<Key ID="STR_FIA_RESOURCE">
+						<Original>Resource: %1</Original>
+						<Russian>Шахта</Russian>
+				</Key>
+				<Key ID="STR_FIA_OUTPOST">
+						<Original>FIA Outpost: %1</Original>
+						<Russian>Аванпост</Russian>
+				</Key>
+				<Key ID="STR_FIA_BASE">
+						<Original>FIA Base: %1</Original>
+						<Russian>База</Russian>
+				</Key>
+				<Key ID="STR_FIA_AIRPORT">
+						<Original>FIA Airport: %1</Original>
+						<Russian>Аэропорт</Russian>
+				</Key>
+				<Key ID="STR_CANT_MOVE_30M">
+						<Original>You cannot move statics further than 30m from the flag.</Original>
+						<Russian>Вы не можете уносить статику дальше 30 метров от флага.</Russian>
+				</Key>
+				<Key ID="STR_CANT_MOVE_IN_VEH">
+						<Original>You cannot move statics while you're in a vehicle.</Original>
+						<Russian>Вы не можете переносить статику, когда вы в транспорте.</Russian>
+				</Key>
+				<Key ID="STR_DROP_HERE">
+						<Original>Drop Here</Original>
+						<Russian>Поставить</Russian>
+				</Key>
+				<Key ID="STR_PICKUP_TOW_ROPES">
+						<Original>Pickup Tow Ropes</Original>
+						<Russian>Взять буксировочный трос</Russian>
+				</Key>
+				<Key ID="STR_DROP_TOW_ROPES">
+						<Original>Drop Tow Ropes</Original>
+						<Russian>Бросить буксировочный трос</Russian>
+				</Key>
+				<Key ID="STR_ATTACH_TOW_ROPES">
+						<Original>Attach To Tow Ropes</Original>
+						<Russian>Прицепить к буксировочному тросу</Russian>
+				</Key>
+				<Key ID="STR_PUT_TOW_ROPES">
+						<Original>Put Away Tow Ropes</Original>
+						<Russian>Отцепить буксировочный трос</Russian>
+				</Key>
+				<Key ID="STR_DEPLOY_TOW_ROPES">
+						<Original>Deploy Tow Ropes</Original>
+						<Russian>Прицепить буксировочный трос</Russian>
+				</Key>
+				<Key ID="STR_CANT_REMOVE_GARRISONS_ENEMIES_NEAR">
+						<Original>You cannot remove garrisons while there are enemies nearby</Original>
+						<Russian>Вы не можете распустить гарнизон пока там рядом враги.</Russian>
+				</Key>
+				<Key ID="STR_NO_TROOPS_FOR_REMOVE">
+						<Original>The place has no garrisoned troops to remove</Original>
+						<Russian>Эта зона пока не имеет гарнизона.</Russian>
+				</Key>
+				<Key ID="STR_CANT_MANAGE_GARRISON">
+						<Original>You cannot manage garrisons on this kind of zone</Original>
+						<Russian>Вы не можете иметь гарнизон в этой зоне.</Russian>
+				</Key>
+				<Key ID="STR_NOT_BELONG_TO_FIA">
+						<Original>That zone does not belong to FIA</Original>
+						<Russian>Эта зона больше не принадлежит FIA.</Russian>
+				</Key>
+				<Key ID="STR_CLICK_NEAR_ZONE">
+						<Original>You must click near a marked zone</Original>
+						<Russian>Вы должны кликнуть рядом с маркером зоны.</Russian>
+				</Key>
+				<Key ID="STR_SELECT_ZONE_FOR_REMOVE_GARRISON">
+						<Original>Select a zone to remove it's Garrison</Original>
+						<Russian>Выберить зону, чтобы распустить её гарнизон.</Russian>
+				</Key>
+				<Key ID="STR_SELECT_ZONE_FOR_GARRISON">
+						<Original>Select a zone to add garrisoned troops</Original>
+						<Russian>Выберите зону, чтобы добавить бойцов в её гарнизон.</Russian>
+				</Key>
+				<Key ID="STR_GARRISON_INFO">
+						<Original>Info%1</Original>
+						<Russian>Информация%1</Russian>
+				</Key>
+				<Key ID="STR_RECTUIT_PAUSE">
+						<Original>We are currently adding garrison units to this zone. HQ nearby zones require more time to add garrisons.\n\nPlease try again in %1 seconds.</Original>
+						<Russian>Мы сейчас добавляем бойцов в гарнизон. Зоны рядом с нашим Штабом требуют больше времени для этого.\n\nПопробуйте снова через %1 секунд.</Russian>
+				</Key>
+				<Key ID="STR_CANT_GARRISON_ENEMIES_NEAR">
+						<Original>You cannot Recruit Garrison Units with enemies near the zone</Original>
+						<Russian>Вы не можете добавлять бойцов в гарнизон, возле когорого враги.</Russian>
+				</Key>
+				<Key ID="STR_NOT_MONEY_FOR_UNIT">
+						<Original>You do not have enough money for this kind of unit (%1 € needed)</Original>
+						<Russian>У вас недостаточно денег для снаряжения добровольца этой специальности (%1 € требуется).</Russian>
+				</Key>
+				<Key ID="STR_NOT_HR_FOR_RECRUITMENT">
+						<Original>You lack of HR to make a new recruitment</Original>
+						<Russian>У вас закончились очки HR, чтобы нанять добровольцев.</Russian>
+				</Key>
+				<Key ID="STR_TRAINING_DONE_AND_CURRENT_LEVEL">
+						<Original>FIA Skill Level has been Upgraded\nCurrent level is %1</Original>
+						<Russian>Уровень бойцов FIA был повышен\nТекущий уровень %1</Russian>
+				</Key>
+				<Key ID="STR_NOT_MONEY_FOR_TRAINING">
+						<Original>You do not have enough money to afford additional training. %1 € needed</Original>
+						<Russian>У вас недостаточно денег, чтобы провести дополнительную тренировку. Нужно: %1 €</Russian>
+				</Key>
+				<Key ID="STR_TROOPS_LEVEL_IS_MAX">
+						<Original>Your troops have the maximum training</Original>
+						<Russian>Ваши бойцы максимально натренированы</Russian>
+				</Key>
+				<Key ID="STR_ONLY_COMM_FOR_THIS_FUNC">
+						<Original>Only Commander Stavros has access to this function</Original>
+						<Russian>Только командир имеет доступ</Russian>
+				</Key>
+				<Key ID="STR_NOT_ENOUTH_SPACE_FOR_VEHICLE">
+						<Original>Not enough space to place this type of vehicle</Original>
+						<Russian>Недостаточно места, чтобы разместить эту технику.</Russian>
+				</Key>
+				<Key ID="STR_NOT_ENOUTH_FOR_VEHICLE">
+						<Original>You do not have enough money for this vehicle: %1 € required</Original>
+						<Russian>У вас недостаточно денег для покупки этой техники: %1 € требуется.</Russian>
+				</Key>
+				<Key ID="STR_CANT_BY_VEHICLE_WHILE_ENEMY">
+						<Original>You cannot buy vehicles with enemies nearby</Original>
+						<Russian>Вы не можете покупать технику, когда рядом враги.</Russian>
+				</Key>
+				<Key ID="STR_CANT_BY_VEHICLE_WHILE_AI">
+						<Original>You cannot buy vehicles while you are controlling AI</Original>
+						<Russian>Вы не можете покупать технику во время управления AI.</Russian>
+				</Key>
+				<Key ID="STR_NOT_ENOUTH_MONEY">
+						<Original>You do not have enough money for this request (%1 € required)</Original>
+						<Russian>У вас недостаточно денег\n (%1 € требуется)</Russian>
+				</Key>
+				<Key ID="STR_NOT_ENOUGH_HR">
+						<Original>You do not have enough HR for this request (%1 required)</Original>
+						<Russian>У вас недостаточно очков HR\n (%1 требуется)</Russian>
+				</Key>
+				<Key ID="STR_CANT_RECRUIT_NEAR_ENEMIES">
+						<Original>You cannot Recruit Squads with enemies near your HQ</Original>
+						<Russian>Вы не можете нанимать добровольцев, когда враги рядом с нашим Штабом.</Russian>
+				</Key>
+				<Key ID="STR_NEED_RADIO_FOR_ORDERS">
+						<Original>You need a radio in your inventory to be able to give orders to other squads</Original>
+						<Russian>Вам необходима рация, чтобы отдавать приказы другим отрядам</Russian>
+				</Key>
+				<Key ID="STR_CANT_RECRUIT">
+						<Original>You cant recruit a new squad while you are moving your HQ</Original>
+						<Russian>Вы не можете нанимать новый отряд во время перемещения нашего Штаба.</Russian>
+				</Key>
+				<Key ID="STR_ONLY_COMM_CAN_USE_IT">
+						<Original>Only Commander Stavros has access to this function</Original>
+						<Russian>Только командир имеет доступ.</Russian>
+				</Key>
+				<Key ID="STR_HIGT_LOAD_ON_SERVER">
+						<Original>Server is very loaded. \nWait one minute or change FPS settings in order to fulfill this request</Original>
+						<Russian>Сервер очень загружен. \nПодождите 1 минуту или измените настройки FPS для выполнения этого запроса.</Russian>
+				</Key>
+				<Key ID="STR_ELEGIBLE_COMM">
+						<Original>You are now elegible to be Commander of the FIA forces.</Original>
+						<Russian>Теперь вас могут назначить командиром отряда партизан.</Russian>
+				</Key>
+				<Key ID="STR_DECIDED_COMM">
+						<Original>You decided not to be elegible for Commander.</Original>
+						<Russian>Вы отказываетесь быть командиром отряда партизан.</Russian>
+				</Key>
+				<Key ID="STR_TRUCK_LOADED">
+						<Original>Truck Loaded</Original>
+						<Russian>Содержимое загружено</Russian>
+				</Key>
+				<Key ID="STR_RADIO_TOWER">
+						<Original>Radio Tower</Original>
+						<Russian>Радиовышка</Russian>
+				</Key>
+				<Key ID="STR_COST_SQUAD">
+						<Original>Cost: %1 €. HR: %2</Original>
+						<Russian>Цена: %1 €. HR: %2</Russian>
+				</Key>
+				<Key ID="STR_CURRENT_LEVEL">
+						<Original>Current level: %2. Next Level Training Cost: %1 €</Original>
+						<Russian>Текущий уровень: %2. Цена следующего уровня: %1 €</Russian>
+				</Key>
+				<Key ID="STR_COST">
+						<Original>Cost: %1 €</Original>
+						<Russian>Цена: %1 €</Russian>
+				</Key>
+				<Key ID="STR_MOVE_THIS_ASSET">
+						<Original>Move this asset</Original>
+						<Russian>Переместить</Russian>
+				</Key>
 				<Key ID="STR_CLOSE">
 						<Original>Close</Original>
 						<Russian>Закрыть</Russian>

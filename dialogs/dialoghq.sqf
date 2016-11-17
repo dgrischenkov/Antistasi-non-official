@@ -1,4 +1,4 @@
-private ["_display","_childControl","_veh","_texto","_coste","_tipoVeh"];
+﻿private ["_display","_childControl","_veh","_texto","_coste","_tipoVeh"];
 _nul = createDialog "HQ_menu";
 
 sleep 1;
@@ -9,7 +9,7 @@ _display = findDisplay 100;
 if (str (_display) != "no display") then
 {
 	_ChildControl = _display displayCtrl 109;
-	_ChildControl  ctrlSetTooltip format ["Current level: %2. Next Level Training Cost: %1 €",1000 + (1.5*((server getvariable "skillFIA") *750)),server getvariable "skillFIA"];
+	_ChildControl  ctrlSetTooltip format [localize "STR_CURRENT_LEVEL",1000 + (1.5*((server getvariable "skillFIA") *750)),server getvariable "skillFIA"];
 /*
 	_ChildControl = _display displayCtrl 110;
 	{

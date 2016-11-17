@@ -1,4 +1,4 @@
-if (!isDedicated) then
+﻿if (!isDedicated) then
 	{
 	["gogglesPlayer"] call fn_LoadStat;
 	["vestPlayer"] call fn_LoadStat;
@@ -113,21 +113,21 @@ if (_x in mrkFIA) then
 		};
 	if (_x in aeropuertos) then
 		{
-		_mrkD setMarkerText format ["FIA Airport: %1",count (garrison getVariable _x)];
+		_mrkD setMarkerText format [localize "STR_FIA_AIRPORT",count (garrison getVariable _x)];
 		_mrkD setMarkerType "flag_FIA";
 		planesAAFmax = planesAAFmax - 1;
 	    helisAAFmax = helisAAFmax - 2;
 	    };
 	if (_x in bases) then
 		{
-		_mrkD setMarkerText format ["FIA Base: %1",count (garrison getVariable _x)];
+		_mrkD setMarkerText format [localize "STR_FIA_BASE",count (garrison getVariable _x)];
 		_mrkD setMarkerType "flag_FIA";
 		APCAAFmax = APCAAFmax - 2;
     	tanksAAFmax = tanksAAFmax - 1;
 		};
 	if (_x in puestos) then
 		{
-		_mrkD setMarkerText format ["FIA Outpost: %1",count (garrison getVariable _x)];
+		_mrkD setMarkerText format [localize "STR_FIA_OUTPOST",count (garrison getVariable _x)];
 		};
 	if (_x in ciudades) then
 		{
@@ -140,7 +140,7 @@ if (_x in mrkFIA) then
 		};
 	if ((_x in recursos) or (_x in fabricas)) then
 		{
-		if (_x in recursos) then {_mrkD setMarkerText format ["Resource: %1",count (garrison getVariable _x)]} else {_mrkD setMarkerText format ["Factory: %1",count (garrison getVariable _x)]};
+		if (_x in recursos) then {_mrkD setMarkerText format [localize "STR_FIA_RESOURCE",count (garrison getVariable _x)]} else {_mrkD setMarkerText format ["Factory: %1",count (garrison getVariable _x)]};
 		_power = [power, getMarkerPos _x] call BIS_fnc_nearestPosition;
 		if ((not (_power in mrkFIA))  or (_power in destroyedCities)) then
 			{
@@ -150,11 +150,11 @@ if (_x in mrkFIA) then
 		};
 	if (_x in puertos) then
 		{
-		_mrkD setMarkerText format ["Sea Port: %1",count (garrison getVariable _x)];
+		_mrkD setMarkerText format [localize "STR_FIA_PORT",count (garrison getVariable _x)];
 		};
 	if (_x in power) then
 		{
-		_mrkD setMarkerText format ["Power Plant: %1",count (garrison getVariable _x)];
+		_mrkD setMarkerText format [localize "STR_POWER_PLANT",count (garrison getVariable _x)];
 		if (_x in destroyedCities) then {[_x] call destroyCity};
 		};
 	};

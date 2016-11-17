@@ -1,4 +1,4 @@
-private ["_roads","_pos","_posicion","_grupo"];
+﻿private ["_roads","_pos","_posicion","_grupo"];
 
 _marcadores = campsFIA + ["respawn_west"];
 
@@ -42,7 +42,7 @@ if (_chequeo) exitWith {Hint "You cannot Fast Travel if you don't have a driver 
 posicionTel = [];
 
 if (_esHC) then {hcShowBar false};
-hint "Click on the zone you want to travel to";
+hint localize "STR_CLICK_FOR_TRAVEL";
 openMap true;
 onMapSingleClick "posicionTel = _pos;";
 
@@ -68,7 +68,7 @@ if (count _posicionTel > 0) then
 		{
 		_posicion = [getMarkerPos _base, 10, random 360] call BIS_Fnc_relPos;
 		_distancia = round (((position _jefe) distance _posicion)/200);
-		if (!_esHC) then {disableUserInput true; cutText ["Fast traveling, please wait","BLACK",2]; sleep 2;} else {hcShowBar false;hcShowBar true;hint format ["Moving group %1 to destination",groupID _grupo]; sleep _distancia;};
+		if (!_esHC) then {disableUserInput true; cutText [localize "STR_TRAVELING_WAIT","BLACK",2]; sleep 2;} else {hcShowBar false;hcShowBar true;hint format ["Moving group %1 to destination",groupID _grupo]; sleep _distancia;};
 		_forzado = false;
 		if (!isMultiplayer) then {if (not(_base in forcedSpawn)) then {_forzado = true; forcedSpawn = forcedSpawn + [_base]}};
 		if (!_esHC) then {sleep _distancia};
@@ -150,14 +150,14 @@ if (count _posicionTel > 0) then
 
 
 
-		if (!_esHC) then {disableUserInput false;cutText ["You arrived to destination","BLACK IN",3]} else {hint format ["Group %1 arrived to destination",groupID _grupo]};
+		if (!_esHC) then {disableUserInput false;cutText [localize "STR_ARRIVED_TO_DESTINATION","BLACK IN",3]} else {hint format ["Group %1 arrived to destination",groupID _grupo]};
 		if (_forzado) then {forcedSpawn = forcedSpawn - [_base]};
 		sleep 5;
 		{_x allowDamage true} forEach units _grupo;
 		}
 	else
 		{
-		Hint "You must click near a camp or HQ";
+		hint localize "STR_NEED_CLICK_NEAR_CAMP";
 		};
 	};
 openMap false;

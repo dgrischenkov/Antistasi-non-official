@@ -1,13 +1,13 @@
-
+﻿
 _resourcesFIA = server getVariable "resourcesFIA";
 
-if (_resourcesFIA < 5000) exitWith {hint "You do not have enough money to rebuild any Asset. You need 5.000 €"};
+if (_resourcesFIA < 5000) exitWith {hint localize "STR_UI_CANT_REBUILD_NO_MONEY"};
 
 _destroyedCities = destroyedCities - ciudades;
 
 openMap true;
 posicionTel = [];
-hint "Click on the zone you want to rebuild.";
+hint localize "STR_UI_CLICK_FOR_REBUILD";
 
 onMapSingleClick "posicionTel = _pos;";
 
@@ -20,13 +20,13 @@ _posicionTel = posicionTel;
 
 _sitio = [marcadores,_posicionTel] call BIS_fnc_nearestPosition;
 
-if (getMarkerPos _sitio distance _posicionTel > 50) exitWith {hint "You must click near a map marker"};
+if (getMarkerPos _sitio distance _posicionTel > 50) exitWith {hint localize "STR_UI_MUST_CLICK_NEAR_MARKER"};
 
-if (not(_sitio in _destroyedCities)) exitWith {hint "You cannot rebuild that"};
+if (not(_sitio in _destroyedCities)) exitWith {hint localize "STR_UI_CANT_REBUILD_THAT"};
 
 _nombre = [_sitio] call localizar;
 
-hint format ["%1 Rebuilt"];
+hint format [localize "STR_UI_REBUILDED"];
 
 [0,10,_posicionTel] remoteExec ["citySupportChange",2];
 [5,0] remoteExec ["prestige",2];

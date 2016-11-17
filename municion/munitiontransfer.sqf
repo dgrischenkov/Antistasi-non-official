@@ -1,4 +1,4 @@
-if (!isServer) exitWith {};
+﻿if (!isServer) exitWith {};
 private ["_subCosa","_municion"];
 _origen = _this select 0;
 _destino = _this select 1;
@@ -171,5 +171,5 @@ if (_destino == caja) then {
 	}
 else
 	{
-	[petros,"hint","Truck Loaded"] remoteExec ["commsMP",driver _destino];
+	[petros,"hint",localize "STR_TRUCK_LOADED"] remoteExec ["commsMP",driver _destino];
 	};

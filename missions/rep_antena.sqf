@@ -1,4 +1,4 @@
-if (!isServer and hasInterface) exitWith{};
+﻿if (!isServer and hasInterface) exitWith{};
 
 private ["_marcador","_posicion","_fechalim","_fechalimnum","_nombredest","_camionCreado","_size","_pos","_veh","_grupo","_unit"];
 
@@ -76,7 +76,7 @@ if (dateToNumber date > _fechalimnum) then
 	_mrkfin setMarkerShape "ICON";
 	_mrkfin setMarkerType "loc_Transmitter";
 	_mrkfin setMarkerColor "ColorBlack";
-	_mrkfin setMarkerText "Radio Tower";
+	_mrkfin setMarkerText localize "STR_RADIO_TOWER";
 	mrkAntenas = mrkAntenas + [_mrkfin];
 	_antena addEventHandler ["Killed",
 		{

@@ -1,4 +1,4 @@
-/*
+﻿/*
 The MIT License (MIT)
 Copyright (c) 2016 Seth Duda
 Permission is hereby granted, free of charge, to any person obtaining a copy of this software and associated documentation files (the "Software"), to deal in the Software without restriction, including without limitation the rights to use, copy, modify, merge, publish, distribute, sublicense, and/or sell copies of the Software, and to permit persons to whom the Software is furnished to do so, subject to the following conditions:
@@ -730,23 +730,23 @@ SA_Set_Owner = {
 
 SA_Add_Player_Tow_Actions = {
 
-  player addAction ["Deploy Tow Ropes", {
+  player addAction [localize "STR_DEPLOY_TOW_ROPES", {
     [] call SA_Take_Tow_Ropes_Action;
   }, nil, 0, false, true, "", "call SA_Take_Tow_Ropes_Action_Check"];
 
-  player addAction ["Put Away Tow Ropes", {
+  player addAction [localize "STR_PUT_TOW_ROPES", {
     [] call SA_Put_Away_Tow_Ropes_Action;
   }, nil, 0, false, true, "", "call SA_Put_Away_Tow_Ropes_Action_Check"];
 
-  player addAction ["Attach To Tow Ropes", {
+  player addAction [localize "STR_ATTACH_TOW_ROPES", {
     [] call SA_Attach_Tow_Ropes_Action;
   }, nil, 0, false, true, "", "call SA_Attach_Tow_Ropes_Action_Check"];
 
-  player addAction ["Drop Tow Ropes", {
+  player addAction [localize "STR_DROP_TOW_ROPES", {
     [] call SA_Drop_Tow_Ropes_Action;
   }, nil, 0, false, true, "", "call SA_Drop_Tow_Ropes_Action_Check"];
 
-  player addAction ["Pickup Tow Ropes", {
+  player addAction [localize "STR_PICKUP_TOW_ROPES", {
     [] call SA_Pickup_Tow_Ropes_Action;
   }, nil, 0, false, true, "", "call SA_Pickup_Tow_Ropes_Action_Check"];
 
