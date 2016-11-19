@@ -183,8 +183,8 @@
 						<Russian>Станок с ПЗРК</Russian>
 				</Key>
 				<Key ID="STR_UI_APC">
-						<Original>Buy APC</Original>
-						<Russian>БТР</Russian>
+						<Original>Buy Hunter / APC</Original>
+						<Russian>Хантер / БТР</Russian>
 				</Key>
 				<Key ID="STR_UI_GAME_OPTIONS">
 						<Original>Game Options</Original>

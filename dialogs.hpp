@@ -517,20 +517,8 @@ class HQ_button_APC: RscButton // L5 -- M5
 	y = 0.710047 * safezoneH + safezoneY;
 	w = 0.175015 * safezoneW;
 	h = 0.0560125 * safezoneH;
-	action = "if (hayRHS) then {if (player == Stavros) then {closeDialog 0;nul = [vfs select 11] call addFIAveh;} else {hint ""Only Player Commander has access to this function""};}else {hint ""RHS exclusive for now""};";
+	action = "closeDialog 0;nul = [vfs select 11] call addFIAveh;";
 };
-/*
-class HQ_button_CTRUCK: RscButton // R5
-{
-	idc = 113;
-	text = "Buy C2 Truck";
-	x = 0.37749 * safezoneW + safezoneX;
-	y = 0.710047 * safezoneH + safezoneY;
-	w = 0.175015 * safezoneW;
-	h = 0.0560125 * safezoneH;
-	action = "if (hayRHS) then {if (player == Stavros) then {closeDialog 0;nul = [vfs select 12] call addFIAveh;} else {hint ""Only Player Commander has access to this function""};}else {hint ""RHS/TFAR exclusive for now""};";
-};
-*/
 
 ////////////////////////////////////////////////////////
 // GUI EDITOR OUTPUT END

@@ -449,7 +449,8 @@ _vfs = 	[
 	"B_HMG_01_high_F",
 	"B_G_Mortar_01_F",
 	"B_static_AT_F",
-	"B_static_AA_F"
+	"B_static_AA_F",
+	"B_T_MRAP_01_hmg_F"
 ];
 
 _civHeli = "C_Heli_Light_01_civil_F";
