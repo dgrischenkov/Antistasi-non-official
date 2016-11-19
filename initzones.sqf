@@ -80,7 +80,7 @@ if ((_nombre != "") and (_nombre != "sagonisi") and (_nombre != "hill12")) then/
     _mrk setMarkerSize [_size, _size];
     _mrk setMarkerShape "RECTANGLE";
     _mrk setMarkerBrush "SOLID";
-    _mrk setMarkerColor "ColorGUER";
+    _mrk setMarkerColor "ColorEAST";
     _mrk setMarkerText _nombre;
     _mrk setMarkerAlpha 0;
     ciudades pushBack _nombre;
@@ -88,7 +88,7 @@ if ((_nombre != "") and (_nombre != "sagonisi") and (_nombre != "hill12")) then/
     _dmrk = createMarker [format ["Dum%1",_nombre], _pos];
     _dmrk setMarkerShape "ICON";
     _dmrk setMarkerType "loc_Cross";
-    _dmrk setMarkerColor "ColorGUER";
+    _dmrk setMarkerColor "ColorEAST";
     if (_nroads < _numVeh) then {_numVeh = _nroads};
 
     _info = [_numCiv, _numVeh, prestigeOPFOR,prestigeBLUFOR];
@@ -122,7 +122,7 @@ if ((_nombre != "") and (_nombre != "Magos")) then//Magos is blacklisted can't r
     _dmrk = createMarker [format ["Dum%1",_nombre], _pos];
     _dmrk setMarkerShape "ICON";
     _dmrk setMarkerType "loc_bunker";
-    _dmrk setMarkerColor "ColorGUER";
+    _dmrk setMarkerColor "ColorEAST";
     _dmrk setMarkerText "AAF Outpost";
     */
     };
@@ -134,7 +134,7 @@ marcadores = marcadores + colinas + ciudades;
 _pos = getMarkerPos _x;
 _dmrk = createMarker [format ["Dum%1",_x], _pos];
 _dmrk setMarkerShape "ICON";
-_dmrk setMarkerColor "ColorGUER";
+_dmrk setMarkerColor "ColorEAST";
 if (_x in power) then
     {
     _dmrk setMarkerType "loc_power";

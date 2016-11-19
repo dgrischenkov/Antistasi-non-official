@@ -101,7 +101,7 @@ while {(spawner getVariable _marcador) and (_cuenta < _numCiv)} do
 			    _mrk setMarkerSize [5, 5];
 			    _mrk setMarkerShape "RECTANGLE";
 			    _mrk setMarkerBrush "SOLID";
-			    _mrk setMarkerColor "ColorGUER";
+			    _mrk setMarkerColor "ColorEAST";
 			    //_mrk setMarkerText _nombre;
 			    */
 				_veh = _tipoveh createVehicle _pos;

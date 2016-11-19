@@ -112,7 +112,7 @@ while {true} do
 		//_datos = [_numCiv,_numVeh,_prestigeOPFOR,_prestigeBLUFOR,_power];
 		//server setVariable [_ciudad,_datos,true];
 		_mrkD = format ["Dum%1",_ciudad];
-		_mrkD setMarkerColor "colorGUER";
+		_mrkD setMarkerColor "ColorEAST";
 		sleep 5;
 		if (_power) then {_power = false} else {_power = true};
 		[_ciudad,_power] spawn apagon;

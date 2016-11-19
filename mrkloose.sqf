@@ -27,7 +27,7 @@ while {isNull _bandera} do
 [[_bandera,"take"],"flagaction"] call BIS_fnc_MP;
 
 _mrk = format ["Dum%1",_marcador];
-_mrk setMarkerColor "ColorGUER";
+_mrk setMarkerColor "ColorEAST";
 
 if ((not (_marcador in bases)) and (not (_marcador in aeropuertos))) then
 	{
