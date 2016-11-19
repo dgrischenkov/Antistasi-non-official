@@ -363,8 +363,8 @@ _unlocked_magazines = 	[
 	"rhs_mag_rdg2_white",
 
 	// rockets for discardable launchers, unlocking them would otherwise be a PITA
-	"rhs_rpg26_mag"
-	"rhs_rshg2_mag"
+	"rhs_rpg26_mag",
+	"rhs_rshg2_mag",
 	"rhs_m136_hedp_mag"
 ];
 
