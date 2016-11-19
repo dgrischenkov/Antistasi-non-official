@@ -118,7 +118,7 @@ garageKeys = (findDisplay 46) displayAddEventHandler ["KeyDown",
 					} forEach personalGarage;
 					personalGarage = _newArr;
 					["personalGarage",_newArr] call fn_SaveStat;
-					garageVeh setVariable ["duenyo",getPlayerUID player,true];
+					garageVeh setVariable ["duenyo",nil,true];
 					};
 				if (garageVeh isKindOf "StaticWeapon") then {staticsToSave = staticsToSave + [garageVeh]; publicVariable "staticsToSave"};
 				clearMagazineCargoGlobal garageVeh;
