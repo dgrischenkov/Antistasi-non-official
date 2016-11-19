@@ -37,7 +37,6 @@ addons[]=
 	"A3_Modules_F",
 	"A3_Characters_F",
 	"A3_Modules_F_Hc",
-	"A3_Modules_F_Curator_Environment",
 	"A3_Modules_F_Curator_Curator"
 };
 class AddonsMetaData
@@ -154,7 +153,7 @@ class Mission
 	};
 	class Entities
 	{
-		items=176;
+		items=175;
 		class Item0
 		{
 			dataType="Marker";
@@ -2901,40 +2900,6 @@ class Mission
 			id=333;
 		};
 		class Item174
-		{
-			dataType="Logic";
-			class PositionInfo
-			{
-				position[]={3648.4729,15.234612,10301.444};
-			};
-			id=369;
-			type="ModuleTimeMultiplier_F";
-			atlOffset=9.5367432e-007;
-			class CustomAttributes
-			{
-				class Attribute0
-				{
-					property="ModuleTimeMultiplier_F_TimeMultiplier";
-					expression="_this setVariable ['TimeMultiplier',_value,true];";
-					class Value
-					{
-						class data
-						{
-							class type
-							{
-								type[]=
-								{
-									"SCALAR"
-								};
-							};
-							value=6;
-						};
-					};
-				};
-				nAttributes=1;
-			};
-		};
-		class Item175
 		{
 			dataType="Logic";
 			class PositionInfo
