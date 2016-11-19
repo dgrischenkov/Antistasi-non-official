@@ -1114,6 +1114,11 @@
 						<Original>Close</Original>
 						<Russian>Закрыть</Russian>
 				</Key>
+				</Key>
+				<Key ID="STR_UI_TAKE_FLAG">
+						<Original>Take the flag</Original>
+						<Russian>Поднять флаг</Russian>
+				</Key>
 				<Key ID="STR_TUTORIAL_ACTION">
 						<Original>Tutorial</Original>
 						<Russian>Справочная</Russian>
