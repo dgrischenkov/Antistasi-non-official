@@ -40,7 +40,7 @@ if ( isNil "howtoplay" ) then { howtoplay = 0; };
 			"STR_TUTO_TEXT6"
 		];
 
-		_tutorial_height = [1.9, 0.5, 0.7, 2.5, 1.0, 1.8, 0.8];
+		_tutorial_height = [2.8, 0.5, 0.7, 2.5, 1.0, 1.8, 0.8];
 
 		_old_page = -1;
 
