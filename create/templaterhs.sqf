@@ -76,7 +76,7 @@ _infPilot = 	["rhs_pilot_transport_heli","rhs_pilot_combat_heli"];
 // all vehicles sorted by role
 _vTruck = 		["rhs_gaz66o_vdv","rhs_gaz66_vdv","RHS_Ural_Open_VDV_01","RHS_Ural_VDV_01"];
 _vSupply = 		["rhs_gaz66_ammo_vdv","RHS_Ural_Fuel_VDV_01","rhs_gaz66_repair_vdv","rhs_gaz66_ap2_vdv"];
-_vPatrol = 		["rhs_tigr_m_vdv","RHS_Mi8mt_vvsc"];
+_vPatrol = 		["rhs_tigr_m_vdv","RHS_Mi8mt_vvsc","rhs_gaz66o_vdv","rhs_gaz66_vdv","RHS_Ural_Open_VDV_01","RHS_Ural_VDV_01","rhs_btr60_vdv"];
 _vAPC = 		["rhs_btr60_vdv","rhs_btr70_vdv","rhs_btr80_vdv"];
 _vIFV = 		["rhs_bmd1","rhs_bmd1k","rhs_bmd1p","rhs_bmd1pk","rhs_bmd2","rhs_bmd2k","rhs_bmd2m",
 				"rhs_bmp1_vdv","rhs_bmp1d_vdv","rhs_bmp1k_vdv","rhs_bmp1p_vdv","rhs_bmp2e_vdv","rhs_bmp2_vdv","rhs_bmp2d_vdv","rhs_bmp2k_vdv","rhs_brm1k_vdv"];
@@ -364,7 +364,8 @@ _unlocked_magazines = 	[
 
 	// rockets for discardable launchers, unlocking them would otherwise be a PITA
 	"rhs_rpg26_mag"
-//	"rhs_rshg2_mag"
+	"rhs_rshg2_mag"
+	"rhs_m136_hedp_mag"
 ];
 
 // Standard rifles for AI soldiers are picked from this array. Add only rifles.
