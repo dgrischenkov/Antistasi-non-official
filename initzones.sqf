@@ -87,7 +87,7 @@ if ((_nombre != "") and (_nombre != "sagonisi") and (_nombre != "hill12")) then/
     spawner setVariable [_nombre,false,true];
     _dmrk = createMarker [format ["Dum%1",_nombre], _pos];
     _dmrk setMarkerShape "ICON";
-    _dmrk setMarkerType "loc_Cross";
+    _dmrk setMarkerType "loc_Tourism";
     _dmrk setMarkerColor "ColorEAST";
     if (_nroads < _numVeh) then {_numVeh = _nroads};
 
