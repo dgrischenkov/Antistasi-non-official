@@ -1,56 +1,36 @@
-private ["_unit","_distancia","_distanciaTotal","_hayMedico","_medico","_units","_ayudando","_pidiendoAyuda"];
+private ["_unit","_unitSide","_distanceMin","_rangeConst","_medico","_nearUnit","_nearUnitSide","_inconsciente"];
+
 _unit = _this select 0;
+_unitSide = _this select 1;
 
-_distanciaTotal = 200;
-_distancia = _distanciaTotal;
-_haymedico = false;
+_rangeConst = 350;
+
+_distanceMin = _rangeConst;
 _medico = objNull;
-//if (count _this == 1) then {_units = units group _unit} else {_units = units (_this select 1)};
-_units = units group _unit;
+
 {
-if (!isPlayer _x) then
+	_nearUnit = _x select 4;
+	_nearUnitSide = _x select 2;
+
+	_inconsciente = _nearUnit getVariable "inconsciente";
+	if (isNil "_inconsciente") then { _inconsciente = false; };
+
+	if ( (_nearUnitSide == _unitSide) and (_nearUnit != Petros) and !(_inconsciente) ) then
 	{
-	if (typeOf _x == "B_G_medic_F") then
+		if ( ("Medikit" in (items _nearUnit)) or ("FirstAidKit" in (items _nearUnit)) ) then
 		{
-		if ((alive _x) and ("FirstAidKit" in (items _x)) and (not (_x getVariable "inconsciente")) and (vehicle _x == _x) and (_x distance _unit < _distanciaTotal)) then
+			if ( (_nearUnit distance _unit) < _distanceMin ) then
 			{
-			_hayMedico = true;
-			_ayudando = _x getVariable "ayudando";
-			if ((isNil "_ayudando") and (!(_x getVariable "rearming"))) then
-				{
-				_medico = _x;
-				_distancia = _x distance _unit;
-				};
+				_distanceMin = _nearUnit distance _unit;
+				_medico = _nearUnit;
 			};
 		};
 	};
-} forEach _units;
-
-if ((!_haymedico) or (_unit getVariable "inconsciente")) then
-	{
-	{
-	if (!isPlayer _x) then
-		{
-		if (typeOf _x != "B_G_medic_F") then
-			{
-			if ((alive _x) and ("FirstAidKit" in (items _x)) and (not (_x getVariable "inconsciente")) and (vehicle _x == _x) and (_x distance _unit < _distanciaTotal)) then
-				{
-				_ayudando = _x getVariable "ayudando";
-				if ((isNil "_ayudando") and (!(_x getVariable "rearming"))) then
-					{
-					_medico = _x;
-					_distancia = _x distance _unit;
-					};
-				};
-
-			};
-		};
-	} forEach _units;
-	};
+} forEach (_unit nearTargets _rangeConst);
 
 if (!isNull _medico) then
-	{
+{
 	[_unit,_medico] spawn ayudar;
-	};
+};
 
 _medico

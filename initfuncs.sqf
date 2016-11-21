@@ -67,7 +67,6 @@ handleDamage = compile preProcessFileLineNumbers "Revive\handleDamage.sqf";
 initRevive = compile preProcessFileLineNumbers "Revive\initRevive.sqf";
 pedirAyuda = compile preProcessFileLineNumbers "AI\pedirAyuda.sqf";
 ayudar = compile preProcessFileLineNumbers "AI\ayudar.sqf";
-autoHealFnc = compile preProcessFileLineNumbers "AI\autoHealFnc.sqf";
 cubrirConHumo = compile preProcessFileLineNumbers "AI\cubrirConHumo.sqf";
 intelFound = compile preProcessFileLineNumbers "intelFound.sqf";
 minefieldAAF = compile preProcessFileLineNumbers "CREATE\minefieldAAF.sqf";

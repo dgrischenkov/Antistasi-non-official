@@ -11,18 +11,7 @@ _unit setVariable ["respawning",true];
 titleText ["", "BLACK IN", 0];
 if (isMultiplayer) exitWith
 	{
-	if (!isNil "deadCam") then
-		{
-		if (!isNull deadCam) then
-			{
-			deadCam camSetPos position player;
-			deadCam camCommit 1;
-			sleep 1;
-			deadCam cameraEffect ["terminate", "BACK"];
-			camDestroy deadCam;
-			};
-		};
-	(findDisplay 46) displayRemoveEventHandler ["KeyDown", respawnMenu];
+	if (!isNil "respawnMenu") then { (findDisplay 46) displayRemoveEventHandler ["KeyDown", respawnMenu]; };
 	_unit setCaptive false;
 	_unit setVariable ["inconsciente",false,true];
 	_unit setVariable ["respawning",false];

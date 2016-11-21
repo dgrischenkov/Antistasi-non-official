@@ -2400,24 +2400,11 @@ class HQ_button_Gstatic: RscButton
 	h = 0.0560125 * safezoneH;
 	action = "closeDialog 0; if (count groupselectedUnits player == 0) then {nul = (units group player) spawn rearmCall} else {nul = (groupselectedUnits player) spawn rearmCall};";
 };
-
-class HQ_button_Gremove: RscButton
-{
-	idc = -1;
-	text = $STR_UI_AUTO_HEAL;
-	//x = 0.37749 * safezoneW + safezoneX;
-	x = 0.272481 * safezoneW + safezoneX;
-	y = 0.415981 * safezoneH + safezoneY;
-	w = 0.175015 * safezoneW;
-	h = 0.0560125 * safezoneH;
-	action = "if (autoHeal) then {autoHeal = false; hint ""Auto Healing disabled"";} else {autoHeal = true; hint ""Auto Heal enabled""; nul = [] spawn autoHealFnc}";
-};
 class dismiss_units: RscButton
 {
 	idc = -1;
 	text = $STR_UI_DISMISS_UNITS_SQUADS;
-	//x = 0.37749 * safezoneW + safezoneX;
-	x = 0.482498 * safezoneW + safezoneX;
+	x = 0.37749 * safezoneW + safezoneX;
 	y = 0.415981 * safezoneH + safezoneY;
 	w = 0.175015 * safezoneW;
 	h = 0.0560125 * safezoneH;

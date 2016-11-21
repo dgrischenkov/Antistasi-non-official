@@ -18,7 +18,6 @@ posHQ = getMarkerPos "respawn_west";
 //minefieldMrk = [];
 minimoFPS = 15;//initial FPS minimum.
 //destroyedCities = [];
-autoHeal = false;
 allowPlayerRecruit = true;
 recruitCooldown = 0;
 AAFpatrols = 0;//0
