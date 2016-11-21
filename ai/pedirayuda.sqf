@@ -15,7 +15,7 @@ _medico = objNull;
 	_inconsciente = _nearUnit getVariable "inconsciente";
 	if (isNil "_inconsciente") then { _inconsciente = false; };
 
-	if ( (_nearUnitSide == _unitSide) and (_nearUnit != Petros) and !(_inconsciente) ) then
+	if ( (_nearUnitSide == _unitSide) and (_nearUnit != Petros) and !(_inconsciente) and !(isPlayer _nearUnit) ) then
 	{
 		if ( ("Medikit" in (items _nearUnit)) or ("FirstAidKit" in (items _nearUnit)) ) then
 		{
