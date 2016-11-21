@@ -3,7 +3,7 @@ private ["_unit","_unitSide","_distanceMin","_rangeConst","_medico","_nearUnit",
 _unit = _this select 0;
 _unitSide = _this select 1;
 
-_rangeConst = 350;
+_rangeConst = 150;
 
 _distanceMin = _rangeConst;
 _medico = objNull;
