@@ -23,6 +23,7 @@ if (_dam > 0.95) then
 	else
 	{
 		_dam = 0.9;
+		_unit setCaptive true;
 		if ( _part != "" ) then { removeHeadgear _unit; };
 		[_unit] spawn inconsciente;
 	};
