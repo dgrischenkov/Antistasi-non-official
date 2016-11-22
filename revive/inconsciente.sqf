@@ -3,10 +3,10 @@ private ["_unit","_unitSide","_grupo","_grupos","_isLeader","_dummyGroup","_blee
 _unit = _this select 0;
 
 if (!local _unit) exitWith {};
-if (damage _unit < 0.9) exitWith {}; // TODO ???
-if (_unit getVariable "inconsciente") exitWith {}; // TODO ???
+if (damage _unit < 0.9) exitWith {};
+if (_unit getVariable "inconsciente") exitWith {};
 
-_bleedOutConst = time + 300;
+_bleedOutConst = time + 360;
 
 _unitSide = side _unit;
 _unit setVariable ["inconsciente",true,true];
@@ -42,7 +42,6 @@ if (isPlayer _unit) then
 	};
 
 	deadCam = "camera" camCreate (player modelToWorld [0,0,2]);
-	deadCam cameraEffect ["internal", "BACK"];
 }
 else
 {
@@ -78,58 +77,55 @@ while { (time < _bleedOutConst) and (alive _unit) and (damage _unit > 0.25) } do
 			(position _camTarget select 1) + 12 - random 24,
 			(position _camTarget select 2) + 6];
 		deadCam camSetTarget _camTarget;
+		deadCam cameraEffect ["internal", "BACK"];
 		deadCam camCommit _tiempo;
 	};
 
 	sleep _tiempo;
 };
 
-_unit setCaptive false;
-
-if (isPlayer _unit) then
+// reviwed or dead
+if (_unit getVariable ["inconsciente", false] and !(damage _unit > 0.25)) then
 {
-	deadCam camSetPos [
-		(position player select 0),
-		(position player select 1),
-		(position player select 2) + 2];
-	deadCam camSetTarget player;
-	deadCam camCommit 5;
-	sleep 5;
-	camDestroy deadCam;
+	_unit setCaptive false;
+	_unit setVariable ["inconsciente",false,true];
+	_unit playMoveNow "AmovPpneMstpSnonWnonDnon_healed";
 
-	(findDisplay 46) displayRemoveEventHandler ["KeyDown", respawnMenu];
-
-	if (hayTFAR) then
+	if (isPlayer _unit) then
 	{
-		player setVariable ["tf_unable_to_use_radio", false, true];
-		player setVariable ["tf_globalVolume", _saveVolume];
-		player setVariable ["tf_voiceVolume", _saveVolumeVoice, true];
+		(findDisplay 46) displayRemoveEventHandler ["KeyDown", respawnMenu];
+
+		deadCam camSetPos [
+			(position player select 0),
+			(position player select 1),
+			(position player select 2) + 1];
+		deadCam camSetTarget player;
+		deadCam camCommit 2;
+		sleep 2;
+		deadCam cameraEffect ["terminate", "BACK"];
+		camDestroy deadCam;
+
+		if (hayTFAR) then
+		{
+			player setVariable ["tf_unable_to_use_radio", false, true];
+			player setVariable ["tf_globalVolume", _saveVolume];
+			player setVariable ["tf_voiceVolume", _saveVolumeVoice, true];
+		};
+	}
+	else
+	{
+		{_unit enableAI _x} foreach ["TARGET","AUTOTARGET","MOVE","ANIM"];
+		_unit stop false;
 	};
 }
 else
 {
-	_unit stop false;
-};
-
-if (time > _bleedOutConst) exitWith
-{
-	if (isPlayer _unit) then
+	if ((isPlayer _unit) and (damage _unit > 0)) then
 	{
-		[_unit] call respawn;
+		[_unit] spawn respawn;
 	}
 	else
 	{
 		_unit setDamage 1;
-	};
-};
-
-if (_unit getVariable "inconsciente") then {_unit setVariable ["inconsciente",false,true]};
-
-if (alive _unit) then
-{
-	_unit playMoveNow "AmovPpneMstpSnonWnonDnon_healed";
-	if (!isPlayer _unit) then
-	{
-		{_unit enableAI _x} foreach ["TARGET","AUTOTARGET","MOVE","ANIM"];
 	};
 };

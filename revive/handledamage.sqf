@@ -9,17 +9,16 @@ if (_dam > 0.95) then
 {
 	if (_unit getVariable ["inconsciente", false]) then
 	{
-		_unit removeAllEventHandlers "HandleDamage";
-
 		if (isPlayer _unit) then
 		{
 			_dam = 0;
 			[_unit] spawn respawn;
-			if (isPlayer _injurer) then
-			{
-				if (_injurer != _unit) then {[_injurer,60] remoteExec ["castigo",_injurer]};
-			};
+			if (isPlayer _injurer) then { if (_injurer != _unit) then {[_injurer,60] remoteExec ["castigo",_injurer]}; };
 		}
+		else
+		{
+			_unit removeAllEventHandlers "HandleDamage";
+		};
 	}
 	else
 	{
@@ -27,10 +26,6 @@ if (_dam > 0.95) then
 		if ( _part != "" ) then { removeHeadgear _unit; };
 		[_unit] spawn inconsciente;
 	};
-}
-else
-{
-	if (_dam > 0.1) then {[_unit,_unit] spawn cubrirConHumo};
 };
 
 _dam

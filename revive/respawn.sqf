@@ -1,5 +1,6 @@
 private ["_unit"];
 _unit = _this select 0;
+
 if (!local _unit) exitWith {};
 if (_unit getVariable "respawning") exitWith {};
 if (not( _unit getVariable "inconsciente")) exitWith {};
@@ -15,9 +16,6 @@ if (isMultiplayer) exitWith
 		{
 		if (!isNull deadCam) then
 			{
-			deadCam camSetPos position player;
-			deadCam camCommit 1;
-			sleep 1;
 			deadCam cameraEffect ["terminate", "BACK"];
 			camDestroy deadCam;
 			};
@@ -27,6 +25,7 @@ if (isMultiplayer) exitWith
 	_unit setVariable ["inconsciente",false,true];
 	_unit setVariable ["respawning",false];
 	_unit setDamage 1;
+
 	};
 private ["_posicion","_tam","_roads","_road","_pos"];
 _posicion = getMarkerPos "respawn_west";
