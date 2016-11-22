@@ -17,10 +17,23 @@ while {true} do
 			_mrk setMarkerColorLocal "ColorYellow";
 			_mrk setMarkerTextLocal format ["%1",name _jugador];
 			if (server getVariable ["hardMode", false]) then {_mrk setMarkerAlphaLocal 0};
-			//_mrk setMarkerAlphaLocal 0; // <<-- hard mode
 			_marcadores pushBack _mrk;
 			};
 		} forEach playableUnits;
+
+		{
+		_jugador = _x getVariable ["owner",_x];
+		if ((not(_jugador in _jugadores))) then
+			{
+			_jugadores pushBack _jugador;
+			_mrk = createMarkerLocal [format ["%1",_jugador],position _jugador];
+			_mrk setMarkerTypeLocal "mil_dot";
+			_mrk setMarkerColorLocal "ColorBlue";
+			if (server getVariable ["hardMode", false]) then {_mrk setMarkerAlphaLocal 0};
+			_marcadores pushBack _mrk;
+			};
+		} forEach (units group player);
+
 		if (count _jugadores > 0) then
 			{
 			{
@@ -29,24 +42,24 @@ while {true} do
 			if (vehicle _jugador == _jugador) then
 				{
 				if !(server getVariable ["hardMode", false]) then {_mrk setMarkerAlphaLocal 1};
-				//_mrk setMarkerAlphaLocal 1; // <<-- normal mode
 				_mrk setMarkerPosLocal position _jugador;
 				_mrk setMarkerDirLocal getDir _jugador;
 				if (_jugador getVariable ["inconsciente",false]) then
 					{
 					_mrk setMarkerTypeLocal "mil_join";
 					if (server getVariable ["hardMode", false]) then {_mrk setMarkerAlphaLocal 1};
-					//_mrk setMarkerAlphaLocal 1; // <<-- hard mode
 					_mrk setMarkerTextLocal format ["%1 Injured",name _jugador];
 					_mrk setMarkerColorLocal "ColorPink";
 					}
 				else
 					{
-					_mrk setMarkerTypeLocal "mil_triangle";
-					if (server getVariable ["hardMode", false]) then {_mrk setMarkerAlphaLocal 0};
-					//_mrk setMarkerAlphaLocal 0; // <<-- hard mode
-					_mrk setMarkerTextLocal format ["%1",name _jugador];
-					_mrk setMarkerColorLocal "ColorYellow";
+					if ( isPlayer _jugador ) then
+						{
+						_mrk setMarkerTypeLocal "mil_triangle";
+						if (server getVariable ["hardMode", false]) then {_mrk setMarkerAlphaLocal 0};
+						_mrk setMarkerTextLocal format ["%1",name _jugador];
+						_mrk setMarkerColorLocal "ColorYellow";
+						};
 					};
 				}
 			else
