@@ -8,12 +8,12 @@ if (!local _unit) exitWith {};
 
 _bleedOutConst = time + 360;
 
+if (_part != "") then { removeHeadgear _unit; };
+if (vehicle _unit != _unit) then { _unit action ["getOut", vehicle _unit]; sleep 4; };
+
 _unit switchMove "AinjPpneMstpSnonWrflDnon";
 _unit playActionNow "Unconscious";
 _unit setFatigue 1;
-
-if (_part != "") then { removeHeadgear _unit; };
-if (vehicle _unit != _unit) then { _unit action ["getOut", vehicle _unit]; };
 
 if (isPlayer _unit) then
 {
@@ -71,11 +71,11 @@ while { !_whileExit } do
 		_camTarget = player;
 		if (isNull _ayuda) then
 		{
-			_texto = format [localize "STR_RESPAWN_INCONSCIENTE_CAMERA_TO_PLAYER", _bleedOutConst - time];
+			_texto = format [localize "STR_RESPAWN_INCONSCIENTE_CAMERA_TO_PLAYER", ceil (_bleedOutConst - time)];
 		}
 		else
 		{
-			_texto = format [localize "STR_RESPAWN_INCONSCIENTE_CAMERA_TO_AYUDA", name _ayuda, _bleedOutConst - time];
+			_texto = format [localize "STR_RESPAWN_INCONSCIENTE_CAMERA_TO_AYUDA", name _ayuda, ceil (_bleedOutConst - time)];
 			if (!(_unit getVariable ["finishedoff",false])) then { _camTarget = _ayuda; };
 		};
 
