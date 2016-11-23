@@ -1,42 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <Project name="Antistasi">&lt;br/&gt;
 		<Package name="Antistasi">
-				<Key ID="STR_REST_HOURS">
-						<Original>Rest for 8 Hours</Original>
-						<Russian>Отдохнуть 8 часов</Russian>
-				</Key>
-				<Key ID="STR_MAP_INFO">
-						<Original>Map Info</Original>
-						<Russian>Открыть карту</Russian>
-				</Key>
-				<Key ID="STR_GAME_OPTIONS">
-						<Original>Game Options</Original>
-						<Russian>Настройки игры</Russian>
-				</Key>
-				<Key ID="STR_HEAL_AND_REPAIR">
-						<Original>Heal, Repair and Rearm</Original>
-						<Russian>Полечить и починить</Russian>
-				</Key>
-				<Key ID="STR_PERSONAL_GARAGE">
-						<Original>Personal Garage</Original>
-						<Russian>Персональный гараж</Russian>
-				</Key>
-				<Key ID="STR_BUY_VEHICLE">
-						<Original>Buy Vehicle</Original>
-						<Russian>Покупка техники</Russian>
-				</Key>
-				<Key ID="STR_UNIT_RECRUITMENT">
-						<Original>Unit Recruitment</Original>
-						<Russian>Покупка ботов</Russian>
-				</Key>
-				<Key ID="STR_HQ_MANAGMENT">
-						<Original>HQ Management</Original>
-						<Russian>Управление штабом</Russian>
-				</Key>
-				<Key ID="STR_HQ_MANAGMENT_ONLY_FOR_COMMANDER">
-						<Original>Only Commander has access to HQ Options</Original>
-						<Russian>Только коммандир имеет доступ к управлению штабом</Russian>
-				</Key>
 				<Key ID="STR_RESPAWN_INCONSCIENTE_CAMERA_TO_PLAYER">
 						<Original>&lt;t size='0.8'&gt;There is no AI near to help you.&lt;t size='0.6'&gt;&lt;br/&gt;Hit SPACE to Respawn (%1 sec)</Original>
 						<Russian>&lt;t size='0.8'&gt;Нет ботов поблизости чтобы помочь вам.&lt;t size='0.6'&gt;&lt;br/&gt;Нажми ПРОБЕЛ для возрождения (%1 сек)</Russian>
