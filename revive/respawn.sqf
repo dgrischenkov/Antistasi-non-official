@@ -1,15 +1,16 @@
 private ["_unit"];
 _unit = _this select 0;
 
+if (true) exitWith {};
 if (!local _unit) exitWith {};
 if (_unit getVariable "respawning") exitWith {};
 if (not( _unit getVariable "inconsciente")) exitWith {};
 if (_unit != _unit getVariable ["owner",_unit]) exitWith {};
 if (!isPlayer _unit) exitWith {};
 _unit setVariable ["respawning",true];
-//_unit enableSimulation true;
-["Respawning",0,0,3,0,0,4] spawn bis_fnc_dynamicText;
+["UNKNOWN RESPAWN",0,0,10,0,0,4] spawn bis_fnc_dynamicText;
 titleText ["", "BLACK IN", 0];
+
 if (isMultiplayer) exitWith
 	{
 	if (!isNil "deadCam") then

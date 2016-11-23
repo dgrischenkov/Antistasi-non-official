@@ -23,6 +23,7 @@ while {time < _timeOut} do
 						_x setdamage 0;
 						_x setVariable ["inconsciente",true,true];
 						[_x] spawn respawn;
+						[localize "STR_RESPAWN_NAPALM",0,0,10,0,0,4] spawn bis_fnc_dynamicText;
 						}
 					else
 						{
