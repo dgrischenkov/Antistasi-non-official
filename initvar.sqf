@@ -296,7 +296,7 @@ server setVariable [vfs select 7,400,true];//700
 server setVariable [vfs select 8,800,true];
 server setVariable [vfs select 9,800,true];
 server setVariable [vfs select 10,800,true];
-server setVariable [vfs select 11,4000,true];
+server setVariable [vfs select 11,2000,true];
 
 if (hayRHS) then {
 	server setVariable [vfs select 2,6000,true];
