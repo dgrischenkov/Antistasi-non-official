@@ -317,7 +317,7 @@ server setVariable ["enableBM",false,true];
 server setVariable ["enableFTold",false,true]; // extended fast travel mode
 server setVariable ["enableMemAcc",false,true]; // simplified arsenal access
 
-server setVariable ["easyMode",true,false]; // higher income
+server setVariable ["easyMode",true,true]; // higher income
 server setVariable ["hardMode",false,true];
 
 staticsToSave = []; publicVariable "staticsToSave";
