@@ -11,7 +11,6 @@ _bleedOutConst = time + 360;
 _unit setCaptive true;
 
 if (_part != "") then { removeHeadgear _unit; };
-if (vehicle _unit != _unit) then { _unit action ["getOut", vehicle _unit]; };
 
 _unit switchMove "AinjPpneMstpSnonWrflDnon";
 _unit playActionNow "Unconscious";
@@ -62,8 +61,8 @@ _unitSide = side _unit;
 
 while { !_whileExit } do
 {
-	if (random 100 < 5) then { playSound3D [(injuredSounds call BIS_fnc_selectRandom),_unit,false, getPosASL _unit, 1, 1, 50]; };
-	if (random 100 > 5) then { _unit setCaptive true; } else { _unit setCaptive false; }; // change side to civilian
+	if (random 100 < 9) then { playSound3D [(injuredSounds call BIS_fnc_selectRandom),_unit,false, getPosASL _unit, 1, 1, 50]; };
+	if (random 100 > 9) then { _unit setCaptive true; } else { _unit setCaptive false; }; // change side to civilian
 
 	_ayuda = [_unit, _unitSide] call pedirAyuda;
 	_finishedoff = _unit getVariable "finishedoff";

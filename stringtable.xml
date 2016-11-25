@@ -49,6 +49,10 @@
 						<Original>&lt;t size='0.5'&gt;You killed %1&lt;br/&gt;</Original>
 						<Russian>&lt;t size='0.5'&gt;Вас подстрелил %1&lt;br/&gt;</Russian>
 				</Key>
+				<Key ID="STR_RESPAWN_HANDLEDAMAGE_IN_VEH">
+						<Original>You killed in vehicle&lt;br/&gt;</Original>
+						<Russian>Вы убиты в машине&lt;br/&gt;</Russian>
+				</Key>
 				<Key ID="STR_RESPAWN_INCONSCIENTE_FELL_OF_BURNED">
 						<Original>You fell or burned&lt;br/&gt;</Original>
 						<Russian>Вы упали или сгорели&lt;br/&gt;</Russian>
