@@ -24,7 +24,7 @@ petros addEventHandler ["HandleDamage",
                 if (!(petros getVariable "inconsciente")) then
                     {
                     _dam = 0.9;
-                    [petros] spawn inconsciente;
+                    [petros, _part, _injurer] spawn inconsciente;
                     }
                 else
                     {
