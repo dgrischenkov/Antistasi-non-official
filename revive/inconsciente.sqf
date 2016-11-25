@@ -1,4 +1,4 @@
-private ["_unit","_part","_injurer","_unitSide","_whileExit","_finishedoff","_camTime","_bleedOutConst","_ayuda","_texto","_camTarget","_respawnMenu","_respMessage","_saveVolume","_saveVolumeVoice"];
+private ["_unit","_part","_injurer","_unitSide","_isPlayerWas","_whileExit","_finishedoff","_camTime","_bleedOutConst","_ayuda","_texto","_textoKiller","_textoFinishedoffer","_camTarget","_respawnMenu","_saveVolume","_saveVolumeVoice"];
 
 _unit = _this select 0;
 _part = _this select 1;
@@ -7,13 +7,17 @@ _injurer = _this select 2;
 if (!local _unit) exitWith {};
 
 _bleedOutConst = time + 360;
+_camTimeForCommitConst = 8;
 
+_unitSide = side _unit;
 _unit setCaptive true;
 
 if (_part != "") then { removeHeadgear _unit; };
 
-_unit switchMove "AinjPpneMstpSnonWrflDnon";
-_unit playActionNow "Unconscious";
+if ( vehicle _unit == _unit )
+then { _unit switchMove "AinjPpneMstpSnonWrflDnon"; _unit playActionNow "Unconscious"; }
+else { _unit setVariable ["dieInVehicle",true]; };
+
 _unit setFatigue 1;
 
 if (isPlayer _unit) then
@@ -32,10 +36,19 @@ if (isPlayer _unit) then
 			if (_this select 1 == 57) then
 			{
 				player setVariable ["suicide",true];
-				[localize "STR_RESPAWN_INCONSCIENTE_SPACE_KEY",0,0,10,0,0,4] spawn bis_fnc_dynamicText;
+				[localize "STR_RESPAWN_MESSAGE_SPACE_KEY",0,0,10,0,0,4] spawn bis_fnc_dynamicText;
 			};
 			false;
 		}];
+
+	if (!isNull _injurer) then
+	{
+		if (isPlayer _injurer)
+		then { _textoKiller = format [localize "STR_RESPAWN_KILLER_IS_PLAYER", name _injurer]; }
+		else { _textoKiller = format [localize "STR_RESPAWN_KILLER_IS_BOT", name _injurer]; };
+	}	else { _textoKiller = localize "STR_RESPAWN_KILLER_IS_HAPPY"; };
+
+	_textoKiller = format[localize "STR_RESPAWN_MESSAGE_KILLER_NAME", _textoKiller];
 
 	if (hayTFAR) then
 	{
@@ -54,10 +67,9 @@ else
 	_unit stop true;
 };
 
-_whileExit = false;
-_camTime = time - 7;
+_whileExit = _unit getVariable ["dieInVehicle",false];
+_camTime = time - _camTimeForCommitConst;
 _unit setVariable ["finishedoff",nil,true];
-_unitSide = side _unit;
 
 while { !_whileExit } do
 {
@@ -69,25 +81,17 @@ while { !_whileExit } do
 
 	if (isPlayer _unit) then
 	{
-		if (isNull _injurer) then { _texto = localize "STR_RESPAWN_INCONSCIENTE_FELL_OF_BURNED"; }
-		else
-		{
-			if (isPlayer _injurer)
-			then { _texto = format [localize "STR_RESPAWN_HANDLEDAMAGE_BY_PLAYER", name _injurer]; }
-			else { _texto = format [localize "STR_RESPAWN_HANDLEDAMAGE_BY_BOT", name _injurer]; };
-			_texto = format[localize "STR_RESPAWN_INCONSCIENTE_YOU_KILLED", _texto];
-		};
-
 		if (isNull _ayuda)
-		then { _texto = _texto + format [localize "STR_RESPAWN_INCONSCIENTE_CAMERA_TO_PLAYER", ceil (_bleedOutConst - time)]; }
-		else { _texto = _texto + format [localize "STR_RESPAWN_INCONSCIENTE_CAMERA_TO_AYUDA", name _ayuda, ceil (_bleedOutConst - time)]; };
+		then { _texto = _textoKiller + format [localize "STR_RESPAWN_INCONSCIENTE_CAMERA_TO_PLAYER", ceil (_bleedOutConst - time)]; }
+		else { _texto = _textoKiller + format [localize "STR_RESPAWN_INCONSCIENTE_CAMERA_TO_AYUDA", name _ayuda, ceil (_bleedOutConst - time)]; };
 
-		_camTarget = player;
-		if (!isNull _ayuda and isNil "_finishedoff") then { _camTarget = _ayuda; };
+		if (!isNull _ayuda and isNil "_finishedoff")
+		then { _camTarget = _ayuda; }
+		else { _camTarget = player; };
 
 		[_texto,0,0,1,0,0,4] spawn bis_fnc_dynamicText;
 
-		if ( (_camTime + 7) <= time ) then
+		if ( (_camTime + _camTimeForCommitConst) <= time ) then
 		{
 			_camTime = time;
 
@@ -97,7 +101,7 @@ while { !_whileExit } do
 				(position _camTarget select 2) + 6];
 			deadCam camSetTarget _camTarget;
 			deadCam cameraEffect ["internal", "BACK"];
-			deadCam camCommit 10;
+			deadCam camCommit _camTimeForCommitConst;
 		};
 	};
 
@@ -110,41 +114,53 @@ while { !_whileExit } do
 	then { _whileExit = true; };
 };
 
+// player-killer go to prison
+if (!isNil "_finishedoff") then
+{
+	if (isPlayer _finishedoff and _unitSide != civilian and
+		[side _finishedoff, _unitSide] call BIS_fnc_sideIsFriendly ) then
+		{[_finishedoff,60] remoteExec ["castigo",_finishedoff]};
+};
+
 if (isPlayer _unit) then
 {
 	(findDisplay 46) displayRemoveEventHandler ["KeyDown", _respawnMenu];
 
 	if (_unit getVariable ["suicide",false]) then
-		{_unit setVariable ["suicide",nil];};
+		{_unit setVariable ["suicide",nil]; };
 
-	_finishedoff = _unit getVariable "finishedoff";
 	if (!isNil "_finishedoff") then
 	{
-		if ( isNull _finishedoff ) then
-			{ [format ["%1", localize "STR_RESPAWN_INCONSCIENTE_FELL_OF_BURNED"],0,0,10,0,0,4] spawn bis_fnc_dynamicText; }
-		else
+		if (!isNull _finishedoff) then
 		{
-			// player-killer go to prison
-			if (isPlayer _finishedoff and _finishedoff != _unit) then {[_finishedoff,60] remoteExec ["castigo",_finishedoff]}; // TODO test it
-
-			// generate respawn message
 			if (isPlayer _finishedoff)
-			then { _respMessage = format [localize "STR_RESPAWN_HANDLEDAMAGE_BY_PLAYER", name _finishedoff]; }
-			else { _respMessage = format [localize "STR_RESPAWN_HANDLEDAMAGE_BY_BOT", name _finishedoff]; };
-			[format ["%1 %2", localize "STR_RESPAWN_HANDLEDAMAGE", _respMessage],0,0,10,0,0,4] spawn bis_fnc_dynamicText;
-		};
+			then { _textoFinishedoffer = format [localize "STR_RESPAWN_KILLER_IS_PLAYER", name _finishedoff]; }
+			else { _textoFinishedoffer = format [localize "STR_RESPAWN_KILLER_IS_BOT", name _finishedoff]; };
+		}	else { _textoFinishedoffer = localize "STR_RESPAWN_KILLER_IS_HAPPY"; };
+
+		_textoFinishedoffer = format[localize "STR_RESPAWN_MESSAGE_FINISHEDOFFER_NAME", _textoFinishedoffer];
+		[ _textoKiller + _textoFinishedoffer,0,0,10,0,0,4] spawn bis_fnc_dynamicText;
 	};
 
 	if (time > _bleedOutConst) then
-		{[localize "STR_RESPAWN_INCONSCIENTE_BLEEDOUT",0,0,10,0,0,4] spawn bis_fnc_dynamicText;};
+		{[_textoKiller + localize "STR_RESPAWN_MESSAGE_BLEEDOUT",0,0,10,0,0,4] spawn bis_fnc_dynamicText; };
 
-	deadCam camSetPos [
-		(position player select 0),
-		(position player select 1),
-		(position player select 2) + 1];
-	deadCam camSetTarget player;
-	deadCam camCommit 1;
-	sleep 1;
+	if (_unit getVariable ["dieInVehicle",false]) then
+	{
+		[_textoKiller + localize "STR_RESPAWN_MESSAGE_DIE_IN_VEH",0,0,10,0,0,4] spawn bis_fnc_dynamicText;
+		_unit setVariable ["dieInVehicle",nil];
+	}
+	else
+	{
+		deadCam camSetPos [
+			(position player select 0),
+			(position player select 1),
+			(position player select 2) + 1];
+		deadCam camSetTarget player;
+		deadCam camCommit 1;
+		sleep 1;
+	};
+
 	deadCam cameraEffect ["terminate", "BACK"];
 	camDestroy deadCam;
 
@@ -157,15 +173,9 @@ if (isPlayer _unit) then
 };
 
 _unit setCaptive false;
-_unit setVariable ["inconsciente",nil,true];
+_isPlayerWas = isPlayer _unit;
 
-if (damage _unit > 0.25) then
-{
-	if (!isPlayer _unit) then
-		{ _unit removeAllEventHandlers "HandleDamage"; };
-
-	_unit setDamage 1;
-}
+if (damage _unit > 0.25) then { _unit setDamage 1; }
 else
 {
 	_unit playMoveNow "AmovPpneMstpSnonWnonDnon_healed";
@@ -176,3 +186,7 @@ else
 		_unit stop false;
 	};
 };
+
+if (_isPlayerWas)
+then { player setVariable ["inconsciente",false,true]; }
+else { _unit setVariable ["inconsciente",false,true]; };

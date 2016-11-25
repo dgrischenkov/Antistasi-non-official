@@ -45,39 +45,39 @@
 						<Original>&lt;t size='0.8'&gt;%1 is on the way to help you.&lt;t size='0.6'&gt;&lt;br/&gt;Hit SPACE to Respawn (%2 sec)</Original>
 						<Russian>&lt;t size='0.8'&gt;%1 на пути к вам.&lt;t size='0.6'&gt;&lt;br/&gt;Нажми ПРОБЕЛ для возрождения (%2 сек)</Russian>
 				</Key>
-				<Key ID="STR_RESPAWN_INCONSCIENTE_YOU_KILLED">
+				<Key ID="STR_RESPAWN_MESSAGE_KILLER_NAME">
 						<Original>&lt;t size='0.5'&gt;You killed %1&lt;br/&gt;</Original>
-						<Russian>&lt;t size='0.5'&gt;Вас подстрелил %1&lt;br/&gt;</Russian>
+						<Russian>&lt;t size='0.5'&gt;Отработал %1&lt;br/&gt;</Russian>
 				</Key>
-				<Key ID="STR_RESPAWN_HANDLEDAMAGE_IN_VEH">
-						<Original>You killed in vehicle&lt;br/&gt;</Original>
-						<Russian>Вы убиты в машине&lt;br/&gt;</Russian>
+				<Key ID="STR_RESPAWN_MESSAGE_FINISHEDOFFER_NAME">
+						<Original>&lt;t size='0.8'&gt;You were finished off %1</Original>
+						<Russian>&lt;t size='0.8'&gt;Добил %1</Russian>
 				</Key>
-				<Key ID="STR_RESPAWN_INCONSCIENTE_FELL_OF_BURNED">
-						<Original>You fell or burned&lt;br/&gt;</Original>
-						<Russian>Вы упали или сгорели&lt;br/&gt;</Russian>
+				<Key ID="STR_RESPAWN_MESSAGE_BLEEDOUT">
+						<Original>&lt;t size='0.8'&gt;You bled</Original>
+						<Russian>&lt;t size='0.8'&gt;Скончался от кровопотери</Russian>
 				</Key>
-				<Key ID="STR_RESPAWN_INCONSCIENTE_BLEEDOUT">
-						<Original>You bled</Original>
-						<Russian>Вы истекли кровью</Russian>
+				<Key ID="STR_RESPAWN_MESSAGE_DIE_IN_VEH">
+						<Original>&lt;t size='0.8'&gt;You killed in vehicle</Original>
+						<Russian>&lt;t size='0.8'&gt;Сгорел на работе</Russian>
 				</Key>
-				<Key ID="STR_RESPAWN_INCONSCIENTE_SPACE_KEY">
-						<Original>You did not wait for help</Original>
-						<Russian>Вы не дождались помощи</Russian>
+				<Key ID="STR_RESPAWN_MESSAGE_SPACE_KEY">
+						<Original>&lt;t size='0.8'&gt;You did not wait for help</Original>
+						<Russian>&lt;t size='0.8'&gt;Не дождался помощи</Russian>
+				</Key>
+				<Key ID="STR_RESPAWN_KILLER_IS_HAPPY">
+						<Original>MR Happy Occasion</Original>
+						<Russian>МИСТЕР Счастливый Случай</Russian>
 				</Key>
 				<Key ID="STR_RESPAWN_NAPALM">
 						<Original>You burnt by napalm</Original>
 						<Russian>Вас пожгли напалмом</Russian>
 				</Key>
-				<Key ID="STR_RESPAWN_HANDLEDAMAGE">
-						<Original>You were finished off</Original>
-						<Russian>Вас добил</Russian>
-				</Key>
-				<Key ID="STR_RESPAWN_HANDLEDAMAGE_BY_BOT">
+				<Key ID="STR_RESPAWN_KILLER_IS_BOT">
 						<Original>by AI %1</Original>
 						<Russian>БОТ %1</Russian>
 				</Key>
-				<Key ID="STR_RESPAWN_HANDLEDAMAGE_BY_PLAYER">
+				<Key ID="STR_RESPAWN_KILLER_IS_PLAYER">
 						<Original>by PLAYER %1</Original>
 						<Russian>ИГРОК %1</Russian>
 				</Key>
