@@ -1,4 +1,4 @@
-private ["_unit","_part","_injurer","_unitSide","_whileExit","_bleedOutConst","_ayuda","_texto","_camTarget","_respawnMenu","_respMessage","_saveVolume","_saveVolumeVoice"];
+private ["_unit","_part","_injurer","_unitSide","_whileExit","_finishedoff","_camTime","_bleedOutConst","_ayuda","_texto","_camTarget","_respawnMenu","_respMessage","_saveVolume","_saveVolumeVoice"];
 
 _unit = _this select 0;
 _part = _this select 1;
@@ -8,8 +8,10 @@ if (!local _unit) exitWith {};
 
 _bleedOutConst = time + 360;
 
+_unit setCaptive true;
+
 if (_part != "") then { removeHeadgear _unit; };
-if (vehicle _unit != _unit) then { _unit action ["getOut", vehicle _unit]; sleep 4; };
+if (vehicle _unit != _unit) then { _unit action ["getOut", vehicle _unit]; };
 
 _unit switchMove "AinjPpneMstpSnonWrflDnon";
 _unit playActionNow "Unconscious";
@@ -54,49 +56,59 @@ else
 };
 
 _whileExit = false;
-_unit setVariable ["finishedoff",false,true];
+_camTime = time - 7;
+_unit setVariable ["finishedoff",nil,true];
 _unitSide = side _unit;
 
 while { !_whileExit } do
 {
-	_tiempo = 5 + random 5;
-
-	if (random 10 < 1) then { playSound3D [(injuredSounds call BIS_fnc_selectRandom),_unit,false, getPosASL _unit, 1, 1, 50]; };
-	if (random 10 > 9) then { _unit setCaptive false; } else { _unit setCaptive true; }; // change side to civilian
+	if (random 100 < 5) then { playSound3D [(injuredSounds call BIS_fnc_selectRandom),_unit,false, getPosASL _unit, 1, 1, 50]; };
+	if (random 100 > 5) then { _unit setCaptive true; } else { _unit setCaptive false; }; // change side to civilian
 
 	_ayuda = [_unit, _unitSide] call pedirAyuda;
+	_finishedoff = _unit getVariable "finishedoff";
 
 	if (isPlayer _unit) then
 	{
-		_camTarget = player;
-		if (isNull _ayuda) then
-		{
-			_texto = format [localize "STR_RESPAWN_INCONSCIENTE_CAMERA_TO_PLAYER", ceil (_bleedOutConst - time)];
-		}
+		if (isNull _injurer) then { _texto = localize "STR_RESPAWN_INCONSCIENTE_FELL_OF_BURNED"; }
 		else
 		{
-			_texto = format [localize "STR_RESPAWN_INCONSCIENTE_CAMERA_TO_AYUDA", name _ayuda, ceil (_bleedOutConst - time)];
-			if (!(_unit getVariable ["finishedoff",false])) then { _camTarget = _ayuda; };
+			if (isPlayer _injurer)
+			then { _texto = format [localize "STR_RESPAWN_HANDLEDAMAGE_BY_PLAYER", name _injurer]; }
+			else { _texto = format [localize "STR_RESPAWN_HANDLEDAMAGE_BY_BOT", name _injurer]; };
+			_texto = format[localize "STR_RESPAWN_INCONSCIENTE_YOU_KILLED", _texto];
 		};
 
-		[_texto,0,0,_tiempo,0,0,4] spawn bis_fnc_dynamicText;
+		if (isNull _ayuda)
+		then { _texto = _texto + format [localize "STR_RESPAWN_INCONSCIENTE_CAMERA_TO_PLAYER", ceil (_bleedOutConst - time)]; }
+		else { _texto = _texto + format [localize "STR_RESPAWN_INCONSCIENTE_CAMERA_TO_AYUDA", name _ayuda, ceil (_bleedOutConst - time)]; };
 
-		deadCam camSetPos [
-			(position _camTarget select 0) + 12 - random 24,
-			(position _camTarget select 1) + 12 - random 24,
-			(position _camTarget select 2) + 6];
-		deadCam camSetTarget _camTarget;
-		deadCam cameraEffect ["internal", "BACK"];
-		deadCam camCommit _tiempo;
+		_camTarget = player;
+		if (!isNull _ayuda and isNil "_finishedoff") then { _camTarget = _ayuda; };
+
+		[_texto,0,0,1,0,0,4] spawn bis_fnc_dynamicText;
+
+		if ( (_camTime + 7) <= time ) then
+		{
+			_camTime = time;
+
+			deadCam camSetPos [
+				(position _camTarget select 0) + 12 - random 24,
+				(position _camTarget select 1) + 12 - random 24,
+				(position _camTarget select 2) + 6];
+			deadCam camSetTarget _camTarget;
+			deadCam cameraEffect ["internal", "BACK"];
+			deadCam camCommit 10;
+		};
 	};
 
-	sleep _tiempo;
+	sleep 1;
 
 	if ((time > _bleedOutConst) or
 		(damage _unit <= 0.25) or
 		(_unit getVariable ["suicide",false]) or
-		(_unit getVariable ["finishedoff",false])
-	) then { _whileExit = true; };
+		(!isNil "_finishedoff"))
+	then { _whileExit = true; };
 };
 
 if (isPlayer _unit) then
@@ -106,16 +118,22 @@ if (isPlayer _unit) then
 	if (_unit getVariable ["suicide",false]) then
 		{_unit setVariable ["suicide",nil];};
 
-	if (_unit getVariable ["finishedoff",false]) then
+	_finishedoff = _unit getVariable "finishedoff";
+	if (!isNil "_finishedoff") then
 	{
-		// player-killer go to prison
-		if (isPlayer _injurer and _injurer != _unit) then {[_injurer,60] remoteExec ["castigo",_injurer]};
+		if ( isNull _finishedoff ) then
+			{ [format ["%1", localize "STR_RESPAWN_INCONSCIENTE_FELL_OF_BURNED"],0,0,10,0,0,4] spawn bis_fnc_dynamicText; }
+		else
+		{
+			// player-killer go to prison
+			if (isPlayer _finishedoff and _finishedoff != _unit) then {[_finishedoff,60] remoteExec ["castigo",_finishedoff]}; // TODO test it
 
-		// generate respawn message
-		_respMessage = format [localize "STR_RESPAWN_HANDLEDAMAGE_BY_BOT", name _injurer];
-		if (isPlayer _injurer)
-		then { _respMessage = format [localize "STR_RESPAWN_HANDLEDAMAGE_BY_PLAYER", name _injurer]; };
-		[format ["%1 %2", localize "STR_RESPAWN_HANDLEDAMAGE", _respMessage],0,0,10,0,0,4] spawn bis_fnc_dynamicText;
+			// generate respawn message
+			if (isPlayer _finishedoff)
+			then { _respMessage = format [localize "STR_RESPAWN_HANDLEDAMAGE_BY_PLAYER", name _finishedoff]; }
+			else { _respMessage = format [localize "STR_RESPAWN_HANDLEDAMAGE_BY_BOT", name _finishedoff]; };
+			[format ["%1 %2", localize "STR_RESPAWN_HANDLEDAMAGE", _respMessage],0,0,10,0,0,4] spawn bis_fnc_dynamicText;
+		};
 	};
 
 	if (time > _bleedOutConst) then
@@ -142,7 +160,13 @@ if (isPlayer _unit) then
 _unit setCaptive false;
 _unit setVariable ["inconsciente",nil,true];
 
-if (damage _unit > 0.25) then { _unit setDamage 1; }
+if (damage _unit > 0.25) then
+{
+	if (!isPlayer _unit) then
+		{ _unit removeAllEventHandlers "HandleDamage"; };
+
+	_unit setDamage 1;
+}
 else
 {
 	_unit playMoveNow "AmovPpneMstpSnonWnonDnon_healed";

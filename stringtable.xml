@@ -45,6 +45,14 @@
 						<Original>&lt;t size='0.8'&gt;%1 is on the way to help you.&lt;t size='0.6'&gt;&lt;br/&gt;Hit SPACE to Respawn (%2 sec)</Original>
 						<Russian>&lt;t size='0.8'&gt;%1 на пути к вам.&lt;t size='0.6'&gt;&lt;br/&gt;Нажми ПРОБЕЛ для возрождения (%2 сек)</Russian>
 				</Key>
+				<Key ID="STR_RESPAWN_INCONSCIENTE_YOU_KILLED">
+						<Original>&lt;t size='0.5'&gt;You killed %1&lt;br/&gt;</Original>
+						<Russian>&lt;t size='0.5'&gt;Вас подстрелил %1&lt;br/&gt;</Russian>
+				</Key>
+				<Key ID="STR_RESPAWN_INCONSCIENTE_FELL_OF_BURNED">
+						<Original>You fell or burned&lt;br/&gt;</Original>
+						<Russian>Вы упали или сгорели&lt;br/&gt;</Russian>
+				</Key>
 				<Key ID="STR_RESPAWN_INCONSCIENTE_BLEEDOUT">
 						<Original>You bled</Original>
 						<Russian>Вы истекли кровью</Russian>
