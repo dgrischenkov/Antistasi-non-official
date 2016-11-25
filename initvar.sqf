@@ -6,7 +6,7 @@
 //Don't touch them.
 antistasiVersion = "v 1.5.5 -- modded";
 
-servidoresOficiales = ["Antistasi Official EU","Antistasi Official EU - TEST"];//this is for author's fine tune the official servers. If I get you including your server in this variable, I will create a special variable for your server. Understand?
+servidoresOficiales = ["[RU] ARMATOP Antistasi Altis"];
 
 debug = false;//debug variable, not useful for everything..
 
