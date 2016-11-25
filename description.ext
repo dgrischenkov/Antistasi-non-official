@@ -4,7 +4,7 @@
 
 author="Barbolani";
 OnLoadName = "Antistasi - modified";
-OnLoadMission = "Be a Resistance Leader - Be a Hero";
+OnLoadMission = Бей и беги - основы партизанской войны;
 loadScreen = "pic.JPG";
 
 overviewText = "Be the Resistance Leader. Fight against a superior enemy in technology, number, assets and vehicles. Use guerrilla tactics in a totally dynamic world, with around 18 sidemissions, everywhere, anytime, anything.";
