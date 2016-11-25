@@ -15,16 +15,17 @@ _medico = objNull;
 	_inconsciente = _nearUnit getVariable "inconsciente";
 	if (isNil "_inconsciente") then { _inconsciente = false; };
 
-	if ( (_nearUnitSide == _unitSide) and (_nearUnit != Petros) and !(_inconsciente) and !(isPlayer _nearUnit) ) then
+	if (
+		([_nearUnitSide, _unitSide] call BIS_fnc_sideIsFriendly) and
+		(_nearUnit != Petros) and
+		!(_inconsciente) and
+		!(isPlayer _nearUnit) and
+		(alive _nearUnit) and
+		(("Medikit" in (items _nearUnit)) or ("FirstAidKit" in (items _nearUnit))) and
+		((_nearUnit distance _unit) < _distanceMin ) ) then
 	{
-		if ( ("Medikit" in (items _nearUnit)) or ("FirstAidKit" in (items _nearUnit)) ) then
-		{
-			if ( (_nearUnit distance _unit) < _distanceMin ) then
-			{
-				_distanceMin = _nearUnit distance _unit;
-				_medico = _nearUnit;
-			};
-		};
+		_distanceMin = _nearUnit distance _unit;
+		_medico = _nearUnit;
 	};
 } forEach (_unit nearTargets _rangeConst);
 
