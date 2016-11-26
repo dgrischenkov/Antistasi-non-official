@@ -10,14 +10,14 @@ class DifficultyPresets
 			enemyTags=0;
 			detectedMines=0;
 			commands=0;
-			waypoints=0;
+			waypoints=2;
 			weaponInfo=2;
 			stanceIndicator=2;
 			staminaBar=1;
 			weaponCrosshair=0;
 			visionAid=0;
 			squadRadar=0;
-			thirdPersonView=0;
+			thirdPersonView=1;
 			cameraShake=1;
 			scoreTable=0;
 			deathMessages=0;
