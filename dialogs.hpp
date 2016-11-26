@@ -2118,7 +2118,7 @@ class HQ_box: BOX
 	x = 0.244979 * safezoneW + safezoneX;
 	y = 0.223941 * safezoneH + safezoneY;
 	w = 0.445038 * safezoneW;
-	h = 0.30 * safezoneH;
+	h = 0.48 * safezoneH;
 };
 class HQ_frame: RscFrame
 {
@@ -2127,7 +2127,7 @@ class HQ_frame: RscFrame
 	x = 0.254979 * safezoneW + safezoneX;
 	y = 0.233941 * safezoneH + safezoneY;
 	w = 0.425038 * safezoneW;
-	h = 0.28 * safezoneH;
+	h = 0.46 * safezoneH;
 };
 class HQ_button_back: RscButton
 {
@@ -2163,12 +2163,54 @@ class HQ_button_Gremove: RscButton
 {
 	idc = 106;
 	text = $STR_UI_BUY_HELICOPTER;
-	x = 0.37749 * safezoneW + safezoneX;
+	x = 0.272481 * safezoneW + safezoneX;
 	y = 0.415981 * safezoneH + safezoneY;
 	w = 0.175015 * safezoneW;
 	h = 0.0560125 * safezoneH;
 	action = "closeDialog 0;nul = [vfs select 2] call addFIAveh;";
 };
+class HQ_button_G_01: RscButton
+{
+	idc = 107;
+	text = $STR_UI_BUY_SUV;
+	x = 0.482498 * safezoneW + safezoneX;
+	y = 0.415981 * safezoneH + safezoneY;
+	w = 0.175015 * safezoneW;
+	h = 0.0560125 * safezoneH;
+	action = "closeDialog 0;nul = [vfs select 12] call addFIAveh;";
+};
+class HQ_button_G_02: RscButton
+{
+	idc = 108;
+	text = $STR_UI_HATCHBACK;
+	x = 0.272481 * safezoneW + safezoneX;
+	y = 0.514003 * safezoneH + safezoneY;
+	w = 0.175015 * safezoneW;
+	h = 0.0560125 * safezoneH;
+	action = "closeDialog 0;nul = [vfs select 13] call addFIAveh;";
+};
+class HQ_button_G_03: RscButton
+{
+	idc = 109;
+	text = $STR_UI_BUY_HATCKBACK_SPORT;
+	x = 0.482498 * safezoneW + safezoneX;
+	y = 0.514003 * safezoneH + safezoneY;
+	w = 0.175015 * safezoneW;
+	h = 0.0560125 * safezoneH;
+	action = "closeDialog 0;nul = [vfs select 14] call addFIAveh;";
+};
+class HQ_button_G_04: RscButton
+{
+	idc = 110;
+	text = $STR_UI_BUY_FUEL;
+	x = 0.37749 * safezoneW + safezoneX;
+	y = 0.612005 * safezoneH + safezoneY;
+	w = 0.175015 * safezoneW;
+	h = 0.0560125 * safezoneH;
+	action = "closeDialog 0;nul = [vfs select 15] call addFIAveh;";
+};
+
+
 ////////////////////////////////////////////////////////
 // GUI EDITOR OUTPUT END
 ////////////////////////////////////////////////////////

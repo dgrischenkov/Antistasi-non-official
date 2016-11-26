@@ -641,6 +641,22 @@
 						<Original>Truck</Original>
 						<Russian>Грузовик</Russian>
 				</Key>
+				<Key ID="STR_UI_BUY_FUEL">
+						<Original>Fuel Truck</Original>
+						<Russian>Бензовоз</Russian>
+				</Key>
+				<Key ID="STR_UI_BUY_HATCKBACK_SPORT">
+						<Original>Hatchback sport</Original>
+						<Russian>Хетчбек спорт</Russian>
+				</Key>
+				<Key ID="STR_UI_HATCHBACK">
+						<Original>Hatchback</Original>
+						<Russian>Хетчбек</Russian>
+				</Key>
+				<Key ID="STR_UI_BUY_SUV">
+						<Original>SUV</Original>
+						<Russian>BMW X6</Russian>
+				</Key>
 				<Key ID="STR_UI_BUY_HELICOPTER">
 						<Original>Helicopter</Original>
 						<Russian>Вертолёт</Russian>

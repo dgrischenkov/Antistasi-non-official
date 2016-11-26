@@ -10,7 +10,12 @@ if (isNil "_coste") then {
 		if (_tipoVeh in vehAPC) exitWith {_coste = 1000};
 		if (_tipoVeh in vehIFV) exitWith {_coste = 2000};
 		if (_tipoVeh in vehTank) exitWith {_coste = 5000};
-		if (_tipoveh == "C_Van_01_fuel_F") exitWith {_coste = 50};
+
+		if (_tipoveh == "C_SUV_01_F") exitWith {_coste = 300};
+		if (_tipoveh == "C_Hatchback_01_F") exitWith {_coste = 150};
+		if (_tipoveh == "C_Hatchback_01_sport_F") exitWith {_coste = 200};
+		if (_tipoveh == "C_Van_01_fuel_F") exitWith {_coste = 1250};
+
 		if (_tipoVeh in arrayCivVeh) exitWith {_coste = 25};
 
 		_coste = 0;

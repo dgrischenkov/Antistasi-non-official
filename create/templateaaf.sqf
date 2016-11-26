@@ -450,7 +450,11 @@ _vfs = 	[
 	"B_G_Mortar_01_F",
 	"B_static_AT_F",
 	"B_static_AA_F",
-	"B_T_MRAP_01_hmg_F"
+	"B_T_MRAP_01_hmg_F",
+	"C_SUV_01_F",
+	"C_Hatchback_01_F",
+	"C_Hatchback_01_sport_F",
+	"C_Van_01_fuel_F"
 ];
 
 _civHeli = "C_Heli_Light_01_civil_F";

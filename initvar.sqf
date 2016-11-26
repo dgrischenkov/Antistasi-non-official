@@ -285,18 +285,22 @@ server setVariable ["B_G_Offroad_01_armed_F",700,true];//700
 {server setVariable [_x,400,true]} forEach ["B_HMG_01_high_F","B_G_Boat_Transport_01_F","B_G_Offroad_01_repair_F"];//400
 {server setVariable [_x,800,true]} forEach ["B_G_Mortar_01_F","B_static_AT_F","B_static_AA_F"];//800
 
-server setVariable [vfs select 0,300,true];
-server setVariable [vfs select 1,600,true];//600
-server setVariable [vfs select 2,6000,true];//12000
-server setVariable [vfs select 3,50,true];//50
-server setVariable [vfs select 4,200,true];//200
-server setVariable [vfs select 5,450,true];//300
-server setVariable [vfs select 6,700,true];//700
-server setVariable [vfs select 7,400,true];//700
+server setVariable [vfs select 0,200,true];
+server setVariable [vfs select 1,600,true];
+server setVariable [vfs select 2,2500,true];
+server setVariable [vfs select 3,50,true];
+server setVariable [vfs select 4,200,true];
+server setVariable [vfs select 5,450,true];
+server setVariable [vfs select 6,700,true];
+server setVariable [vfs select 7,400,true];
 server setVariable [vfs select 8,800,true];
 server setVariable [vfs select 9,800,true];
 server setVariable [vfs select 10,800,true];
 server setVariable [vfs select 11,2000,true];
+server setVariable [vfs select 12,300,true];
+server setVariable [vfs select 13,150,true];
+server setVariable [vfs select 14,200,true];
+server setVariable [vfs select 15,1250,true];
 
 if (hayRHS) then {
 	server setVariable [vfs select 2,6000,true];
