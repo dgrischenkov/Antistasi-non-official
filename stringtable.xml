@@ -50,16 +50,20 @@
 						<Russian>&lt;t size='0.5'&gt;Отработал %1&lt;br/&gt;</Russian>
 				</Key>
 				<Key ID="STR_RESPAWN_MESSAGE_FINISHEDOFFER_NAME">
-						<Original>&lt;t size='0.8'&gt;You were finished off %1</Original>
-						<Russian>&lt;t size='0.8'&gt;Добил %1</Russian>
+						<Original>&lt;t size='0.8'&gt;You were finished off %1&lt;br/&gt;</Original>
+						<Russian>&lt;t size='0.8'&gt;Добил %1&lt;br/&gt;</Russian>
+				</Key>
+				<Key ID="STR_RESPAWN_MESSAGE_TORN_TO_PIECES">
+						<Original>&lt;t font='PuristaBold' color='#bb1122' size='1.1'&gt;Torn to pieces</Original>
+						<Russian>&lt;t font='PuristaBold' color='#bb1122' size='1.1'&gt;Разорвало на куски</Russian>
 				</Key>
 				<Key ID="STR_RESPAWN_MESSAGE_BLEEDOUT">
 						<Original>&lt;t size='0.8'&gt;You bled</Original>
 						<Russian>&lt;t size='0.8'&gt;Скончался от кровопотери</Russian>
 				</Key>
 				<Key ID="STR_RESPAWN_MESSAGE_DIE_IN_VEH">
-						<Original>&lt;t size='0.8'&gt;You killed in vehicle</Original>
-						<Russian>&lt;t size='0.8'&gt;Сгорел на работе</Russian>
+						<Original>&lt;t size='0.8'&gt;You killed in vehicle&lt;br/&gt;</Original>
+						<Russian>&lt;t size='0.8'&gt;Сгорел на работе&lt;br/&gt;</Russian>
 				</Key>
 				<Key ID="STR_RESPAWN_MESSAGE_SPACE_KEY">
 						<Original>&lt;t size='0.8'&gt;You did not wait for help</Original>

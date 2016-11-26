@@ -1,4 +1,4 @@
-private ["_unit","_part","_dam","_injurer","_message"];
+private ["_unit","_part","_dam","_damAccum","_injurer","_message"];
 
 _unit = _this select 0;
 _part = _this select 1;
@@ -10,6 +10,10 @@ if (!alive _unit and !isPlayer _unit) exitWith
 
 if (_dam > 0.95) then
 {
+	_damAccum = _unit getVariable ["damAccum", 0];
+	_damAccum = _damAccum + _dam;
+	_unit setVariable ["damAccum",_damAccum,true];
+
 	_dam = 0.95;
 
 	if (_unit getVariable ["inconsciente", false]) then

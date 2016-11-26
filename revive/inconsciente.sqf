@@ -1,4 +1,4 @@
-private ["_unit","_part","_injurer","_unitSide","_isPlayerWas","_whileExit","_finishedoff","_camTime","_bleedOutConst","_ayuda","_texto","_textoKiller","_textoFinishedoffer","_camTarget","_respawnMenu","_saveVolume","_saveVolumeVoice"];
+private ["_unit","_part","_injurer","_unitSide","_isPlayerWas","_whileExit","_finishedoff","_camTime","_bleedOutConst","_ayuda","_texto","_textoKiller","_textoFinishedoffer","_camTarget","_respawnMenu","_damAccumMessage","_damAccumLimitConst","_saveVolume","_saveVolumeVoice"];
 
 _unit = _this select 0;
 _part = _this select 1;
@@ -6,6 +6,7 @@ _injurer = _this select 2;
 
 if (!local _unit) exitWith {};
 
+_damAccumLimitConst = 50;
 _bleedOutConst = time + 360;
 _camTimeForCommitConst = 8;
 
@@ -116,13 +117,15 @@ while { !_whileExit } do
 
 	sleep 1;
 
+	_finishedoff = _unit getVariable "finishedoff";
+
 	if ((time > _bleedOutConst) or
 		(damage _unit <= 0.25) or
 		(_unit getVariable ["suicide",false]) or
+		(_unit getVariable ["damAccum", 0] > _damAccumLimitConst) or
 		(!isNil "_finishedoff"))
 	then { _whileExit = true; };
 
-	_finishedoff = _unit getVariable "finishedoff";
 	_ayuda = [_unit, _unitSide] call pedirAyuda;
 };
 
@@ -141,6 +144,13 @@ if (isPlayer _unit) then
 	if (_unit getVariable ["suicide",false]) then
 		{_unit setVariable ["suicide",nil]; };
 
+	_damAccumMessage = "";
+	if (_unit getVariable ["damAccum", 0] > _damAccumLimitConst) then
+	{
+		_damAccumMessage = localize "STR_RESPAWN_MESSAGE_TORN_TO_PIECES";
+		[ _textoKiller + _damAccumMessage,0,0,10,0,0,4] spawn bis_fnc_dynamicText;
+	};
+
 	if (!isNil "_finishedoff") then
 	{
 		if (!isNull _finishedoff) then
@@ -151,7 +161,7 @@ if (isPlayer _unit) then
 		}	else { _textoFinishedoffer = localize "STR_RESPAWN_KILLER_IS_HAPPY"; };
 
 		_textoFinishedoffer = format[localize "STR_RESPAWN_MESSAGE_FINISHEDOFFER_NAME", _textoFinishedoffer];
-		[ _textoKiller + _textoFinishedoffer,0,0,10,0,0,4] spawn bis_fnc_dynamicText;
+		[ _textoKiller + _textoFinishedoffer + _damAccumMessage,0,0,10,0,0,4] spawn bis_fnc_dynamicText;
 	};
 
 	if (time > _bleedOutConst) then
@@ -159,7 +169,7 @@ if (isPlayer _unit) then
 
 	if (_unit getVariable ["dieInVehicle",false]) then
 	{
-		[_textoKiller + localize "STR_RESPAWN_MESSAGE_DIE_IN_VEH",0,0,10,0,0,4] spawn bis_fnc_dynamicText;
+		[_textoKiller + localize "STR_RESPAWN_MESSAGE_DIE_IN_VEH" + _damAccumMessage,0,0,10,0,0,4] spawn bis_fnc_dynamicText;
 		_unit setVariable ["dieInVehicle",nil];
 	}
 	else
@@ -185,6 +195,7 @@ if (isPlayer _unit) then
 };
 
 _unit setCaptive false;
+_unit setVariable ["damAccum",nil,true];
 _isPlayerWas = isPlayer _unit;
 
 if (damage _unit > 0.25) then { _unit setDamage 1; }
