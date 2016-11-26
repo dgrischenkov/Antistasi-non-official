@@ -26,15 +26,20 @@ class DifficultyPresets
 			autoReport=0;
 			multipleSaves=0;
 		};
-		aiLevelPreset=2;
+		aiLevelPreset=3;
+	};
+	class CustomAILevel
+	{
+		skillAI=1;
+		precisionAI=1;
 	};
 };
 singleVoice=0;
 maxSamplesPlayed=96;
 sceneComplexity=400000;
 shadowZDistance=100;
-viewDistance=1200;
-preferredObjectViewDistance=800;
+viewDistance=3000;
+preferredObjectViewDistance=3000;
 terrainGrid=25;
 volumeCD=10;
 volumeFX=10;
