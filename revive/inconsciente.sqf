@@ -22,10 +22,13 @@ if ( vehicle _unit != _unit ) then
 		_unit action ["getOut", vehicle _unit];
 		if ( !isPlayer _unit ) then { sleep 5; };
 	};
+}
+else
+{
+	_unit switchMove "AinjPpneMstpSnonWrflDnon";
+	_unit playActionNow "Unconscious";
 };
 
-_unit switchMove "AinjPpneMstpSnonWrflDnon";
-_unit playActionNow "Unconscious";
 _unit setFatigue 1;
 
 if (isPlayer _unit) then
