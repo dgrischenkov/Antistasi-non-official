@@ -14,10 +14,18 @@ _unit setCaptive true;
 
 if (_part != "") then { removeHeadgear _unit; };
 
-if ( vehicle _unit == _unit )
-then { _unit switchMove "AinjPpneMstpSnonWrflDnon"; _unit playActionNow "Unconscious"; }
-else { _unit setVariable ["dieInVehicle",true]; };
+if ( vehicle _unit != _unit ) then
+{
+	_unit setVariable ["dieInVehicle",true];
+	if ( !alive vehicle _unit ) then
+	{
+		_unit action ["getOut", vehicle _unit];
+		if ( !isPlayer _unit ) then { sleep 5; };
+	};
+};
 
+_unit switchMove "AinjPpneMstpSnonWrflDnon";
+_unit playActionNow "Unconscious";
 _unit setFatigue 1;
 
 if (isPlayer _unit) then
@@ -70,14 +78,12 @@ else
 _whileExit = _unit getVariable ["dieInVehicle",false];
 _camTime = time - _camTimeForCommitConst;
 _unit setVariable ["finishedoff",nil,true];
+_ayuda = objNull;
 
 while { !_whileExit } do
 {
 	if (random 100 < 9) then { playSound3D [(injuredSounds call BIS_fnc_selectRandom),_unit,false, getPosASL _unit, 1, 1, 50]; };
 	if (random 100 > 9) then { _unit setCaptive true; } else { _unit setCaptive false; }; // change side to civilian
-
-	_ayuda = [_unit, _unitSide] call pedirAyuda;
-	_finishedoff = _unit getVariable "finishedoff";
 
 	if (isPlayer _unit) then
 	{
@@ -85,15 +91,15 @@ while { !_whileExit } do
 		then { _texto = _textoKiller + format [localize "STR_RESPAWN_INCONSCIENTE_CAMERA_TO_PLAYER", ceil (_bleedOutConst - time)]; }
 		else { _texto = _textoKiller + format [localize "STR_RESPAWN_INCONSCIENTE_CAMERA_TO_AYUDA", name _ayuda, ceil (_bleedOutConst - time)]; };
 
-		if (!isNull _ayuda and isNil "_finishedoff")
-		then { _camTarget = _ayuda; }
-		else { _camTarget = player; };
-
 		[_texto,0,0,1,0,0,4] spawn bis_fnc_dynamicText;
 
 		if ( (_camTime + _camTimeForCommitConst) <= time ) then
 		{
 			_camTime = time;
+
+			if (isNull _ayuda)
+			then { _camTarget = player; }
+			else { _camTarget = _ayuda; };
 
 			deadCam camSetPos [
 				(position _camTarget select 0) + 12 - random 24,
@@ -112,6 +118,9 @@ while { !_whileExit } do
 		(_unit getVariable ["suicide",false]) or
 		(!isNil "_finishedoff"))
 	then { _whileExit = true; };
+
+	_finishedoff = _unit getVariable "finishedoff";
+	_ayuda = [_unit, _unitSide] call pedirAyuda;
 };
 
 // player-killer go to prison
