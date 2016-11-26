@@ -347,19 +347,19 @@ if (_isJip) then
 		{
 		if (!isPlayer (leader group _x)) then
 			{
-			_x addAction ["Order Refugee to follow me", "AI\liberaterefugee.sqf",nil,0,false,true];
+			_x addAction [localize "STR_UI_ORDER_TO_FOLLOW", "AI\liberaterefugee.sqf",nil,0,false,true];
 			};
 		};
 	} forEach allUnits;
 	if (petros == leader group petros) then
 		{
 		removeAllActions petros;
-		petros addAction ["Mission Request", {nul=CreateDialog "mission_menu";},nil,0,false,true];
+		petros addAction [localize "STR_UI_MISSION_REQUEST", {nul=CreateDialog "mission_menu";},nil,0,false,true];
 		}
 	else
 		{
 		removeAllActions petros;
-		petros addAction ["Build HQ here", {[] spawn buildHQ},nil,0,false,true];
+		petros addAction [localize "STR_UI_BUILD_HQ_HERE", {[] spawn buildHQ},nil,0,false,true];
 		};
 
 	if (isMultiplayer) then
