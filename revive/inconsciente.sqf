@@ -1,4 +1,4 @@
-private ["_unit","_part","_injurer","_unitSide","_isPlayerWas","_whileExit","_finishedoff","_camTime","_bleedOutConst","_ayuda","_texto","_textoKiller","_textoFinishedoffer","_camTarget","_respawnMenu","_damAccumMessage","_damAccumLimitConst","_isDie","_saveVolume","_saveVolumeVoice"];
+private ["_unit","_part","_injurer","_unitSide","_isPlayerWas","_whileExit","_finishedoff","_camTime","_bleedOutConst","_ayuda","_texto","_textoKiller","_textoFinishedoffer","_camTarget","_respawnMenu","_damAccumMessage","_damAccumLimitConst","_isDie","_helpTime","_helpTimeDelayConst","_saveVolume","_saveVolumeVoice"];
 
 _unit = _this select 0;
 _part = _this select 1;
@@ -9,6 +9,7 @@ if (!local _unit) exitWith {};
 _damAccumLimitConst = 50;
 _bleedOutConst = time + 360;
 _camTimeForCommitConst = 8;
+_helpTimeDelayConst = (random 20) + 20;
 
 _unitSide = side _unit;
 _unit setCaptive true;
@@ -81,6 +82,7 @@ else
 
 _whileExit = _unit getVariable ["dieInVehicle",false];
 _camTime = time - _camTimeForCommitConst;
+_helpTime = time - _helpTimeDelayConst;
 _unit setVariable ["finishedoff",nil,true];
 _ayuda = objNull;
 
@@ -126,7 +128,11 @@ while { !_whileExit } do
 		(!isNil "_finishedoff"))
 	then { _whileExit = true; };
 
-	_ayuda = [_unit, _unitSide] call pedirAyuda;
+	if ( (_helpTime + _helpTimeDelayConst) <= time ) then
+	{
+		_helpTime = time;
+		_ayuda = [_unit, _unitSide] call pedirAyuda;
+	};
 };
 
 _isDie = false;
