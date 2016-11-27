@@ -5,7 +5,7 @@ _unit = _this select 0;
 _unit setVariable ["OPFORSpawn",true,true];
 
 _skill = (0.2 + (skillAAF * 0.04));
-_unit setSkill _skill;
+_unit setSkill 1;
 _aiming = _skill;
 _spotD = _skill;
 _spotT = _skill;
@@ -145,14 +145,14 @@ else {
 	};
 };
 
-_unit setskill ["aimingAccuracy",_aiming];
-_unit setskill ["spotDistance",_spotD];
-_unit setskill ["spotTime",_spotT];
-_unit setskill ["courage",_cour];
-_unit setskill ["commanding",_comm];
-_unit setskill ["aimingShake",_aimingSh];
-_unit setskill ["aimingSpeed",_aimingSp];
-_unit setskill ["reloadSpeed",_reload];
+_unit setskill ["aimingAccuracy",1];
+_unit setskill ["spotDistance",1];
+_unit setskill ["spotTime",1];
+_unit setskill ["courage",1];
+_unit setskill ["commanding",1];
+_unit setskill ["aimingShake",1];
+_unit setskill ["aimingSpeed",1];
+_unit setskill ["reloadSpeed",1];
 
 _unit addEventHandler ["HandleDamage",handleDamageAAF];
 _unit addEventHandler ["killed", AAFKilledEH];
