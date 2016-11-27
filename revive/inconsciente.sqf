@@ -139,6 +139,7 @@ _isDie = false;
 if ((time > _bleedOutConst) or
 	(_unit getVariable ["suicide",false]) or
 	(_unit getVariable ["damAccum", 0] > _damAccumLimitConst) or
+	(_unit getVariable ["dieInVehicle",false]) or
 	(!isNil "_finishedoff"))
 then { _isDie = true; };
 
