@@ -17,6 +17,7 @@ _medico = objNull;
 
 	if (
 		([_nearUnitSide, _unitSide] call BIS_fnc_sideIsFriendly) and
+		(_nearUnit != _unit) and
 		(_nearUnit != Petros) and
 		!(_inconsciente) and
 		!(isPlayer _nearUnit) and
