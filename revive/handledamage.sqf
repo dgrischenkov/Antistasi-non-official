@@ -20,8 +20,11 @@ if (_dam > 0.95) then
 		{ _unit setVariable ["finishedoff",_injurer,true]; }
 	else
 	{
-		_unit setVariable ["inconsciente",true,true];
-		[_unit, _part, _injurer] spawn inconsciente;
+		if ( !((vehicle _unit == _unit) and (vehicle _injurer != _injurer)) ) then
+		{
+			_unit setVariable ["inconsciente",true,true];
+			[_unit, _part, _injurer] spawn inconsciente;
+		};
 	};
 };
 
