@@ -1,4 +1,4 @@
-private ["_unit","_part","_injurer","_unitSide","_isPlayerWas","_whileExit","_finishedoff","_camTime","_bleedOutConst","_ayuda","_texto","_textoKiller","_textoFinishedoffer","_camTarget","_respawnMenu","_damAccumMessage","_damAccumLimitConst","_saveVolume","_saveVolumeVoice"];
+private ["_unit","_part","_injurer","_unitSide","_isPlayerWas","_whileExit","_finishedoff","_camTime","_bleedOutConst","_ayuda","_texto","_textoKiller","_textoFinishedoffer","_camTarget","_respawnMenu","_damAccumMessage","_damAccumLimitConst","_isDie","_saveVolume","_saveVolumeVoice"];
 
 _unit = _this select 0;
 _part = _this select 1;
@@ -129,6 +129,13 @@ while { !_whileExit } do
 	_ayuda = [_unit, _unitSide] call pedirAyuda;
 };
 
+_isDie = false;
+if ((time > _bleedOutConst) or
+	(_unit getVariable ["suicide",false]) or
+	(_unit getVariable ["damAccum", 0] > _damAccumLimitConst) or
+	(!isNil "_finishedoff"))
+then { _isDie = true; };
+
 // player-killer go to prison
 if (!isNil "_finishedoff") then
 {
@@ -198,7 +205,7 @@ _unit setCaptive false;
 _unit setVariable ["damAccum",nil,true];
 _isPlayerWas = isPlayer _unit;
 
-if (damage _unit > 0.25) then { _unit setDamage 1; }
+if (_isDie) then { _unit setDamage 1; }
 else
 {
 	_unit playMoveNow "AmovPpneMstpSnonWnonDnon_healed";
