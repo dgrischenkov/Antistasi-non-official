@@ -6,7 +6,7 @@ _injurer = _this select 2;
 
 if (!local _unit) exitWith {};
 
-_damAccumLimitConst = 50;
+_damAccumLimitConst = 65;
 _bleedOutConst = time + 360;
 _camTimeForCommitConst = 8;
 _helpTimeDelayConst = (random 20) + 20;
