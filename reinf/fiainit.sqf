@@ -10,7 +10,7 @@ _skillFIA = server getVariable "skillFIA";
 _unit allowFleeing 0;
 _skill = 0.2 + (_skillFIA * 0.04);
 if ((!isMultiplayer) and (leader _unit == stavros)) then {_skill = _skill + 0.2};
-_unit setSkill 1;
+_unit setSkill _skill;
 _aiming = _skill;
 _spotD = _skill;
 _spotT = _skill;
@@ -390,14 +390,14 @@ if (sunOrMoon < 1) then {
 
 if ((_tipo != "B_G_Soldier_M_F") and (_tipo != "B_G_Sharpshooter_F")) then {if (_aiming > 0.35) then {_aiming = 0.35}};
 
-_unit setskill ["aimingAccuracy",1];
-_unit setskill ["spotDistance",1];
-_unit setskill ["spotTime",1];
-_unit setskill ["courage",1];
-_unit setskill ["commanding",1];
-_unit setskill ["aimingShake",1];
-_unit setskill ["aimingSpeed",1];
-_unit setskill ["reloadSpeed",1];
+_unit setskill ["aimingAccuracy",_aiming];
+_unit setskill ["spotDistance",_spotD];
+_unit setskill ["spotTime",_spotT];
+_unit setskill ["courage",_cour];
+_unit setskill ["commanding",_comm];
+_unit setskill ["aimingShake",_aimingSh];
+_unit setskill ["aimingSpeed",_aimingSp];
+_unit setskill ["reloadSpeed",_reload];
 
 if (player == leader _unit) then {
 	_EHkilledIdx = _unit addEventHandler ["killed", {
