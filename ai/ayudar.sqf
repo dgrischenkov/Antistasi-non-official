@@ -8,13 +8,12 @@ _medico setVariable ["medic_to",_unit,true];
 _unit setVariable ["medic_from",_medico,true];
 
 [_medico,_unit] call cubrirConHumo;
+_medico doMove getPosATL _unit;
 
 while { (alive _unit) and (alive _medico) and (time < _timeOut) and
 	(_unit getVariable ["inconsciente",false]) and
 	((_unit getVariable "medic_from") == _medico) } do
 {
-	_medico doMove getPosATL _unit;
-
 	if (_unit distance _medico < 4) then
 	{
 		_medico action ["HealSoldier",_unit];
