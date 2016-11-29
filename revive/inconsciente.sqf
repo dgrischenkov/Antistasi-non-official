@@ -1,4 +1,4 @@
-private ["_unit","_part","_injurer","_unitSide","_isPlayerWas","_whileExit","_finishedoff","_camTime","_bleedOutConst","_ayuda","_texto","_textoKiller","_textoFinishedoffer","_camTarget","_respawnMenu","_damAccumMessage","_damAccumLimitConst","_isDie","_helpTime","_helpTimeDelayConst","_healTimeImmunityConst","_saveVolume","_saveVolumeVoice"];
+private ["_unit","_part","_injurer","_unitSide","_isPlayerWas","_whileExit","_finishedoff","_camTime","_bleedOutConst","_ayuda","_texto","_textoKiller","_textoFinishedoffer","_camTarget","_respawnMenu","_damAccumMessage","_damAccumLimitConst","_isDie","_helpTime","_helpTimeDelayConst","_ayudaName","_healTimeImmunityConst","_saveVolume","_saveVolumeVoice"];
 
 _unit = _this select 0;
 _part = _this select 1;
@@ -96,7 +96,7 @@ while { !_whileExit } do
 	{
 		if (isNull _ayuda)
 		then { _texto = _textoKiller + format [localize "STR_RESPAWN_INCONSCIENTE_CAMERA_TO_PLAYER", ceil (_bleedOutConst - time)]; }
-		else { _texto = _textoKiller + format [localize "STR_RESPAWN_INCONSCIENTE_CAMERA_TO_AYUDA", name _ayuda, ceil (_bleedOutConst - time)]; };
+		else { _texto = _textoKiller + format [localize "STR_RESPAWN_INCONSCIENTE_CAMERA_TO_AYUDA", _ayudaName, ceil (_bleedOutConst - time)]; };
 
 		[_texto,0,0,1,0,0,4] spawn bis_fnc_dynamicText;
 
@@ -133,6 +133,7 @@ while { !_whileExit } do
 	{
 		_helpTime = time;
 		_ayuda = [_unit, _unitSide] call pedirAyuda;
+		_ayudaName = name _ayuda;
 	};
 };
 
