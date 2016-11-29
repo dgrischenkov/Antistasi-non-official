@@ -41,7 +41,7 @@ petros allowdamage false;
 ["mrkFIA"] call fn_LoadStat; mrkFIA = mrkFIA + puestosFIA; publicVariable "mrkFIA"; if (isMultiplayer) then {sleep 5};
 ["mrkAAF"] call fn_LoadStat;
 ["destroyedCities"] call fn_LoadStat;
-["minas"] call fn_LoadStat;
+// ["minas"] call fn_LoadStat;
 ["cuentaCA"] call fn_LoadStat;
 ["antenas"] call fn_LoadStat;
 ["prestigeNATO"] call fn_LoadStat;
