@@ -28,4 +28,6 @@ if (_dam > 0.95) then
 	};
 };
 
+if (_unit getVariable ["inconsciente", false]) then { _dam = 0.95; };
+
 _dam
