@@ -129,7 +129,7 @@ while { !_whileExit } do
 		(!isNil "_finishedoff"))
 	then { _whileExit = true; };
 
-	if ( ( (_helpTime + _helpTimeDelayConst) <= time ) and !_whileExit ) then
+	if ( ( ( time > (_helpTime + _helpTimeDelayConst) ) or !(alive _ayuda) or (_ayuda getVariable["inconsciente",false]) ) and !_whileExit ) then
 	{
 		_helpTime = time;
 		_ayuda = [_unit, _unitSide] call pedirAyuda;

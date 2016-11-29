@@ -15,7 +15,7 @@ while { (alive _unit) and (alive _medico) and (time < _timeOut) and
 {
 	_medico doMove getPosATL _unit;
 
-	if (_unit distance _medico < 3) then
+	if (_unit distance _medico < 4) then
 	{
 		_medico action ["HealSoldier",_unit];
 	};
@@ -26,4 +26,4 @@ while { (alive _unit) and (alive _medico) and (time < _timeOut) and
 _medico setVariable ["medic_to",nil,true];
 
 if ((_unit getVariable "medic_from") == _medico) then
-	{ _unit setVariable ["medic_from",nil,true]; };
+	{ _unit setVariable ["medic_from",objNull,true]; };
