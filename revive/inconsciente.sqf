@@ -1,4 +1,4 @@
-private ["_unit","_part","_injurer","_unitSide","_isPlayerWas","_whileExit","_finishedoff","_camTime","_bleedOutConst","_ayuda","_texto","_textoKiller","_textoFinishedoffer","_camTarget","_respawnMenu","_damAccumMessage","_damAccumLimitConst","_isDie","_helpTime","_helpTimeDelayConst","_ayudaName","_healTimeImmunityConst","_saveVolume","_saveVolumeVoice"];
+private ["_unit","_part","_injurer","_unitSide","_isPlayerWas","_whileExit","_finishedoff","_camTime","_bleedOutConst","_ayuda","_texto","_textoKiller","_textoFinishedoffer","_camTarget","_respawnMenu","_damAccumMessage","_damAccumLimitConst","_isDie","_helpTime","_helpTimeDelayConst","_ayudaName","_saveVolume","_saveVolumeVoice"];
 
 _unit = _this select 0;
 _part = _this select 1;
@@ -10,7 +10,6 @@ _damAccumLimitConst = 65;
 _bleedOutConst = time + 360;
 _camTimeForCommitConst = 8;
 _helpTimeDelayConst = (random 20) + 20;
-_healTimeImmunityConst = time + 5;
 
 _unitSide = side _unit;
 _unit setCaptive true;
@@ -123,7 +122,7 @@ while { !_whileExit } do
 	_finishedoff = _unit getVariable "finishedoff";
 
 	if ((time > _bleedOutConst) or
-		((damage _unit <= 0.25) and (time > _healTimeImmunityConst)) or
+		(damage _unit <= 0.25) or
 		(_unit getVariable ["suicide",false]) or
 		(_unit getVariable ["damAccum", 0] > _damAccumLimitConst) or
 		(!isNil "_finishedoff"))
