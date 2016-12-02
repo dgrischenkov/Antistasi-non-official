@@ -29,7 +29,8 @@ if (_rifle) then
 	_mag = currentMagazine _unit;
 	_unit removeMagazines _mag;
 	_unit removeWeaponGlobal (primaryWeapon _unit);
-	_rifleFinal = unlockedRifles call BIS_fnc_selectRandom;
+	// _rifleFinal = unlockedRifles call BIS_fnc_selectRandom;
+	_rifleFinal = ["arifle_Katiba_F", "arifle_Katiba_GL_F", "arifle_MX_F", "arifle_MX_GL_F", "arifle_TRG21_F", "arifle_AKS_F"] call BIS_fnc_selectRandom;
 	if (_rifleFinal in genGL) then {
 		if !(hayRHS) then {_unit addMagazine ["1Rnd_HE_Grenade_shell", 4];}
 		else {_unit addMagazine ["rhs_VOG25", 4];};
