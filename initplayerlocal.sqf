@@ -439,7 +439,7 @@ if (hayXLA) then {
 } else {
 	_action = caja addaction [localize "STR_A3_Arsenal",
 	{
-	_this call accionArsenal;
+	["Open",true] call BIS_fnc_arsenal;
 	},
 	[],
 	6,
