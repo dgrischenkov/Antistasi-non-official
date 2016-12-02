@@ -1097,6 +1097,10 @@
 						<Original>Select a zone to add garrisoned troops</Original>
 						<Russian>Выберите зону, чтобы добавить бойцов в её гарнизон.</Russian>
 				</Key>
+				<Key ID="STR_GARRISON_LIMIT">
+						<Original>Limit garrison</Original>
+						<Russian>Гарнизон максимально большой</Russian>
+				</Key>
 				<Key ID="STR_GARRISON_INFO">
 						<Original>Info%1</Original>
 						<Russian>Информация%1</Russian>

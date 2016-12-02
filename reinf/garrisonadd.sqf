@@ -30,6 +30,7 @@ if (closeMarkersUpdating > 0) exitWith {hint format [localize "STR_RECTUIT_PAUSE
 _nul = [-1,-_coste] remoteExec ["resourcesFIA",2];
 _garrison = garrison getVariable [_marcador,[]];
 _garrison = _garrison + [_tipo];
+if (count _garrison > 20) exitWith {hint format [localize "STR_GARRISON_LIMIT"]};
 garrison setVariable [_marcador,_garrison,true];
 [_marcador] call mrkUpdate;
 hint format ["Soldier recruited.%1",[_marcador] call garrisonInfo];
