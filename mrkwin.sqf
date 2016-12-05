@@ -47,6 +47,7 @@ if (isPlayer _x) then
 _bandera setFlagTexture "\A3\Data_F\Flags\Flag_FIA_CO.paa";
 
 sleep 5;
+[[_bandera,"hq_managment"],"flagaction"] call BIS_fnc_MP;
 [[_bandera,"unit"],"flagaction"] call BIS_fnc_MP;
 [[_bandera,"vehicle"],"flagaction"] call BIS_fnc_MP;
 [[_bandera,"garage"],"flagaction"] call BIS_fnc_MP;

@@ -70,6 +70,7 @@ for "_i" from 0 to (count _buildings) - 1 do
 _veh = createVehicle ["Flag_FIA_F", _posicion, [],0, "CAN_COLLIDE"];
 _veh allowDamage false;
 _vehiculos = _vehiculos + [_veh];
+[[_veh,"hq_managment"],"flagaction"] call BIS_fnc_MP;
 [[_veh,"unit"],"flagaction"] call BIS_fnc_MP;
 [[_veh,"vehicle"],"flagaction"] call BIS_fnc_MP;
 [[_veh,"garage"],"flagaction"] call BIS_fnc_MP;

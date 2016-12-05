@@ -50,6 +50,7 @@ if (count _buildings > 1) then
 _pos = [_posicion, 3,0] call BIS_fnc_relPos;
 _veh = createVehicle [bluFlag, _pos, [],0, "CAN_COLLIDE"];
 _veh allowDamage false;
+[[_veh,"hq_managment"],"flagaction"] call BIS_fnc_MP;
 [[_veh,"unit"],"flagaction"] call BIS_fnc_MP;
 [[_veh,"vehicle"],"flagaction"] call BIS_fnc_MP;
 [[_veh,"garage"],"flagaction"] call BIS_fnc_MP;

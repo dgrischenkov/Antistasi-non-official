@@ -8,6 +8,7 @@ _tipo = _this select 1;
 switch _tipo do
 	{
 	case "take": {removeAllActions _flag; _flag addAction [localize "STR_UI_TAKE_FLAG", {[[_this select 0, _this select 1],"mrkWIN"] call BIS_fnc_MP;},nil,0,false,true,"","(isPlayer _this) and (_this == _this getVariable ['owner',objNull])"]};
+	case "hq_managment": {_flag addAction [localize "STR_HQ_MANAGMENT", {if (player == Stavros) then {nul=[] execVM "Dialogs\dialogHQ.sqf";} else {hint localize "STR_HQ_MANAGMENT_ONLY_FOR_COMMANDER"}},nil,0,false,true,"","(isPlayer _this) and (_this == _this getVariable ['owner',objNull])"];};
 	case "unit": {_flag addAction [localize "STR_UI_UNIT_RECRUITMENT", {nul=[] execVM "Dialogs\unit_recruit.sqf";},nil,0,false,true,"","(isPlayer _this) and (_this == _this getVariable ['owner',objNull])"];};
 	case "vehicle": {_flag addAction [localize "STR_UI_BUY_VEHICLE", {nul = createDialog "vehicle_option";},nil,0,false,true,"","(isPlayer _this) and (_this == _this getVariable ['owner',objNull])"];};
 	case "mission": {petros addAction [localize "STR_UI_MISSION_REQUEST", {nul=CreateDialog "mission_menu";},nil,0,false,true,"","(isPlayer _this) and (_this == _this getVariable ['owner',objNull])"];};
