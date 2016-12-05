@@ -8,7 +8,7 @@ class EditorData
 	toggles=1;
 	class ItemIDProvider
 	{
-		nextID=372;
+		nextID=373;
 	};
 	class MarkerIDProvider
 	{
@@ -37,7 +37,8 @@ addons[]=
 	"A3_Modules_F",
 	"A3_Characters_F",
 	"A3_Modules_F_Hc",
-	"A3_Modules_F_Curator_Curator"
+	"A3_Modules_F_Curator_Curator",
+	"A3_Modules_F_Curator_Effects"
 };
 class AddonsMetaData
 {
@@ -153,7 +154,7 @@ class Mission
 	};
 	class Entities
 	{
-		items=175;
+		items=176;
 		class Item0
 		{
 			dataType="Marker";
@@ -3006,6 +3007,58 @@ class Mission
 					};
 				};
 				nAttributes=5;
+			};
+		};
+		class Item175
+		{
+			dataType="Logic";
+			class PositionInfo
+			{
+				position[]={3646.7881,15.088669,10301.849};
+			};
+			id=372;
+			type="ModulePostprocess_F";
+			class CustomAttributes
+			{
+				class Attribute0
+				{
+					property="ModulePostprocess_F_CommitTime";
+					expression="_this setVariable ['CommitTime',_value,true];";
+					class Value
+					{
+						class data
+						{
+							class type
+							{
+								type[]=
+								{
+									"SCALAR"
+								};
+							};
+							value=0;
+						};
+					};
+				};
+				class Attribute1
+				{
+					property="ModulePostprocess_F_Template";
+					expression="_this setVariable ['Template',_value,true];";
+					class Value
+					{
+						class data
+						{
+							class type
+							{
+								type[]=
+								{
+									"STRING"
+								};
+							};
+							value="Survive";
+						};
+					};
+				};
+				nAttributes=2;
 			};
 		};
 	};
