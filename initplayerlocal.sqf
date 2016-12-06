@@ -2,6 +2,7 @@
 waitUntil {player == player};
 player removeweaponGlobal "itemmap";
 player removeweaponGlobal "itemgps";
+howtoplay = 1;
 if (isMultiplayer) then
 	{
 	[] execVM "briefing.sqf";
