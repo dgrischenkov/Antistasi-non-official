@@ -1230,6 +1230,31 @@
 						<Original>TUTORIAL</Original>
 						<Russian>СПРАВОЧНАЯ</Russian>
 				</Key>
+
+				<Key ID="STR_TUTO_HELLOW_TITLE">
+						<Original>Это чё такое?!</Original>
+				</Key>
+
+				<Key ID="STR_TUTO_HELLOW_TEXT">
+						<Original>
+							&lt;t align='center' shadow='1' shadowColor='#996600' font='PuristaBold'&gt;Это чё такое?!&lt;/t&gt;
+							&lt;br/&gt;&lt;br/&gt;
+							&lt;t font='PuristaBold'&gt;[RU] ARMATOP Antistasi Altis&lt;/t&gt; - это учебный полигон команды ARMATOP, созданный с целью выявить талантливых игроков и, в дальнейшем, принять их в отряд для более серьёзных игр. Наши контакты:
+							&lt;br/&gt;
+							&lt;t font='PuristaBold'&gt;https://vk.com/antistasi&lt;/t&gt; - страница сервера;
+							&lt;br/&gt;
+							&lt;t font='PuristaBold'&gt;https://vk.com/armatop&lt;/t&gt; - страница команды;
+							&lt;br/&gt;
+							&lt;t font='PuristaBold'&gt;http://steamcommunity.com/id/f1af&lt;/t&gt; - админ сервера.
+							&lt;br/&gt;&lt;br/&gt;
+							На сервере крутится миссия &lt;t font='PuristaBold'&gt;Antistasi&lt;/t&gt; - симулятор партизанской войны. Миссия очень сложная и навороченная, для вдумчивых игроков. Режим игры: PVE + COOP + CTI, т.е. играем против ботов (их нереально много!), играем в кооперативе, цель игры - захват острова.
+							&lt;br/&gt;&lt;br/&gt;
+							Миссия находится в активной стадии разработки и обновляется очень часто. Следите за обновлениями на странице вконтакте или тут, в Справочной, в разделе "Что новенького?".
+							&lt;br/&gt;&lt;br/&gt;
+							Эта справочная доступна в шатбе, на карте, в меню на колесе мыши. Для выхода нажми ESC.
+						</Original>
+				</Key>
+
 				<Key ID="STR_TUTO_TITLE0">
 						<Original>Хочу стрелять! Куда бежать?</Original>
 				</Key>
