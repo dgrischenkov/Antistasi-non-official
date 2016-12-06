@@ -122,7 +122,7 @@ while { !_whileExit } do
 	_finishedoff = _unit getVariable "finishedoff";
 
 	if ((time > _bleedOutConst) or
-		(damage _unit <= 0.25) or
+		(damage _unit < 0.26) or
 		(_unit getVariable ["suicide",false]) or
 		(_unit getVariable ["damAccum", 0] > _damAccumLimitConst) or
 		(!isNil "_finishedoff"))
