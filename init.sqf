@@ -98,3 +98,5 @@ if(isServer) then
 [] execVM "Dialogs\welcome.sqf";
 
 [] execVM "tutorial.sqf";
+
+[0.5] execVM "snow.sqf";
