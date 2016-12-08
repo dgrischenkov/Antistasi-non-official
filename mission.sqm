@@ -8,7 +8,7 @@ class EditorData
 	toggles=1;
 	class ItemIDProvider
 	{
-		nextID=373;
+		nextID=374;
 	};
 	class MarkerIDProvider
 	{
@@ -20,10 +20,10 @@ class EditorData
 	};
 	class Camera
 	{
-		pos[]={3612.9998,20.932581,10273.426};
-		dir[]={0.69756389,-0.43447965,0.56996053};
-		up[]={0.33663484,0.90052694,0.27505389};
-		aside[]={0.63280523,5.9732702e-007,-0.77448934};
+		pos[]={3610.2217,23.428061,10270.486};
+		dir[]={0.64691246,-0.4140971,0.64050972};
+		up[]={0.29443675,0.91008216,0.29152086};
+		aside[]={0.70367438,4.3772161e-007,-0.71071953};
 	};
 };
 binarizationWanted=0;
@@ -136,19 +136,33 @@ class Mission
 		overviewText="Build FIA Army from scratch and defeat the AAF and CSAT forces in a whole map Dynamic Mission.";
 		resistanceWest=0;
 		resistanceEast=1;
-		startWeather=0.16;
-		startWind=0.099999994;
-		startWaves=0.099999994;
-		forecastWeather=0.16;
-		forecastWind=0.099999994;
-		forecastWaves=0.099999994;
-		forecastLightnings=0.099999994;
+		startWeather=0.90438122;
+		startFog=0.33844241;
+		startWind=1;
+		startWindDir=45;
+		startRain=0.029999999;
+		startLightnings=1;
+		startWaves=1;
+		startGust=1;
+		forecastWeather=0.90438122;
+		forecastFog=0.33844241;
+		forecastWind=1;
+		forecastWaves=1;
+		forecastRain=0.029999999;
+		forecastLightnings=1;
+		forecastGust=1;
+		forecastWindDir=90;
+		rainForced=1;
+		lightningsForced=1;
+		wavesForced=1;
+		windForced=1;
 		year=2016;
-		month=6;
+		month=12;
+		day=24;
 		hour=9;
 		minute=-29;
-		startFogBase=-1000;
-		forecastFogBase=-1000;
+		startFogBase=-10;
+		forecastFogBase=-10;
 		startFogDecay=0.1;
 		forecastFogDecay=0.1;
 	};
@@ -1437,7 +1451,7 @@ class Mission
 			};
 			id=97;
 			type="MapBoard_altis_F";
-			atlOffset=-0.0050001144;
+			atlOffset=-0.0050010681;
 		};
 		class Item98
 		{
