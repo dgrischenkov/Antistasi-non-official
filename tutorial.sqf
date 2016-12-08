@@ -14,13 +14,17 @@ if ( isNil "howtoplay" ) then { howtoplay = 0; };
 
 		_tutorial_titles = [
 			localize "STR_TUTO_HELLOW_TITLE",
-			localize "STR_TUTO_TITLE0",
-			localize "STR_TUTO_TITLE1",
-			localize "STR_TUTO_TITLE2",
-			localize "STR_TUTO_TITLE3",
-			localize "STR_TUTO_TITLE4",
-			localize "STR_TUTO_TITLE5",
-			localize "STR_TUTO_TITLE6"
+			localize "STR_TUTO_START_TITLE",
+			localize "STR_TUTO_HQ_TITLE",
+			localize "STR_TUTO_TELEPORT_TITLE",
+			localize "STR_TUTO_MONEY_TITLE",
+			localize "STR_TUTO_GARRISON_TITLE",
+			localize "STR_TUTO_CAPTURE_TITLE",
+			localize "STR_TUTO_UNDERCOVER_TITLE",
+			localize "STR_TUTO_SQUAD_TITLE",
+			localize "STR_TUTO_NATOCSAT_TITLE",
+			localize "STR_TUTO_NEWS_TITLE",
+			localize "STR_TUTO_FUTURE_TITLE"
 		];
 
 		{
@@ -33,16 +37,20 @@ if ( isNil "howtoplay" ) then { howtoplay = 0; };
 
 		_tutorial_pages = [
 			"STR_TUTO_HELLOW_TEXT",
-			"STR_TUTO_TEXT0",
-			"STR_TUTO_TEXT1",
-			"STR_TUTO_TEXT2",
-			"STR_TUTO_TEXT3",
-			"STR_TUTO_TEXT4",
-			"STR_TUTO_TEXT5",
-			"STR_TUTO_TEXT6"
+			"STR_TUTO_START_TEXT",
+			"STR_TUTO_HQ_TEXT",
+			"STR_TUTO_TELEPORT_TEXT",
+			"STR_TUTO_MONEY_TEXT",
+			"STR_TUTO_GARRISON_TEXT",
+			"STR_TUTO_CAPTURE_TEXT",
+			"STR_TUTO_UNDERCOVER_TEXT",
+			"STR_TUTO_SQUAD_TEXT",
+			"STR_TUTO_NATOCSAT_TEXT",
+			"STR_TUTO_NEWS_TEXT",
+			"STR_TUTO_FUTURE_TEXT"
 		];
 
-		_tutorial_height = [0.9, 2.8, 0.5, 0.7, 2.5, 1.0, 1.8, 0.8];
+		_tutorial_height = [0.9, 0.8, 0.8, 1.5, 1.3, 2.5, 0.8, 0.1, 0.1, 0.1, 0.1, 0.1];
 
 		_old_page = -1;
 
