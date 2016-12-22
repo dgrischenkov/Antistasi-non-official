@@ -8,7 +8,6 @@ if (isMultiplayer) then
 	if (!isServer) then
 		{
 		call compile preprocessFileLineNumbers "initVar.sqf";
-		if (!hasInterface) then {call compile preprocessFileLineNumbers "roadsDB.sqf"};
 		call compile preprocessFileLineNumbers "initFuncs.sqf";
 		};
 	};

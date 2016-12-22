@@ -50,7 +50,7 @@ if ((_nombre != "") and (_nombre != "sagonisi") and (_nombre != "hill12")) then/
     if (_size < 200) then {_size = 200};
     _roads = [];
     _numCiv = 0;
-    if (worldName != "Altis") then//If Altis, data is picked from a DB in initVar.sqf, if not, is built on the fly.
+    if (true /* worldName != "Altis" */) then//If Altis, data is picked from a DB in initVar.sqf, if not, is built on the fly.
         {
         _numCiv = (count (nearestObjects [_pos, ["house"], _size]));
         _roadsProv = _pos nearRoads _size;
