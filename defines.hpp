@@ -143,14 +143,17 @@ class RscButton
    access = 0;
     type = CT_BUTTON;
     text = "";
-    colorText[] = {1,1,1,.9};
-    colorDisabled[] = {0.4,0.4,0.4,0};
-    colorBackground[] = {0.75,0.75,0.75,0.8};
-    colorBackgroundDisabled[] = {0,0.0,0};
-    colorBackgroundActive[] = {0.75,0.75,0.75,1};
-    colorFocused[] = {0.75,0.75,0.75,.5};
-    colorShadow[] = {0.023529,0,0.0313725,1};
-    colorBorder[] = {0.023529,0,0.0313725,1};
+
+    colorDisabled[] = { 0, 0, 0, 1 };
+    colorBackgroundDisabled[] = { 0, 0, 0, 1 };
+    colorShadow[] = { 0, 0, 0, 1 };
+    colorBorder[] = { 0, 0, 0, 1 };
+
+    colorText[] = { 0.5, 0.75, 0.5, 1 };
+    colorBackground[] = { 0.4, 0.44, 0.4, 0.5 };
+    colorBackgroundActive[] = { 0.6, 0.66, 0.4, 0.5 };
+    colorFocused[] = { 0.6, 0.66, 0.4, 0.5 };
+
     soundEnter[] = {"\A3\ui_f\data\sound\RscButton\soundEnter",0.09,1};
     soundPush[] = {"\A3\ui_f\data\sound\RscButton\soundPush",0.09,1};
     soundClick[] = {"\A3\ui_f\data\sound\RscButton\soundClick",0.09,1};
@@ -162,7 +165,7 @@ class RscButton
     h = 0.039216;
     shadow = 2;
     font = "PuristaMedium";
-    sizeEx = 0.03;//0.03921
+    sizeEx = 0.04;
     offsetX = 0.003;
     offsetY = 0.003;
     offsetPressedX = 0.002;
@@ -179,7 +182,7 @@ class RscFrame
     colorBackground[] = {1,1,1,1};//{1,1,1,1}
     colorText[] = {1,1,1,0.9};
     font = "PuristaMedium";
-    sizeEx = 0.03;
+    sizeEx = 0.04;
     text = "";
 };
 class BOX
@@ -191,7 +194,7 @@ class BOX
     colorText[] = {1,1,1,1};
     font = "PuristaMedium";
     sizeEx = 0.02;
-    colorBackground[] = { 0.2,0.2,0.2, 0.9 };
+    colorBackground[] = { 0.04, 0.1, 0.08, 0.9 };
     text = "";
 };
 /*
