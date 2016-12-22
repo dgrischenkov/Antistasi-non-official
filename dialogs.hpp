@@ -406,7 +406,7 @@ class HQ_box: BOX
 	x = 0.244979 * safezoneW + safezoneX;
 	y = 0.223941 * safezoneH + safezoneY;
 	w = 0.445038 * safezoneW;
-	h = 0.590125 * safezoneH;
+	h = 0.690125 * safezoneH;
 };
 class HQ_frame: RscFrame
 {
@@ -415,7 +415,7 @@ class HQ_frame: RscFrame
 	x = 0.254979 * safezoneW + safezoneX;
 	y = 0.233941 * safezoneH + safezoneY;
 	w = 0.425038 * safezoneW;
-	h = 0.560125 * safezoneH;
+	h = 0.660125 * safezoneH;
 };
 class HQ_button_back: RscButton
 {
@@ -513,11 +513,44 @@ class HQ_button_APC: RscButton // L5 -- M5
 {
 	idc = 112;
 	text = $STR_UI_APC;
-	x = 0.37749 * safezoneW + safezoneX;
+	x = 0.272481 * safezoneW + safezoneX;
 	y = 0.710047 * safezoneH + safezoneY;
 	w = 0.175015 * safezoneW;
 	h = 0.0560125 * safezoneH;
 	action = "closeDialog 0;nul = [vfs select 11] call addFIAveh;";
+};
+
+class HQ_button_Prowler: RscButton
+{
+	idc = 113;
+	text = $STR_UI_PROWLER;
+	x = 0.482498 * safezoneW + safezoneX;
+	y = 0.710047 * safezoneH + safezoneY;
+	w = 0.175015 * safezoneW;
+	h = 0.0560125 * safezoneH;
+	action = "closeDialog 0;nul = [vfs select 17] call addFIAveh;";
+};
+
+class HQ_button_Marshal: RscButton
+{
+	idc = 114;
+	text = $STR_UI_MARSHAL;
+	x = 0.272481 * safezoneW + safezoneX;
+	y = 0.808047 * safezoneH + safezoneY;
+	w = 0.175015 * safezoneW;
+	h = 0.0560125 * safezoneH;
+	action = "closeDialog 0;nul = [vfs select 18] call addFIAveh;";
+};
+
+class HQ_button_Panther: RscButton
+{
+	idc = 115;
+	text = $STR_UI_PANTHER;
+	x = 0.482498 * safezoneW + safezoneX;
+	y = 0.808047 * safezoneH + safezoneY;
+	w = 0.175015 * safezoneW;
+	h = 0.0560125 * safezoneH;
+	action = "closeDialog 0;nul = [vfs select 19] call addFIAveh;";
 };
 
 ////////////////////////////////////////////////////////
@@ -2203,11 +2236,21 @@ class HQ_button_G_04: RscButton
 {
 	idc = 110;
 	text = $STR_UI_BUY_FUEL;
-	x = 0.37749 * safezoneW + safezoneX;
+	x = 0.482498 * safezoneW + safezoneX;
 	y = 0.612005 * safezoneH + safezoneY;
 	w = 0.175015 * safezoneW;
 	h = 0.0560125 * safezoneH;
 	action = "closeDialog 0;nul = [vfs select 15] call addFIAveh;";
+};
+class HQ_button_G_05: RscButton
+{
+	idc = 111;
+	text = $STR_UI_BUY_RENEGADE;
+	x = 0.272481 * safezoneW + safezoneX;
+	y = 0.612005 * safezoneH + safezoneY;
+	w = 0.175015 * safezoneW;
+	h = 0.0560125 * safezoneH;
+	action = "closeDialog 0;nul = [vfs select 16] call addFIAveh;";
 };
 
 

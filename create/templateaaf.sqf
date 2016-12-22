@@ -454,7 +454,11 @@ _vfs = 	[
 	"C_SUV_01_F",
 	"C_Hatchback_01_F",
 	"C_Hatchback_01_sport_F",
-	"C_Van_01_fuel_F"
+	"C_Van_01_fuel_F",
+	"C_Offroad_02_unarmed_F",
+	"B_T_LSV_01_armed_F",
+	"B_T_APC_Wheeled_01_cannon_F",
+	"B_T_APC_Tracked_01_rcws_F"
 ];
 
 _civHeli = "C_Heli_Light_01_civil_F";

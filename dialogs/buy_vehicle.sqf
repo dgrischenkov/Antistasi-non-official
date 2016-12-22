@@ -26,4 +26,9 @@ if (str (_display) != "no display") then
 	_ChildControl  ctrlSetTooltip format [localize "STR_COST",[vfs select 10] call vehiclePrice];
 	_ChildControl = _display displayCtrl 112;
 	_ChildControl  ctrlSetTooltip format [localize "STR_COST",[vfs select 11] call vehiclePrice];
-};
+	_ChildControl = _display displayCtrl 113;
+	_ChildControl  ctrlSetTooltip format [localize "STR_COST",[vfs select 17] call vehiclePrice];
+};	_ChildControl = _display displayCtrl 114;
+	_ChildControl  ctrlSetTooltip format [localize "STR_COST",[vfs select 18] call vehiclePrice];
+	_ChildControl = _display displayCtrl 115;
+	_ChildControl  ctrlSetTooltip format [localize "STR_COST",[vfs select 19] call vehiclePrice];

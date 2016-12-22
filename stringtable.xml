@@ -269,10 +269,23 @@
 						<Original>Buy Static AA</Original>
 						<Russian>Станок с ПЗРК</Russian>
 				</Key>
+				<Key ID="STR_UI_MARSHAL">
+						<Original>Marshal</Original>
+						<Russian>Маршал</Russian>
+				</Key>
+				<Key ID="STR_UI_PANTHER">
+						<Original>Panther</Original>
+						<Russian>Пантера</Russian>
+				</Key>
+				<Key ID="STR_UI_PROWLER">
+						<Original>Prowler</Original>
+						<Russian>Провлер</Russian>
+				</Key>
 				<Key ID="STR_UI_APC">
 						<Original>Buy Hunter / APC</Original>
 						<Russian>Хантер / БТР</Russian>
 				</Key>
+
 				<Key ID="STR_UI_GAME_OPTIONS">
 						<Original>Game Options</Original>
 						<Russian>Управление игрой</Russian>
@@ -644,6 +657,10 @@
 				<Key ID="STR_UI_BUY_TRUCK">
 						<Original>Truck</Original>
 						<Russian>Грузовик</Russian>
+				</Key>
+				<Key ID="STR_UI_BUY_RENEGADE">
+						<Original>Renegade</Original>
+						<Russian>Ренегад</Russian>
 				</Key>
 				<Key ID="STR_UI_BUY_FUEL">
 						<Original>Fuel Truck</Original>

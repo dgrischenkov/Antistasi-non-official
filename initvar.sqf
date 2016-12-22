@@ -30,7 +30,7 @@ incomeRep = false;
 closeMarkersUpdating = 0;
 
 arrayCivs = ["C_man_1","C_man_1_1_F","C_man_1_2_F","C_man_1_3_F","C_man_hunter_1_F","C_man_p_beggar_F","C_man_p_beggar_F_afro","C_man_p_fugitive_F","C_man_p_shorts_1_F","C_man_polo_1_F","C_man_polo_2_F","C_man_polo_3_F","C_man_polo_4_F","C_man_polo_5_F","C_man_polo_6_F","C_man_shorts_1_F","C_man_shorts_2_F","C_man_shorts_3_F","C_man_shorts_4_F","C_scientist_F","C_Orestes","C_Nikos","C_Nikos_aged"];//array of possible civs. Only euro types picked (this is Greece). Add any civ classnames you wish here
-arrayCivVeh =["C_Hatchback_01_F","C_Hatchback_01_sport_F","C_Offroad_01_F","C_SUV_01_F","C_Van_01_box_F","C_Van_01_fuel_F","C_Van_01_transport_F","C_Truck_02_transport_F","C_Truck_02_covered_F"];//possible civ vehicles. Add any mod classnames you wish here
+arrayCivVeh =["C_Hatchback_01_F","C_Hatchback_01_sport_F","C_Offroad_01_F","C_SUV_01_F","C_Van_01_box_F","C_Van_01_fuel_F","C_Van_01_transport_F","C_Truck_02_transport_F","C_Truck_02_covered_F","C_Offroad_02_unarmed_F"];//possible civ vehicles. Add any mod classnames you wish here
 gruposFIAmid = ["IRG_InfTeam","IRG_InfTeam_AA","IRG_InfTeam_AT"];
 planesCSAT = ["O_Heli_Light_02_unarmed_F","O_Heli_Transport_04_bench_F","O_Heli_Attack_02_F","O_Plane_CAS_02_F","O_Heli_Light_02_F"];
 planesNATO = ["B_Heli_Light_01_F","B_Heli_Light_01_armed_F","B_Heli_Attack_01_F","B_Heli_Transport_01_camo_F","B_Plane_CAS_01_F","B_Heli_Transport_03_F"];
@@ -291,7 +291,7 @@ server setVariable [vfs select 2,2500,true];
 server setVariable [vfs select 3,50,true];
 server setVariable [vfs select 4,200,true];
 server setVariable [vfs select 5,450,true];
-server setVariable [vfs select 6,700,true];
+server setVariable [vfs select 6,400,true];
 server setVariable [vfs select 7,400,true];
 server setVariable [vfs select 8,800,true];
 server setVariable [vfs select 9,800,true];
@@ -301,6 +301,10 @@ server setVariable [vfs select 12,300,true];
 server setVariable [vfs select 13,150,true];
 server setVariable [vfs select 14,200,true];
 server setVariable [vfs select 15,1250,true];
+server setVariable [vfs select 16,350,true];
+server setVariable [vfs select 17,450,true];
+server setVariable [vfs select 18,36000,true];
+server setVariable [vfs select 19,48000,true];
 
 if (hayRHS) then {
 	server setVariable [vfs select 2,6000,true];
