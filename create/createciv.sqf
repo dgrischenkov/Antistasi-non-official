@@ -42,6 +42,7 @@ if (_marcador in destroyedCities) then
 	};
 _cuenta = 0;
 _numVeh = round (_numVeh * civPerc);
+_numVeh = _numVeh / 4;
 if (_numVeh < 1) then {_numVeh = 1};
 _numCiv = round (_numCiv * civPerc);
 if ((daytime < 8) or (daytime > 21)) then {_numCiv = round (_numCiv/4); _numVeh = round (_numVeh * 1.5)};

@@ -11,12 +11,12 @@ servidoresOficiales = ["[RU] ARMATOP Antistasi Altis"];
 debug = false;//debug variable, not useful for everything..
 
 cleantime = 3600;//time to delete dead bodies, vehicles etc..
-distanciaSPWN = 1200;//initial spawn distance. Less than 1Km makes parked vehicles spawn in your nose while you approach.
+distanciaSPWN = 1000;//initial spawn distance. Less than 1Km makes parked vehicles spawn in your nose while you approach.
 musicON = true;
-civPerc = 0.2;//initial % civ spawn rate
+civPerc = 0.02;//initial % civ spawn rate
 posHQ = getMarkerPos "respawn_west";
 //minefieldMrk = [];
-minimoFPS = 15;//initial FPS minimum.
+minimoFPS = 5;//initial FPS minimum.
 //destroyedCities = [];
 allowPlayerRecruit = true;
 recruitCooldown = 0;
