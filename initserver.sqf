@@ -108,6 +108,7 @@ caja addEventHandler ["ContainerOpened",
     }
 ];
 
+if (isServer) then { [] execVM "real_weather.sqf"; };
 
 serverInitDone = true; publicVariable "serverInitDone";
 diag_log "Antistasi MP Server. serverInitDone set to true.";
