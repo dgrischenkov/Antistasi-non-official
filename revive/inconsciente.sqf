@@ -1,4 +1,4 @@
-private ["_unit","_part","_injurer","_unitSide","_isPlayerWas","_whileExit","_finishedoff","_camTime","_bleedOutConst","_ayuda","_texto","_textoKiller","_textoFinishedoffer","_camTarget","_respawnMenu","_damAccumMessage","_damAccumLimitConst","_isDie","_helpTime","_helpTimeDelayConst","_ayudaName","_saveVolume","_saveVolumeVoice"];
+private ["_unit","_part","_injurer","_unitSide","_isPlayerWas","_whileExit","_finishedoff","_camTime","_bleedOutConst","_ayuda","_texto","_textoKiller","_textoFinishedoffer","_camTarget","_respawnMenu","_damAccumMessage","_damAccumLimitConst","_isDie","_helpTime","_helpTimeDelayConst","_ayudaName","_saveVolume","_saveVolumeVoice","_needSurrender","_surrenderRangeConst"];
 
 _unit = _this select 0;
 _part = _this select 1;
@@ -6,6 +6,7 @@ _injurer = _this select 2;
 
 if (!local _unit) exitWith {};
 
+_surrenderRangeConst = 10;
 _damAccumLimitConst = 65;
 _bleedOutConst = time + 360;
 _camTimeForCommitConst = 8;
@@ -222,6 +223,17 @@ else
 	{
 		{_unit enableAI _x} foreach ["TARGET","AUTOTARGET","MOVE","ANIM"];
 		_unit stop false;
+
+		_needSurrender = true;
+
+		{
+			if (([_x select 2, _unitSide] call BIS_fnc_sideIsFriendly) and ((_x select 4) != _unit) ) then
+			{
+				_needSurrender = false;
+			};
+		} forEach (_unit nearTargets _surrenderRangeConst);
+
+		if (_needSurrender) then { [_unit] spawn surrenderAction; };
 	};
 };
 

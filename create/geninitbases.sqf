@@ -154,5 +154,5 @@ _unit setskill ["aimingShake",_aimingSh];
 _unit setskill ["aimingSpeed",_aimingSp];
 _unit setskill ["reloadSpeed",_reload];
 
-_unit addEventHandler ["HandleDamage",handleDamageAAF];
+_unit addEventHandler ["HandleDamage",handleDamage];
 _unit addEventHandler ["killed", AAFKilledEH];

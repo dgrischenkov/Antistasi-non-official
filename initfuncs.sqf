@@ -16,7 +16,6 @@ mineSweep = compile preProcessFileLineNumbers "AI\mineSweep.sqf";
 powerCheck = compile preProcessFileLineNumbers "powerCheck.sqf";
 addTimeForIdle = compile preProcessFileLineNumbers "addTimeForIdle.sqf";
 AAFKilledEH = compile preProcessFileLineNumbers "AI\AAFKilledEH.sqf";
-handleDamageAAF = compile preProcessFileLineNumbers "Revive\handleDamageAAF.sqf";
 CSATVEHinit = compile preProcessFileLineNumbers "CREATE\CSATVEHinit.sqf";
 NATOVEHinit = compile preProcessFileLineNumbers "CREATE\NATOVEHinit.sqf";
 civVEHinit = compile preProcessFileLineNumbers "CREATE\civVEHinit.sqf";

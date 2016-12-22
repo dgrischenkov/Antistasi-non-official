@@ -4,7 +4,7 @@ _unit = _this select 0;
 
 _unit setVariable ["OPFORSpawn",true,true];
 
-_unit addEventHandler ["HandleDamage",handleDamageAAF];
+_unit addEventHandler ["HandleDamage",handleDamage];
 
 _unit addEventHandler ["killed",AAFKilledEH];
 
