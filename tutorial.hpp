@@ -28,7 +28,7 @@ class TutorialDialog {
 
 	class BGRect : UselessStuff {
 		idc = -1;
-		colorBackground[] = { 0.04, 0.08, 0.08, 0.9 };
+		colorBackground[] = { 0.04, 0.1, 0.08, 0.9 };
 		x = 0.0; y = 0.0; w = 1; h = 1;
 	};
 
