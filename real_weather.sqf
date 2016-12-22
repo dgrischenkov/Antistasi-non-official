@@ -23,7 +23,7 @@ private ["_lastrain", "_rain", "_fog", "_mintime", "_maxtime", "_overcast", "_re
 // Real time vs fast time
 // true: Real time is more realistic weather conditions change slowly (ideal for persistent game)
 // false: fast time give more different weather conditions (ideal for non persistent game) 
-_realtime = false;
+_realtime = true;
 
 // Random time before new forecast
 // true: forecast happens bewteen mintime and maxtime
