@@ -152,10 +152,6 @@ class Mission
 		forecastLightnings=1;
 		forecastGust=1;
 		forecastWindDir=90;
-		rainForced=1;
-		lightningsForced=1;
-		wavesForced=1;
-		windForced=1;
 		year=2016;
 		month=12;
 		day=24;
