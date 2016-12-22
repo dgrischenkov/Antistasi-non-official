@@ -1,6 +1,10 @@
 <?xml version="1.0" encoding="utf-8"?>
 <Project name="Antistasi">&lt;br/&gt;
 		<Package name="Antistasi">
+				<Key ID="STR_CHECK_SHOW">
+						<Original>Show this dialog at the next time</Original>
+						<Russian>Показать это диалоговое окно в следующий раз</Russian>
+				</Key>
 				<Key ID="STR_REST_HOURS">
 						<Original>Rest for 8 Hours</Original>
 						<Russian>Отдохнуть 8 часов</Russian>

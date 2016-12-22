@@ -1,5 +1,8 @@
 ﻿if (!isDedicated) then
 	{
+	["show_howtoplay"] call fn_LoadStat;
+	if (show_howtoplay == 0) then { howtoplay = 0; };
+
 	["gogglesPlayer"] call fn_LoadStat;
 	["vestPlayer"] call fn_LoadStat;
 	["outfit"] call fn_LoadStat;

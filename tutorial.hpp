@@ -14,7 +14,7 @@ class TutorialDialog {
 	idd = 5353;
 	controlsBackground[] = { BGRect };
 	objects[] = { };
-	controls[] = { Header, TutorialList, CloseButton, TutoControlGroup };
+	controls[] = { Header, TutorialList, CloseButton, TutoControlGroup, CheckBoxShow };
 
 	class UselessStuff {
 		type = CT_STATIC;
@@ -113,6 +113,28 @@ class TutorialDialog {
 		x = 0.80;
 		y = 0.93;
 		action = "howtoplay = 0;";
+	};
+
+	class CheckBoxShow : StdButton {
+		idc = 516;
+		type = CT_CHECKBOXES;
+
+		x = 0.02;
+		  y = 0.93;
+		w = 0.75;
+		h = 0.04;
+
+		colorText[] = { 0.5, 0.5, 0.5, 1 };
+		colorTextSelect[] = { 0.5, 0.75, 0.5, 1 };
+		colorSelectedBg[] = { 0.55, 0.60, 0.35, 0.1 };
+
+		font = FontB;
+
+		rows = 1;
+		columns = 1;
+		strings[] = {$STR_CHECK_SHOW};
+
+		onCheckBoxesSelChanged = "show_howtoplay = _this select 2; [""show_howtoplay"",show_howtoplay] call fn_SaveStat;"
 	};
 
 	class TutoControlGroup  {

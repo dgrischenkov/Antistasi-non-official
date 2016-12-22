@@ -1,8 +1,10 @@
-if ( isNil "howtoplay" ) then { howtoplay = 0; };
+howtoplay = 1; publicVariable "howtoplay";
+show_howtoplay = 1; publicVariable "show_howtoplay";
 
 [] spawn
 {
 	while { true } do {
+
 		waitUntil { sleep 0.5; howtoplay == 1 };
 		waitUntil { !dialog };
 		sleep 0.1;
@@ -53,6 +55,9 @@ if ( isNil "howtoplay" ) then { howtoplay = 0; };
 		_tutorial_height = [0.9, 0.8, 0.8, 1.5, 1.3, 2.5, 0.8, 0.1, 0.1, 0.1, 0.1, 0.1];
 
 		_old_page = -1;
+
+		_ctrlCheckBox = ((findDisplay 5353) displayCtrl (516));
+		_ctrlCheckBox ctrlSetChecked ( show_howtoplay == 1 );
 
 		while { howtoplay == 1 && alive player && dialog } do {
 			_current_page = lbCurSel 513;
