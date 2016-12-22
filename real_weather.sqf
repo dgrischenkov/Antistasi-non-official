@@ -67,11 +67,11 @@ switch(toUpper(_startingweather)) do {
 	};
 	
 	case "CLOUDY": {
-		wcweather = [0, 0, 0.6, [random 3, random 3, true], date];
+		wcweather = [0.025, 0, 0.6, [random 3, random 3, true], date];
 	};
 	
 	case "RAIN": {
-		wcweather = [1, 0, 1, [random 3, random 3, true], date];
+		wcweather = [0.05, 0, 1, [random 3, random 3, true], date];
 	};
 
 	default {
