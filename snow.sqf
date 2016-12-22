@@ -128,7 +128,7 @@ FS_makeBreathe = {
 		/*MoveVelocity*/ 	[1.2, 1.2,-0.2],
 		/*Simulation*/ 		1, 1.275, 1, 0.2, //rotationVel,weight,volume,rubbing
 		/*Scale*/ 			[0, 0.2,0],
-		/*Color*/ 			[[1,1,1, 0.001], [1,1,1, 0.01], [1,1,1, 0]],
+		/*Color*/ 			[[1,1,1, 0.001], [1,1,1, 0.003], [1,1,1, 0]],
 		/*AnimSpeed*/ 		[1000],
 		/*randDirPeriod*/ 	1,
 		/*randDirIntesity*/ 0.04,
@@ -196,7 +196,7 @@ FS_makeBreathe = {
 			/*MoveVelocity*/ 	_velocity,
 			/*Simulation*/ 		1, 1.275, 1, 0.2, //rotationVel,weight,volume,rubbing
 			/*Scale*/ 			[0, 0.2,0],
-			/*Color*/ 			[[1,1,1, 0.001], [1,1,1, 0.01], [1,1,1, 0]],
+			/*Color*/ 			[[1,1,1, 0.001], [1,1,1, 0.003], [1,1,1, 0]],
 			/*AnimSpeed*/ 		[1000],
 			/*randDirPeriod*/ 	1,
 			/*randDirIntesity*/ 0.04,
