@@ -930,7 +930,7 @@ class HQ_box: BOX
 	x = 0.244979 * safezoneW + safezoneX;
 	y = 0.223941 * safezoneH + safezoneY;
 	w = 0.445038 * safezoneW;
-	h = 0.492103 * safezoneH;
+	h = 0.593103 * safezoneH;
 };
 class HQ_frame: RscFrame
 {
@@ -939,7 +939,7 @@ class HQ_frame: RscFrame
 	x = 0.254979 * safezoneW + safezoneX;
 	y = 0.233941 * safezoneH + safezoneY;
 	w = 0.425038 * safezoneW;
-	h = 0.462103 * safezoneH;
+	h = 0.563103 * safezoneH;
 };
 class HQ_button_back: RscButton
 {
@@ -1022,7 +1022,7 @@ class HQ_button_fpsplus: RscButton
 	action = "if (player == leader group player) then {closeDialog 0;nul = createDialog ""AI_management""} else {hint ""Only group leaders may access to this option""};";
 };
 
-class HQ_button_AA: RscButton
+class HQ_button_playerandmoney: RscButton
 {
 	idc = -1;
 	text = $STR_UI_PLAYER_AND_MONEY;
@@ -1031,6 +1031,30 @@ class HQ_button_AA: RscButton
 	w = 0.175015 * safezoneW;
 	h = 0.0560125 * safezoneH;
 	action = "closeDialog 0;if (isMultiPlayer) then {nul = createDialog ""player_money""} else {hint ""MP Only Menu""};";
+};
+
+class HQ_button_resign: RscButton
+{
+	idc = -1;
+	text = $STR_UI_RESIGN_COMM_CAREER;
+	x = 0.272481 * safezoneW + safezoneX;
+	y = 0.713025 * safezoneH + safezoneY;
+	w = 0.175015 * safezoneW;
+	h = 0.0560125 * safezoneH;
+	tooltip = "";
+	action = "closedialog 0; if (isMultiplayer) then {execVM ""orgPlayers\commResign.sqf""} else {hint ""This feature is MP Only""};";
+};
+
+class HQ_button_tutorial: RscButton
+{
+	idc = -1;
+	text = $STR_TUTORIAL_ACTION;
+	x = 0.482498 * safezoneW + safezoneX;
+	y = 0.713025 * safezoneH + safezoneY;
+	w = 0.175015 * safezoneW;
+	h = 0.0560125 * safezoneH;
+	tooltip = "";
+	action = "closedialog 0; howtoplay=1;";
 };
 ////////////////////////////////////////////////////////
 // GUI EDITOR OUTPUT END
