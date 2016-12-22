@@ -108,5 +108,28 @@ caja addEventHandler ["ContainerOpened",
     }
 ];
 
+if (isServer) then
+{
+    _countBuilding = 0;
+    {
+      _countBuilding = _countBuilding + 1;
+      if (_countBuilding > (random 16) ) then
+      {
+        hideObjectGlobal _x;
+        _countBuilding = 0;
+      };
+    } foreach ( nearestObjects [markerPos "base_4", ["NonStrategic"], 16000] );
+
+    _countBuilding = 0;
+    {
+      _countBuilding = _countBuilding + 1;
+      if (_countBuilding > (random 8) ) then
+      {
+        hideObjectGlobal _x;
+        _countBuilding = 0;
+      };
+    } foreach ( nearestObjects [markerPos "puerto_2", ["NonStrategic"], 4000] );
+};
+
 serverInitDone = true; publicVariable "serverInitDone";
 diag_log "Antistasi MP Server. serverInitDone set to true.";
