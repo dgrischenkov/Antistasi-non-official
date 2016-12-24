@@ -1,5 +1,5 @@
-howtoplay = 1; publicVariable "howtoplay";
-show_howtoplay = 1; publicVariable "show_howtoplay";
+howtoplay = 1;
+show_howtoplay = 1;
 
 [] spawn
 {
