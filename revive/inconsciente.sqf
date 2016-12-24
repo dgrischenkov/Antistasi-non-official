@@ -148,8 +148,7 @@ then { _isDie = true; };
 // player-killer go to prison
 if (!isNil "_finishedoff") then
 {
-	if (isPlayer _finishedoff and _unitSide != civilian and
-		[side _finishedoff, _unitSide] call BIS_fnc_sideIsFriendly ) then
+	if (isPlayer _finishedoff and (side _finishedoff == _unitSide)) then
 		{[_finishedoff,60] remoteExec ["castigo",_finishedoff]};
 };
 
