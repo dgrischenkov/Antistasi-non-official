@@ -226,7 +226,7 @@ else
 		_needSurrender = true;
 
 		{
-			if (([_x select 2, _unitSide] call BIS_fnc_sideIsFriendly) and ((_x select 4) != _unit) ) then
+			if ( ((_x select 2) == _unitSide) and ((_x select 4) != _unit) and !((_x select 4) getVariable["inconsciente",false]) ) then
 			{
 				_needSurrender = false;
 			};
