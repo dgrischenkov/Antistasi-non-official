@@ -1,8 +1,5 @@
 ﻿if (!isDedicated) then
 	{
-	["show_howtoplay"] call fn_LoadStat;
-	if (show_howtoplay == 0) then { howtoplay = 0; };
-
 	["gogglesPlayer"] call fn_LoadStat;
 	["vestPlayer"] call fn_LoadStat;
 	["outfit"] call fn_LoadStat;
@@ -29,6 +26,9 @@
 		diag_log "Antistasi: SP Personal player stats loaded";
 		};
 	};
+
+["show_howtoplay"] call fn_LoadStat;
+if (show_howtoplay == 0) then { howtoplay = 0; };
 
 if (!isServer) exitWith {};
 statsLoaded = 0; publicVariable "statsLoaded";
