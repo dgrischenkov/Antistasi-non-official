@@ -6,6 +6,7 @@ _viejo = _this select 1;
 if (isNull _viejo) exitWith {};
 
 waitUntil {alive player};
+[] spawn FS_spawnSnowCube;
 
 _nul = [_viejo] spawn postmortem;
 
