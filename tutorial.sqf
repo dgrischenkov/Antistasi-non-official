@@ -1,4 +1,4 @@
-howtoplay = 1;
+howtoplay = 0;
 show_howtoplay = 1;
 
 [] spawn
