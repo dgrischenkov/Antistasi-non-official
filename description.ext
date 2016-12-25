@@ -44,7 +44,7 @@ class CfgTaskEnhancements
 
 class Header
 {
-gameType = COOP;
+gameType = CTI;
 minplayers=1;
 maxplayers=32;
 };
