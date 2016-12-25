@@ -15,6 +15,8 @@ _helpTimeDelayConst = (random 20) + 20;
 _unitSide = side _unit;
 _unit setCaptive true;
 
+if (_unitSide != east) then { _damAccumLimitConst = 25; };
+
 if (_part != "") then { removeHeadgear _unit; };
 
 if ( vehicle _unit != _unit ) then
