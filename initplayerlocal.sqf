@@ -460,5 +460,3 @@ if (hayXLA) then {
 
 caja addAction [localize "STR_UI_VEH_CARGO_TO_AMMOBOX", "[] call vaciar"];
 caja addAction [localize "STR_MOVE_THIS_ASSET", "moveHQObject.sqf",nil,0,false,true,"","(_this == stavros)"];
-
-_nul = [player] execVM "OrgPlayers\cleanGear.sqf";
