@@ -147,11 +147,18 @@ if ((time > _bleedOutConst) or
 	(!isNil "_finishedoff"))
 then { _isDie = true; };
 
-// player-killer go to prison
 if (!isNil "_finishedoff") then
 {
-	if (isPlayer _finishedoff and (side _finishedoff == _unitSide)) then
-		{[_finishedoff,60] remoteExec ["castigo",_finishedoff]};
+	if (!isNull _finishedoff) then
+	{
+		if (_finishedoff != _unit) then
+		{
+			if (isPlayer _finishedoff and (side _finishedoff == _unitSide)) then
+				{[_finishedoff,60] remoteExec ["castigo",_finishedoff]};
+
+			[_unit, _finishedoff] spawn AAFKilledEH;
+		};
+	};
 };
 
 if (isPlayer _unit) then
