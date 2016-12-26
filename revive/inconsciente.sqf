@@ -153,10 +153,9 @@ if (!isNil "_finishedoff") then
 	{
 		if (_finishedoff != _unit) then
 		{
-			if (isPlayer _finishedoff and (side _finishedoff == _unitSide)) then
-				{[_finishedoff,60] remoteExec ["castigo",_finishedoff]};
-
-			[_unit, _finishedoff] spawn AAFKilledEH;
+			if (isPlayer _finishedoff and (side _finishedoff == _unitSide))
+			then {[_finishedoff,60] remoteExec ["castigo",_finishedoff]}
+			else {[_unit, _finishedoff] spawn AAFKilledEH;};
 		};
 	};
 };
@@ -222,7 +221,11 @@ _unit setCaptive false;
 _unit setVariable ["damAccum",nil,true];
 _isPlayerWas = isPlayer _unit;
 
-if (_isDie) then { _unit setDamage 1; }
+if (_isDie) then
+{
+	if (_unitSide != side _injurer) then { [_unit, _injurer] spawn AAFKilledEH; };
+	_unit setDamage 1;
+}
 else
 {
 	_unit playMoveNow "AmovPpneMstpSnonWnonDnon_healed";

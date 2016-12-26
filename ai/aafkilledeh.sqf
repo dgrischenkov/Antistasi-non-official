@@ -9,7 +9,7 @@ if ((side _killer == side_blue) || (captive _killer)) then
 	_grupo = group _muerto;
 	if (isPlayer _killer) then
 		{
-		[2,_killer,false] call playerScoreAdd;
+		[0.4,_killer,false] call playerScoreAdd;
 
 		if ((captive _killer) && (_killer distance _muerto < 300)) then
 			{
