@@ -88,6 +88,7 @@ _bandera allowDamage false;
 [[_bandera,"take"],"flagaction"] call BIS_fnc_MP;
 _vehiculos = _vehiculos + [_bandera];
 _veh = "I_supplyCrate_F" createVehicle _posicion;
+_veh addaction [localize "STR_A3_Arsenal", { ["Open",true] call BIS_fnc_arsenal; }, [], 6, true, false, "", "" ];
 _vehiculos = _vehiculos + [_veh];
 
 _nVeh = round (_size / 30);

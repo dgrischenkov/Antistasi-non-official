@@ -20,6 +20,7 @@ _veh setDir (markerDir _marcador);
 _veh = createVehicle [cFlag, _posicion, [],0, "NONE"];
 _vehiculos = _vehiculos + [_veh];
 _veh = createVehicle ["I_supplyCrate_F", _posicion, [],0, "NONE"];
+_veh addaction [localize "STR_A3_Arsenal", { ["Open",true] call BIS_fnc_arsenal; }, [], 6, true, false, "", "" ];
 _vehiculos = _vehiculos + [_veh];
 _nul = [_veh] call cajaAAF;
 _pos = _posicion findEmptyPosition [5,50,"I_Truck_02_covered_F"];

@@ -86,6 +86,7 @@ _bandera allowDamage false;
 [[_bandera,"take"],"flagaction"] call BIS_fnc_MP;
 _vehiculos = _vehiculos + [_bandera];
 _caja = "I_supplyCrate_F" createVehicle _posicion;
+_caja addaction [localize "STR_A3_Arsenal", { ["Open",true] call BIS_fnc_arsenal; }, [], 6, true, false, "", "" ];
 _vehiculos = _vehiculos + [_caja];
 
 {_nul = [_x] spawn genVEHinit;} forEach _vehiculos;
