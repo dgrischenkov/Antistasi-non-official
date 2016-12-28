@@ -125,7 +125,7 @@ if (not(_nombre in lockedWeapons)) then
 
 //rhs detection and integration
 if ("rhs_weap_akms" in lockedWeapons) then {
-	hayRHS = true;
+//	hayRHS = true;
 };
 if ("rhs_weap_m4a1_d" in lockedWeapons) then {
 	hayUSAF = true;
