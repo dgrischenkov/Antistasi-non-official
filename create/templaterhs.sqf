@@ -12,43 +12,43 @@ List of infantry classes. These will have individual skills and equipment mapped
 If you wish to add more soldiers beyond the available variables, you also need to add any new variables to the genInit.sqf and the genInitBASES.sqf
 */
 sol_A_AA = ""; // assistant AA
-sol_A_AR = "I_C_Soldier_Bandit_6_F"; // assistant autorifle
-sol_A_AT = "I_C_Soldier_Bandit_6_F"; // assistant AT
-sol_AA = "I_C_Soldier_Para_1_F"; // AA
-sol_AR = "I_C_Soldier_Para_2_F"; // autorifle
-sol_AT = "I_C_Soldier_Para_3_F"; // AT
+sol_A_AR = "rhs_vdv_machinegunner_assistant"; // assistant autorifle
+sol_A_AT = "rhs_vdv_strelok_rpg_assist"; // assistant AT
+sol_AA = "rhs_vdv_aa"; // AA
+sol_AR = "rhs_vdv_machinegunner"; // autorifle
+sol_AT = "rhs_vdv_at"; // AT
 sol_AMMO = ""; // ammo bearer
-sol_GL = "I_C_Soldier_Para_4_F"; // grenade launcher
-sol_GL2 = "I_C_Soldier_Para_5_F";
-sol_LAT = "I_C_Soldier_Para_6_F"; // light AT
-sol_LAT2 = "I_C_Soldier_Para_7_F";
-sol_MG = "I_C_Soldier_Para_8_F";
-sol_MK = "I_C_Soldier_Bandit_1_F"; // marksman
-sol_SL = "I_C_Soldier_Bandit_2_F"; // squad leader
-sol_TL = "I_C_Soldier_Bandit_3_F"; // team leader
-sol_TL2 = "I_C_Soldier_Bandit_4_F";
+sol_GL = "rhs_vdv_grenadier"; // grenade launcher
+sol_GL2 = "rhs_vdv_grenadier_rpg";
+sol_LAT = "rhs_vdv_LAT"; // light AT
+sol_LAT2 = "rhs_vdv_RShG2";
+sol_MG = "rhs_vdv_arifleman";
+sol_MK = "rhs_vdv_marksman"; // marksman
+sol_SL = "rhs_vdv_sergeant"; // squad leader
+sol_TL = "rhs_vdv_junior_sergeant"; // team leader
+sol_TL2 = "rhs_vdv_efreitor";
 sol_EXP = ""; // explosives
-sol_R_L = "I_C_Soldier_Bandit_5_F"; // rifleman, light
+sol_R_L = "rhs_vdv_rifleman_lite"; // rifleman, light
 sol_REP = ""; // repair
 sol_UN = ""; // unarmed
-sol_RFL = "I_C_Soldier_Bandit_6_F"; // rifleman
-sol_SN = "I_C_Soldier_Bandit_7_F"; // sniper
-sol_SP = "I_C_Soldier_Bandit_8_F"; // spotter
-sol_MED = "I_C_Soldier_Bandit_2_F"; // medic
-sol_ENG = "I_C_Soldier_Bandit_2_F"; // engineer
-sol_OFF = "I_C_Soldier_Para_6_F"; // officer
-sol_OFF2 = "I_C_Soldier_Para_1_F";
+sol_RFL = "rhs_vdv_rifleman"; // rifleman
+sol_SN = "rhs_vdv_marksman_asval"; // sniper
+sol_SP = "rhs_vdv_rifleman_asval"; // spotter
+sol_MED = "rhs_vdv_medic"; // medic
+sol_ENG = "rhs_vdv_engineer"; // engineer
+sol_OFF = "rhs_vdv_officer"; // officer
+sol_OFF2 = "rhs_vdv_officer_armored";
 
-sol_CREW = "I_C_Soldier_Bandit_8_F"; // crew
-sol_CREW2 = "I_C_Soldier_Bandit_6_F";
-sol_CREW3 = "I_C_Soldier_Para_3_F";
-sol_CREW4 = "I_C_Soldier_Bandit_1_F";
-sol_DRV = "I_C_Soldier_Para_6_F"; // driver
-sol_DRV2 = "I_C_Soldier_Bandit_3_F";
+sol_CREW = "rhs_vdv_crew"; // crew
+sol_CREW2 = "rhs_vdv_armoredcrew";
+sol_CREW3 = "rhs_vdv_combatcrew";
+sol_CREW4 = "rhs_vdv_crew_commander";
+sol_DRV = "rhs_vdv_driver"; // driver
+sol_DRV2 = "rhs_vdv_driver_armored";
 sol_HCREW = ""; // helicopter crew
-sol_HPIL = "I_C_Soldier_Para_3_F"; // helicopter pilot
-sol_HPIL2 = "I_C_Soldier_Bandit_3_F";
-sol_PIL = "I_C_Soldier_Bandit_8_F"; // pilot
+sol_HPIL = "rhs_pilot_transport_heli"; // helicopter pilot
+sol_HPIL2 = "rhs_pilot_combat_heli";
+sol_PIL = "rhs_pilot"; // pilot
 sol_UAV = ""; // UAV controller
 
 sol_SUP_AMG = ""; // assistant HMG
@@ -482,27 +482,20 @@ These are the vehicles and statics that you can buy at HQ. Currently, the array 
 0-2: civilian vehicles
 3-12: military vehicles and statics
 */
-_vfs = 	[
+_vfs = [
 	"C_Offroad_01_F",
 	"C_Van_01_transport_F",
-	"C_Heli_Light_01_civil_F",
+	"RHS_Mi8amt_civilian",
 	"B_G_Quadbike_01_F",
-	"B_G_Offroad_01_F",
-	"B_G_Van_01_transport_F",
+	"rhs_uaz_open_MSV_01",
+	"rhs_gaz66o_msv",
 	"B_G_Offroad_01_armed_F",
-	"B_HMG_01_high_F",
-	"B_G_Mortar_01_F",
-	"B_static_AT_F",
-	"B_static_AA_F",
-	"B_T_MRAP_01_hmg_F",
-	"C_SUV_01_F",
-	"C_Hatchback_01_F",
-	"C_Hatchback_01_sport_F",
-	"C_Van_01_fuel_F",
-	"C_Offroad_02_unarmed_F",
-	"B_T_LSV_01_armed_F",
-	"B_T_APC_Wheeled_01_cannon_F",
-	"B_T_APC_Tracked_01_rcws_F"
+	"rhs_DSHKM_ins",
+	"rhs_2b14_82mm_msv",
+	"rhs_Metis_9k115_2_vdv",
+	"RHS_ZU23_VDV",
+	"rhs_bmd1_chdkz",
+	"rhs_gaz66_r142_vdv"
 ];
 
 _civHeli = "RHS_Mi8amt_civilian";
