@@ -1,5 +1,5 @@
-if (player != player getVariable ["owner",player]) exitWith {hint "You cannot go Undercover while you are controlling AI"};
-if (captive player) exitWith {hint "You are in Undercover already"};
+if (player != player getVariable ["owner",player]) exitWith {hint localize "STR_UNDERCOVER_WHILE_AI"};
+if (captive player) exitWith {hint localize "STR_UNDERCOVER_ALREADY"};
 
 private ["_compromised","_cambiar","_bases","_arrayCivVeh","_player","_size","_base"];
 
@@ -14,12 +14,12 @@ if (vehicle player != player) then
 	{
 	if (not(typeOf(vehicle player) in _arrayCivVeh)) then
 		{
-		hint "You are not in a civilian vehicle";
+		hint localize "STR_UNDERCOVER_NOT_CIV_VEH";
 		_cambiar = "Init"
 		};
 	if (vehicle player in reportedVehs) then
 		{
-		hint "The vehicle you are in has been reported to the enemy. Change your vehicle or renew it in the Garage to become Undercover";
+		hint localize "STR_UNDERCOVER_SPOTED_VEH";
 		_cambiar = "Init";
 		};
 	}
@@ -27,12 +27,12 @@ else
 	{
 	if ((primaryWeapon player != "") or (secondaryWeapon player != "") or (handgunWeapon player != "") or (vest player != "") or (headgear player in cascos) or (hmd player != "") or (not(uniform player in civUniforms))) then
 		{
-		hint "You cannot become Undercover while showing:\n\nAny weapon in hand\nWearing Vest\nWearing Helmet\nWearing NV Googles\nWearing a Mil Uniform";
+		hint localize "STR_UNDERCOVER_CANT_LOOT";
 		_cambiar = "Init";
 		};
 	if (dateToNumber date < _compromised) then
 		{
-		hint "You have been reported in the last 30 minutes and you cannot become Undercover";
+		hint localize "STR_UNDERCOVER_3_MIN";
 		_cambiar = "Init";
 		};
 	};
@@ -41,7 +41,7 @@ if (_cambiar != "") exitWith {};
 
 if ({((side _x== side_red) or (side _x== side_green)) and ((_x knowsAbout player > 1.4) or (_x distance player < 350))} count allUnits > 0) exitWith
 	{
-	hint "You cannot become Undercover while some enemies are spotting you";
+	hint localize "STR_UNDERCOVER_SPOTED";
 	if (vehicle player != player) then
 		{
 		{
@@ -52,7 +52,7 @@ if ({((side _x== side_red) or (side _x== side_green)) and ((_x knowsAbout player
 
 _base = [_bases,player] call BIS_fnc_nearestPosition;
 _size = [_base] call sizeMarker;
-if ((player distance getMarkerPos _base < _size*2) and (_base in mrkAAF)) exitWith {hint "You cannot become Undercover near Bases, Outposts or Roadblocks"};
+if ((player distance getMarkerPos _base < _size*2) and (_base in mrkAAF)) exitWith {hint localize "STR_UNDERCOVER_NEAR_BASE"};
 
 ["Undercover ON",0,0,4,0,0,4] spawn bis_fnc_dynamicText;
 
@@ -159,7 +159,7 @@ switch _cambiar do
 	{
 	case "Reported":
 		{
-		hint "You have been reported or spotted by the enemy";
+		hint localize "STR_UNDERCOVER_REPORTED";
 		//_compromised = _player getVariable "compromised";
 		if (vehicle _player != _player) then
 			{
@@ -171,32 +171,32 @@ switch _cambiar do
 			_player setVariable ["compromised",(dateToNumber [date select 0, date select 1, date select 2, date select 3, (date select 4) + 3])];
 			};
 		};
-	case "VNoCivil": {hint "You entered in a non civilian vehicle"};
-	case "VCompromised": {hint "You entered in a reported vehicle"};
+	case "VNoCivil": {hint localize "STR_UNDERCOVER_ENTER_TO_NON_CIV_VEH"};
+	case "VCompromised": {hint localize "STR_UNDERCOVER_ENTER_TO_REPORTED_VEH"};
 	case "SpotBombTruck":
 		{
-		hint "Explosives have been spotted on your vehicle";
+		hint localize "STR_UNDERCOVER_EXPLOSIVE_IN_VEH";
 		reportedVehs pushBackUnique (vehicle _player); publicVariable "reportedVehs";
 		};
 	case "Carretera":
 		{
-		hint "You went far from roads and have been spotted";
+		hint localize "STR_UNDERCOVER_FAR_FROM_ROAD";
 		reportedVehs pushBackUnique (vehicle _player); publicVariable "reportedVehs";
 		};
 	case "AA": {
-		hint "You were identified by air defence forces.";
+		hint localize "STR_UNDERCOVER_SPOTED_FROM_AIR";
 		reportedVehs pushBackUnique (vehicle _player); publicVariable "reportedVehs";
 	};
-	case "Vestido": {hint "You cannot stay Undercover while showing:\n\nAny weapon in hand\nWearing Vest\nWearing Helmet\nWearing NV Googles\nWearing a Mil Uniform"};
+	case "Vestido": {hint localize "STR_UNDERCOVER_CANT_LOOT"};
 	case "Vestido2":
 		{
-		hint "You cannot stay Undercover while showing:\n\nAny weapon in hand\nWearing Vest\nWearing Helmet\nWearing NV Googles\nWearing a Mil Uniform.\n\nThe enemy added you to the Wanted list";
+		hint localize "STR_UNDERCOVER_CANT_LOOT";
 		_player setVariable ["compromised",dateToNumber [date select 0, date select 1, date select 2, date select 3, (date select 4) + 3]];
 		};
-	case "Compromised": {hint "You left your vehicle and you are still in the Wanted list"};
+	case "Compromised": {hint localize "STR_UNDERCOVER_LEFT_VEH"};
 	case "Distancia":
 		{
-		hint "You have gotten too close to an enemy facility";
+		hint localize "STR_UNDERCOVER_NEAR_ENEMY_FACILITY";
 		//_compromised = _player getVariable "compromised";
 		if (vehicle _player != _player) then
 			{

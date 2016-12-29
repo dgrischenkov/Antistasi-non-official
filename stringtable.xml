@@ -1,6 +1,70 @@
 <?xml version="1.0" encoding="utf-8"?>
 <Project name="Antistasi">&lt;br/&gt;
 		<Package name="Antistasi">
+				<Key ID="STR_UNDERCOVER_NEAR_ENEMY_FACILITY">
+						<Original>You have gotten too close to an enemy facility</Original>
+						<Russian>Вы подошли слишком близко к вражескому охраняемому объекту</Russian>
+				</Key>
+				<Key ID="STR_UNDERCOVER_LEFT_VEH">
+						<Original>You left your vehicle and you are still in the Wanted list</Original>
+						<Russian>Вы покинули машину, показав своё лицо - а ведь вы всё ещё в списке разыскиваемых</Russian>
+				</Key>
+				<Key ID="STR_UNDERCOVER_SPOTED_FROM_AIR">
+						<Original>You were identified by air defence forces</Original>
+						<Russian>Вас засекли с воздушно-разведовательные силы</Russian>
+				</Key>
+				<Key ID="STR_UNDERCOVER_FAR_FROM_ROAD">
+						<Original>You went far from roads and have been spotted</Original>
+						<Russian>Вы съехали с дороги, и враг понял, что вы - партизан!</Russian>
+				</Key>
+				<Key ID="STR_UNDERCOVER_EXPLOSIVE_IN_VEH">
+						<Original>Explosives have been spotted on your vehicle</Original>
+						<Russian>В вашей машине найдена взрывчатка</Russian>
+				</Key>
+				<Key ID="STR_UNDERCOVER_ENTER_TO_REPORTED_VEH">
+						<Original>You entered in a reported vehicle</Original>
+						<Russian>Вы сели в машину, находящуюся в розыске, и вас засекли</Russian>
+				</Key>
+				<Key ID="STR_UNDERCOVER_ENTER_TO_NON_CIV_VEH">
+						<Original>You entered in a non civilian vehicle</Original>
+						<Russian>Вы сели не в гражданскую машину и вас засекли</Russian>
+				</Key>
+				<Key ID="STR_UNDERCOVER_REPORTED">
+						<Original>You have been reported or spotted by the enemy</Original>
+						<Russian>О вас сообщили гражданские либо вас засекли враги</Russian>
+				</Key>
+				<Key ID="STR_UNDERCOVER_NEAR_BASE">
+						<Original>You cannot become Undercover near Bases, Outposts or Roadblocks</Original>
+						<Russian>Нельзя притворяться гражданским вблизи военной базы, аванпоста или блокпоста</Russian>
+				</Key>
+				<Key ID="STR_UNDERCOVER_3_MIN">
+						<Original>You have been reported in the last 3 minutes and you cannot become Undercover</Original>
+						<Russian>О вас сообщили, и ближайшие 3 минуты нельзя будет вновь притвориться гражданским</Russian>
+				</Key>
+				<Key ID="STR_UNDERCOVER_CANT_LOOT">
+						<Original>You cannot become Undercover while showing:\n\nAny weapon in hand\nWearing Vest\nWearing Helmet\nWearing NV Googles\nWearing a Mil Uniform</Original>
+						<Russian>Нельзя притвориться гражданским когда на тебе одето:\n\nОружие\nРазгразка\nШлем\nПНВ\nВоенная униформа</Russian>
+				</Key>
+				<Key ID="STR_UNDERCOVER_SPOTED_VEH">
+						<Original>The vehicle you are in has been reported to the enemy. Change your vehicle or renew it in the Garage to become Undercover</Original>
+						<Russian>Вашу машину спалили и добавили в список розыска. Смените машину или поставьте эту в гараж</Russian>
+				</Key>
+				<Key ID="STR_UNDERCOVER_NOT_CIV_VEH">
+						<Original>You are not in a civilian vehicle</Original>
+						<Russian>Вы не в гражданской машине</Russian>
+				</Key>
+				<Key ID="STR_UNDERCOVER_WHILE_AI">
+						<Original>You cannot go Undercover while you are controlling AI</Original>
+						<Russian>Нельзя включать "Под прикрытием" во время управления АИ</Russian>
+				</Key>
+				<Key ID="STR_UNDERCOVER_ALREADY">
+						<Original>You are in Undercover already</Original>
+						<Russian>Вы уже под прикрытием</Russian>
+				</Key>
+				<Key ID="STR_UNDERCOVER_SPOTED">
+						<Original>You cannot become Undercover while some enemies are spotting you</Original>
+						<Russian>Враг ближе чем 350м либо враг знает о тебе</Russian>
+				</Key>
 				<Key ID="STR_CHECK_SHOW">
 						<Original>Show this dialog at the next time</Original>
 						<Russian>Показать это диалоговое окно в следующий раз</Russian>
