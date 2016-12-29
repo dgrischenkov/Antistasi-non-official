@@ -99,6 +99,6 @@ if(isServer) then
 
 [] execVM "tutorial.sqf";
 
-[0.25] execVM "snow.sqf";
+[0.1] execVM "snow.sqf";
 
 [] execVM "real_weather.sqf";
