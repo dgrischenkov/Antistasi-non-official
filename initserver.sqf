@@ -113,7 +113,7 @@ if (isServer) then
     _countBuilding = 0;
     {
       _countBuilding = _countBuilding + 1;
-      if (_countBuilding > (random 16) ) then
+      if (_countBuilding > (random 12) ) then
       {
         hideObjectGlobal _x;
         _countBuilding = 0;
@@ -123,7 +123,7 @@ if (isServer) then
     _countBuilding = 0;
     {
       _countBuilding = _countBuilding + 1;
-      if (_countBuilding > (random 8) ) then
+      if (_countBuilding > (random 6) ) then
       {
         hideObjectGlobal _x;
         _countBuilding = 0;
