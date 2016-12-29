@@ -39,7 +39,7 @@ else
 
 if (_cambiar != "") exitWith {};
 
-if ({((side _x== side_red) or (side _x== side_green)) and (((_x knowsAbout player > 1.4) and (_X distance player < 500)) or (_x distance player < 350))} count allUnits > 0) exitWith
+if ({((side _x== side_red) or (side _x== side_green)) and ((_x knowsAbout player > 1.4) or (_x distance player < 350))} count allUnits > 0) exitWith
 	{
 	hint "You cannot become Undercover while some enemies are spotting you";
 	if (vehicle player != player) then
@@ -168,7 +168,7 @@ switch _cambiar do
 			}
 		else
 			{
-			_player setVariable ["compromised",(dateToNumber [date select 0, date select 1, date select 2, date select 3, (date select 4) + 30])];
+			_player setVariable ["compromised",(dateToNumber [date select 0, date select 1, date select 2, date select 3, (date select 4) + 3])];
 			};
 		};
 	case "VNoCivil": {hint "You entered in a non civilian vehicle"};
@@ -191,7 +191,7 @@ switch _cambiar do
 	case "Vestido2":
 		{
 		hint "You cannot stay Undercover while showing:\n\nAny weapon in hand\nWearing Vest\nWearing Helmet\nWearing NV Googles\nWearing a Mil Uniform.\n\nThe enemy added you to the Wanted list";
-		_player setVariable ["compromised",dateToNumber [date select 0, date select 1, date select 2, date select 3, (date select 4) + 30]];
+		_player setVariable ["compromised",dateToNumber [date select 0, date select 1, date select 2, date select 3, (date select 4) + 3]];
 		};
 	case "Compromised": {hint "You left your vehicle and you are still in the Wanted list"};
 	case "Distancia":
@@ -205,7 +205,7 @@ switch _cambiar do
 			}
 		else
 			{
-			_player setVariable ["compromised",(dateToNumber [date select 0, date select 1, date select 2, date select 3, (date select 4) + 30])];
+			_player setVariable ["compromised",(dateToNumber [date select 0, date select 1, date select 2, date select 3, (date select 4) + 3])];
 			};
 		};
 	};
