@@ -235,7 +235,7 @@ else
 		{_unit enableAI _x} foreach ["TARGET","AUTOTARGET","MOVE","ANIM"];
 		_unit stop false;
 
-		_needSurrender = true;
+		_needSurrender = (_unitSide != side_blue);
 
 		{
 			if ( ((_x select 2) == _unitSide) and ((_x select 4) != _unit) and !((_x select 4) getVariable["inconsciente",false]) ) then
