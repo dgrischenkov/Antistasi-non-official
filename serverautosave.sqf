@@ -2,7 +2,9 @@ if (!isServer) exitWith {};
 
 while {true} do
 	{
-	sleep 3600; // 3600
+	sleep 1800;
+	_nul = [] execVM "garbagecleaner.sqf";
+	sleep 300;
 	_nul = [] execVM "statSave\saveLoop.sqf";
 	_found = false;
 	{
