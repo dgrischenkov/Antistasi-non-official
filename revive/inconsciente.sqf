@@ -4,8 +4,6 @@ _unit = _this select 0;
 _part = _this select 1;
 _injurer = _this select 2;
 
-if (!local _unit) exitWith {};
-
 _surrenderRangeConst = 10;
 _damAccumLimitConst = 65;
 _bleedOutConst = time + 360;
