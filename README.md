@@ -1,4 +1,4 @@
-[README.rus.md](>>> Русская версия этого документа <<<)
+[>>> Русская версия этого документа <<<](README.rus.md)
 
 # Antistasi-non-official
 The **Antistasi-non-official** is a cooperative mission for ARMA 3 (COOP / CTI / PvE), an unofficial version. It is an unofficial mod of Antistasi 1.55.
